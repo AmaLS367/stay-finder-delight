@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Users, MapPin, X, Printer, Search } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
+import { toast } from '@/components/ui/sonner';
 import { useBookings } from '@/hooks/useBookings';
 import { formatPrice, formatDateRange, formatGuests } from '@/lib/formatters';
 
@@ -16,7 +17,10 @@ export default function Trips() {
     if (!booking) return;
 
     const printWindow = window.open('', '_blank');
-    if (!printWindow) return;
+    if (!printWindow) {
+      toast.error('Popup blocked. Allow popups to print the receipt.');
+      return;
+    }
 
     printWindow.document.write(`
       <!DOCTYPE html>
@@ -52,7 +56,23 @@ export default function Trips() {
       </html>
     `);
     printWindow.document.close();
-    printWindow.print();
+
+    const triggerPrint = () => {
+      try {
+        printWindow.focus();
+        printWindow.print();
+      } catch {
+        toast.error('Print failed');
+      }
+    };
+
+    printWindow.onload = () => {
+      triggerPrint();
+    };
+
+    window.setTimeout(() => {
+      triggerPrint();
+    }, 250);
   };
 
   return (
