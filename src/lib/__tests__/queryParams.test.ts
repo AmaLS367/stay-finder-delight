@@ -32,7 +32,7 @@ describe("queryParams", () => {
     const params = buildFilterParams({
       priceMin: 100,
       priceMax: 500,
-      type: ["apartment", "villa"],
+      type: ["apartment", "house"],
       minRating: 4.5,
       amenities: ["wifi", "pool"],
       instantBook: true,
@@ -41,7 +41,7 @@ describe("queryParams", () => {
     const parsed = parseFilterParams(params.toString());
     expect(parsed.priceMin).toBe(100);
     expect(parsed.priceMax).toBe(500);
-    expect(parsed.type).toEqual(["apartment", "villa"]);
+    expect(parsed.type).toEqual(["apartment", "house"]);
     expect(parsed.minRating).toBe(4.5);
     expect(parsed.amenities).toEqual(["wifi", "pool"]);
     expect(parsed.instantBook).toBe(true);
