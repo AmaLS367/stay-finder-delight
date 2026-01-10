@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "CC-BY-NC-4.0",
+  "author": "Ama",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

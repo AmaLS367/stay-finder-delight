@@ -1,0 +1,17 @@
+{
+  "name": "StayFinder",
+  "short_name": "StayFinder",
+  "description": "A production-like booking UI demo: search stays, view listings, manage wishlists and trips.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

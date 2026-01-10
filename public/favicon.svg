@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="StayFinder">
+  <!-- Location pin outline - classic inverted teardrop -->
+  <path d="M64 20 C48 20, 36 32, 36 48 C36 64, 64 108, 64 108 C64 108, 92 64, 92 48 C92 32, 80 20, 64 20 Z" 
+        fill="none" 
+        stroke="#ff6b6b" 
+        stroke-width="7" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Inner circle -->
+  <circle cx="64" cy="50" r="10" 
+          fill="none" 
+          stroke="#ff6b6b" 
+          stroke-width="6"/>
+</svg>
