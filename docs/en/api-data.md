@@ -614,12 +614,12 @@ graph TB
     A --> F[Host]
     A --> G[Reviews]
 
-    B --> B1[title, type, description]
-    C --> C1[city, country, coords]
-    D --> D1[pricePerNight, fees]
-    E --> E1[amenities, bedrooms, beds]
-    F --> F1[name, avatar, isSuperhost]
-    G --> G1[rating, reviewsCount, reviews[]]
+    B --> B1["title, type, description"]
+    C --> C1["city, country, coords"]
+    D --> D1["pricePerNight, fees"]
+    E --> E1["amenities, bedrooms, beds"]
+    F --> F1["name, avatar, isSuperhost"]
+    G --> G1["rating, reviewsCount, reviews[]"]
 ```
 
 ---
