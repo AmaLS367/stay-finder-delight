@@ -4,6 +4,7 @@ import { Star, Heart, Share, Check, MapPin, Users, Bed, Bath, X, Calendar, Chevr
 import { Layout } from '@/components/layout/Layout';
 import { formatPrice, formatGuests, pluralize } from '@/lib/formatters';
 import { calculateNights, isValidDateRange, getDefaultCheckIn, getDefaultCheckOut, generateICSContent, downloadICSFile, getLocalTodayISODate } from '@/lib/dateUtils';
+import { toast } from '@/components/ui/sonner';
 import { useWishlist } from '@/hooks/useWishlist';
 import { useBookings } from '@/hooks/useBookings';
 import { addRecentlyViewed } from '@/lib/storage';
@@ -64,11 +65,11 @@ export default function Listing() {
 
   const handleReserve = () => {
     if (!isValidDateRange(checkIn, checkOut)) {
-      alert('Please select valid dates');
+      toast.error('Please select valid dates');
       return;
     }
     if (guests > listing.maxGuests) {
-      alert(`Maximum ${listing.maxGuests} guests allowed`);
+      toast.error(`Maximum ${listing.maxGuests} guests allowed`);
       return;
     }
     setShowModal(true);
@@ -116,7 +117,15 @@ export default function Listing() {
           </div>
           <div className="flex items-center gap-3">
             <button
-              onClick={() => navigator.clipboard.writeText(window.location.href)}
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(window.location.href);
+                  toast.success('Link copied');
+                } catch {
+                  window.prompt('Copy this link:', window.location.href);
+                  toast.message('Copy the link from the prompt');
+                }
+              }}
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm"
             >
               <Share className="h-4 w-4" /> Share
