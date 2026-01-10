@@ -1,6 +1,6 @@
 // Date utilities
 
-import { format, differenceInDays, isAfter, isBefore, parseISO, addDays } from 'date-fns';
+import { format, differenceInDays, isAfter, isBefore, parseISO, addDays, startOfDay, endOfDay } from 'date-fns';
 
 export function getLocalTodayISODate(): string {
   const today = new Date();
@@ -40,13 +40,14 @@ export function formatForDisplay(dateString: string): string {
 }
 
 export function isUpcoming(checkIn: string): boolean {
-  const date = parseISO(checkIn);
-  return isAfter(date, new Date());
+  const checkInDate = startOfDay(parseISO(checkIn));
+  const todayStart = startOfDay(new Date());
+  return isAfter(checkInDate, todayStart) || checkInDate.getTime() === todayStart.getTime();
 }
 
 export function isPast(checkOut: string): boolean {
-  const date = parseISO(checkOut);
-  return isBefore(date, new Date());
+  const checkOutDate = endOfDay(parseISO(checkOut));
+  return isBefore(checkOutDate, new Date());
 }
 
 // Generate ICS file content for calendar
