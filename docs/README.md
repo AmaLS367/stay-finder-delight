@@ -87,6 +87,7 @@ stay-finder-delight/
 │   │   │   ├── Layout.tsx
 │   │   │   ├── Navbar.tsx
 │   │   │   └── Footer.tsx
+│   │   ├── NavLink.tsx     # Custom navigation link
 │   │   └── 📁 ui/          # shadcn/ui components (50+ components)
 │   │
 │   ├── 📁 data/            # Static data
@@ -95,13 +96,16 @@ stay-finder-delight/
 │   ├── 📁 hooks/           # Custom React hooks
 │   │   ├── useWishlist.ts
 │   │   ├── useBookings.ts
-│   │   └── useLocalStorage.ts
+│   │   ├── useLocalStorage.ts
+│   │   └── use-mobile.tsx
 │   │
 │   ├── 📁 lib/             # Utilities and helpers
 │   │   ├── constants.ts    # App constants
 │   │   ├── formatters.ts   # Formatting utilities
 │   │   ├── dateUtils.ts    # Date helpers
-│   │   └── queryParams.ts  # URL query handling
+│   │   ├── queryParams.ts  # URL query handling
+│   │   ├── storage.ts      # Storage helpers
+│   │   └── utils.ts        # General utilities
 │   │
 │   ├── 📁 pages/           # Page components
 │   │   ├── Home.tsx

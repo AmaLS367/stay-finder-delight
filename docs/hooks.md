@@ -21,7 +21,7 @@ StayFinder provides custom React hooks for managing application state and busine
 | **useLocalStorage** | Persistent storage wrapper | `src/hooks/useLocalStorage.ts` |
 | **useWishlist** | Wishlist management | `src/hooks/useWishlist.ts` |
 | **useBookings** | Booking management | `src/hooks/useBookings.ts` |
-| **useMobile** | Mobile detection | `src/hooks/use-mobile.tsx` |
+| **useIsMobile** | Mobile detection | `src/hooks/use-mobile.tsx` |
 
 ---
 
@@ -322,14 +322,14 @@ function TripsPage() {
 
 ---
 
-## 📱 useMobile
+## 📱 useIsMobile
 
 Detects if the user is on a mobile device.
 
 ### API
 
 ```typescript
-function useMobile(): boolean
+function useIsMobile(): boolean
 ```
 
 ### Returns
@@ -339,10 +339,10 @@ function useMobile(): boolean
 ### Usage
 
 ```typescript
-import { useMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 function ResponsiveComponent() {
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   
   return (
     <div className={isMobile ? 'mobile-layout' : 'desktop-layout'}>
@@ -354,7 +354,7 @@ function ResponsiveComponent() {
 
 ### Implementation
 
-Uses window width breakpoint (typically 768px) to detect mobile devices.
+Uses window width breakpoint (768px) with `matchMedia` API to detect mobile devices. Returns `true` if window width is less than 768px.
 
 ---
 
@@ -369,7 +369,7 @@ graph TB
     
     F[Components] --> C
     F --> D
-    F --> G[useMobile]
+    F --> G[useIsMobile]
 ```
 
 ---

@@ -547,6 +547,39 @@ buildSearchUrl(params: SearchParams): string
 parseSearchParams(query: string): SearchParams
 ```
 
+### Storage Helpers
+
+Location: `src/lib/storage.ts`
+
+Helper functions for localStorage operations (used internally by hooks):
+
+```typescript
+// Generic helpers
+getStorageItem<T>(key: string, defaultValue: T): T
+setStorageItem<T>(key: string, value: T): void
+
+// Wishlist helpers
+getWishlist(): string[]
+addToWishlist(listingId: string): void
+removeFromWishlist(listingId: string): void
+isInWishlist(listingId: string): boolean
+
+// Booking helpers
+getBookings(): Booking[]
+saveBooking(booking: Booking): void
+updateBookingStatus(bookingId: string, status: Booking['status']): void
+
+// Recent searches
+getRecentSearches(): SearchParams[]
+addRecentSearch(search: SearchParams): void
+
+// Recently viewed
+getRecentlyViewed(): string[]
+addRecentlyViewed(listingId: string): void
+```
+
+> **Note:** These functions are used internally by hooks. Prefer using hooks (`useWishlist`, `useBookings`) instead of calling these directly.
+
 ---
 
 ## 🎨 Data Visualization

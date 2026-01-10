@@ -174,6 +174,42 @@ Footer component with:
 - Copyright information
 - Social links (if applicable)
 
+### NavLink
+
+**Location:** `src/components/NavLink.tsx`
+
+Custom navigation link component that wraps React Router's NavLink with additional styling support.
+
+**Props:**
+
+```typescript
+interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
+  className?: string;
+  activeClassName?: string;
+  pendingClassName?: string;
+}
+```
+
+**Features:**
+- Active state styling
+- Pending state styling
+- Compatible with React Router NavLink API
+
+**Usage:**
+
+```typescript
+import { NavLink } from '@/components/NavLink';
+
+<NavLink 
+  to="/trips"
+  className="link-base"
+  activeClassName="link-active"
+  pendingClassName="link-pending"
+>
+  Trips
+</NavLink>
+```
+
 ---
 
 ## 🎨 Common Components

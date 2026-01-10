@@ -45,6 +45,8 @@ stay-finder-delight/
 │   │   │   ├── Navbar.tsx       # Navigation bar
 │   │   │   └── Footer.tsx       # Footer component
 │   │   │
+│   │   ├── NavLink.tsx          # Custom navigation link
+│   │   │
 │   │   └── 📁 ui/               # shadcn/ui primitives (50+)
 │   │       ├── button.tsx
 │   │       ├── card.tsx
@@ -56,7 +58,8 @@ stay-finder-delight/
 │   ├── 📁 hooks/                # Custom React hooks
 │   │   ├── useWishlist.ts       # Wishlist management
 │   │   ├── useBookings.ts       # Booking management
-│   │   └── useLocalStorage.ts   # localStorage wrapper
+│   │   ├── useLocalStorage.ts   # localStorage wrapper
+│   │   └── use-mobile.tsx       # Mobile detection hook
 │   │
 │   ├── 📁 lib/                  # Utilities & helpers
 │   │   ├── constants.ts         # App constants
