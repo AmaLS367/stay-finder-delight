@@ -16,6 +16,7 @@ Welcome to the StayFinder documentation! This comprehensive guide covers everyth
 
 ### 📑 Table of Contents
 
+**English:**
 | Document | Description |
 |----------|-------------|
 | [🚀 Getting Started](./getting-started.md) | Quick start guide, installation, and first steps |
@@ -24,6 +25,16 @@ Welcome to the StayFinder documentation! This comprehensive guide covers everyth
 | [🎣 Hooks](./hooks.md) | Custom React hooks API and usage |
 | [📊 API & Data](./api-data.md) | Data structures, types, and data flow |
 | [🚢 Deployment](./deployment.md) | Deployment guide for GitHub Pages |
+
+**Русский:**
+| Документ | Описание |
+|----------|-------------|
+| [🚀 Быстрый старт](./ru/getting-started.md) | Руководство по быстрому старту, установке и первым шагам |
+| [🏗️ Архитектура](./ru/architecture.md) | Структура проекта, паттерны проектирования и архитектура системы |
+| [🧩 Компоненты](./ru/components.md) | Полная документация библиотеки компонентов |
+| [🎣 Hooks](./ru/hooks.md) | API и использование кастомных React hooks |
+| [📊 API и данные](./ru/api-data.md) | Структуры данных, типы и потоки данных |
+| [🚢 Развертывание](./ru/deployment.md) | Руководство по развертыванию на GitHub Pages |
 
 ---
 

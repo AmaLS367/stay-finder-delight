@@ -89,12 +89,21 @@ npm run preview
 
 Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 
+**English:**
 - 📖 [Getting Started](./docs/getting-started.md) - Quick start guide
 - 🏗️ [Architecture](./docs/architecture.md) - Project structure and design patterns
 - 🧩 [Components](./docs/components.md) - Component library documentation
 - 🎣 [Hooks](./docs/hooks.md) - Custom React hooks API
 - 📊 [API & Data](./docs/api-data.md) - Data structures and types
 - 🚀 [Deployment](./docs/deployment.md) - Deployment guide
+
+**Русский:**
+- 📖 [Быстрый старт](./docs/ru/getting-started.md) - Руководство по быстрому старту
+- 🏗️ [Архитектура](./docs/ru/architecture.md) - Структура проекта и паттерны
+- 🧩 [Компоненты](./docs/ru/components.md) - Документация библиотеки компонентов
+- 🎣 [Hooks](./docs/ru/hooks.md) - API кастомных React hooks
+- 📊 [API и данные](./docs/ru/api-data.md) - Структуры данных и типы
+- 🚀 [Развертывание](./docs/ru/deployment.md) - Руководство по развертыванию
 
 ---
 
