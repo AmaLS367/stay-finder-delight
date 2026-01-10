@@ -51,6 +51,21 @@ export function isPast(checkOut: string): boolean {
 }
 
 // Generate ICS file content for calendar
+function formatUtcDateTime(date: Date): string {
+  const year = String(date.getUTCFullYear());
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  const hours = String(date.getUTCHours()).padStart(2, '0');
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+  return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
+}
+
+function formatICSDateValue(dateString: string): string {
+  const date = parseISO(dateString);
+  return format(date, 'yyyyMMdd');
+}
+
 export function generateICSContent(
   title: string,
   location: string,
@@ -58,14 +73,9 @@ export function generateICSContent(
   checkOut: string,
   description: string
 ): string {
-  const formatICSDate = (dateStr: string): string => {
-    const date = parseISO(dateStr);
-    return format(date, "yyyyMMdd'T'120000");
-  };
-
   const now = new Date();
   const uid = `${now.getTime()}@stayfinder.app`;
-  const dtstamp = format(now, "yyyyMMdd'T'HHmmss'Z'");
+  const dtstamp = formatUtcDateTime(now);
 
   return `BEGIN:VCALENDAR
 VERSION:2.0
@@ -73,8 +83,8 @@ PRODID:-//StayFinder//Booking//EN
 BEGIN:VEVENT
 UID:${uid}
 DTSTAMP:${dtstamp}
-DTSTART;VALUE=DATE:${formatICSDate(checkIn).split('T')[0]}
-DTEND;VALUE=DATE:${formatICSDate(checkOut).split('T')[0]}
+DTSTART;VALUE=DATE:${formatICSDateValue(checkIn)}
+DTEND;VALUE=DATE:${formatICSDateValue(checkOut)}
 SUMMARY:${title}
 LOCATION:${location}
 DESCRIPTION:${description.replace(/\n/g, '\\n')}
