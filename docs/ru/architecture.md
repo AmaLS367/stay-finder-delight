@@ -203,10 +203,10 @@ StayFinder использует **HashRouter** для клиентского р�
 graph LR
     A[HashRouter] --> B[Routes]
     B --> C[/ - Главная]
-    B --> D[/#/search - Поиск]
-    B --> E[/#/listing/:id - Детали]
-    B --> F[/#/trips - Поездки]
-    B --> G[/#/wishlist - Избранное]
+    B --> D[/search - Поиск]
+    B --> E[/listing/:id - Детали]
+    B --> F[/trips - Поездки]
+    B --> G[/wishlist - Избранное]
     B --> H[* - 404]
 
     style C fill:#e1f5ff
