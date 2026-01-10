@@ -2,6 +2,14 @@
 
 import { format, differenceInDays, isAfter, isBefore, parseISO, addDays } from 'date-fns';
 
+export function getLocalTodayISODate(): string {
+  const today = new Date();
+  const year = String(today.getFullYear());
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export function calculateNights(checkIn: string, checkOut: string): number {
   const start = parseISO(checkIn);
   const end = parseISO(checkOut);

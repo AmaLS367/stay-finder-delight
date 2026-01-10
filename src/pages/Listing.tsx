@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Star, Heart, Share, Check, MapPin, Users, Bed, Bath, X, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { formatPrice, formatGuests, pluralize } from '@/lib/formatters';
-import { calculateNights, isValidDateRange, getDefaultCheckIn, getDefaultCheckOut, generateICSContent, downloadICSFile } from '@/lib/dateUtils';
+import { calculateNights, isValidDateRange, getDefaultCheckIn, getDefaultCheckOut, generateICSContent, downloadICSFile, getLocalTodayISODate } from '@/lib/dateUtils';
 import { useWishlist } from '@/hooks/useWishlist';
 import { useBookings } from '@/hooks/useBookings';
 import { addRecentlyViewed } from '@/lib/storage';
@@ -262,7 +262,7 @@ export default function Listing() {
                       type="date"
                       value={checkIn}
                       onChange={e => setCheckIn(e.target.value)}
-                      min={new Date().toISOString().split('T')[0]}
+                      min={getLocalTodayISODate()}
                       className="w-full text-sm bg-transparent"
                     />
                   </div>
@@ -272,7 +272,7 @@ export default function Listing() {
                       type="date"
                       value={checkOut}
                       onChange={e => setCheckOut(e.target.value)}
-                      min={checkIn}
+                      min={checkIn || getLocalTodayISODate()}
                       className="w-full text-sm bg-transparent"
                     />
                   </div>
