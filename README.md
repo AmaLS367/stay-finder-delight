@@ -46,34 +46,40 @@ StayFinder is a modern, production-ready booking UI demonstration application. I
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Requirements
 
-- **Node.js** 20+ 
-- **npm** 10+ (or compatible package manager)
+- Node.js (LTS recommended)
+- npm
 
-### Installation
+### Scripts
+
+Install dependencies:
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/stay-finder-delight.git
-cd stay-finder-delight
-
-# Install dependencies
 npm ci
+```
 
-# Start development server
+Run dev server:
+
+```bash
 npm run dev
 ```
 
-The app will be available at `http://localhost:8080`
-
-### Build for Production
+Lint:
 
 ```bash
-# Build the project
-npm run build
+npm run lint
+```
 
-# Preview production build
+Build:
+
+```bash
+npm run build
+```
+
+Preview production build locally:
+
+```bash
 npm run preview
 ```
 
@@ -140,43 +146,16 @@ For detailed structure, see [Architecture Documentation](./docs/architecture.md)
 
 ---
 
-## 🚢 Deployment
+## 🚢 GitHub Pages (Project Pages)
 
-### GitHub Pages
+This repository is deployed to GitHub Pages using GitHub Actions.
+The site URL format for Project Pages is:
 
-This project is configured for automatic deployment to GitHub Pages:
+`https://AmaLS367.github.io/<repo-name>/`
 
-1. **Push to main branch** - Any push triggers the deployment workflow
-2. **Configure GitHub Pages** - Go to Settings → Pages → Source: GitHub Actions
-3. **Wait for deployment** - Check the Actions tab for build status
-4. **Access your site** - Available at `https://<USERNAME>.github.io/<REPO_NAME>/`
+Routing works on GitHub Pages because the app uses hash-based routing (`HashRouter`).
 
 For detailed deployment instructions, see [Deployment Guide](./docs/deployment.md).
-
-### Important Notes
-
-- ⚙️ **Base Path** - Vite base is set to `"./"` for GitHub Pages compatibility
-- 🔗 **HashRouter** - Uses HashRouter to avoid 404 errors on refresh
-- 📦 **Build Output** - Production build outputs to `dist/` directory
-
----
-
-## 🧪 Development
-
-### Available Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-```
-
-### Code Style
-
-- **ESLint** - Configured with React and TypeScript rules
-- **TypeScript** - Strict mode enabled
-- **Prettier** - Recommended for code formatting
 
 ---
 
@@ -192,7 +171,8 @@ Under the following terms:
 - **Attribution** — You must give appropriate credit
 - **NonCommercial** — You may not use the material for commercial purposes
 
-Full license text: [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+See the full license text:
+[https://creativecommons.org/licenses/by-nc/4.0/legalcode](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
 ---
 
