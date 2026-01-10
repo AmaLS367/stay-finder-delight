@@ -58,6 +58,7 @@ git push -u origin main
 ### Step 3: Trigger Deployment
 
 The deployment workflow runs automatically on:
+
 - ✅ Push to `main` branch
 - ✅ Manual trigger via **Actions** tab → **Run workflow**
 
@@ -70,11 +71,13 @@ The deployment workflow runs automatically on:
 ### Step 5: Access Your Site
 
 Your site will be available at:
+
 ```
 https://<USERNAME>.github.io/<REPO_NAME>/
 ```
 
 For example:
+
 ```
 https://johndoe.github.io/stay-finder-delight/
 ```
@@ -121,12 +124,12 @@ jobs:
 #### 2. Deploy Job
 
 ```yaml
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment: github-pages
-    steps:
-      - Deploy to GitHub Pages
+deploy:
+  runs-on: ubuntu-latest
+  needs: build
+  environment: github-pages
+  steps:
+    - Deploy to GitHub Pages
 ```
 
 ### Complete Workflow
@@ -198,12 +201,13 @@ The project is configured for GitHub Pages with:
 ```typescript
 // vite.config.ts
 export default defineConfig({
-  base: "./",  // Important for GitHub Pages
+  base: "./", // Important for GitHub Pages
   // ...
 });
 ```
 
 **Why `base: "./"`?**
+
 - GitHub Pages serves from `/<REPO_NAME>/`
 - Relative paths ensure assets load correctly
 - Works with HashRouter routing
@@ -224,6 +228,7 @@ import { HashRouter } from 'react-router-dom';
 ```
 
 **Why HashRouter?**
+
 - Works with static hosting (GitHub Pages)
 - No server configuration needed
 - Avoids 404 errors on refresh
@@ -240,6 +245,7 @@ npm run build
 ```
 
 **Output:** `dist/` directory containing:
+
 - `index.html` - Main HTML file
 - `assets/` - JavaScript, CSS, images
 - `favicon.svg` - App icon
@@ -261,7 +267,7 @@ sequenceDiagram
     participant GitHub
     participant Actions
     participant Pages
-    
+
     Dev->>GitHub: git push origin main
     GitHub->>Actions: Trigger workflow
     Actions->>Actions: Checkout code
@@ -275,15 +281,15 @@ sequenceDiagram
 
 ### Timeline
 
-| Step | Duration | Description |
-|------|----------|-------------|
-| Checkout | ~10s | Clone repository |
-| Setup Node | ~5s | Install Node.js |
-| Install | ~30-60s | Install dependencies |
-| Build | ~30-60s | Build project |
-| Upload | ~10s | Upload artifact |
-| Deploy | ~30s | Deploy to Pages |
-| **Total** | **~2-3 min** | Complete deployment |
+| Step       | Duration     | Description          |
+| ---------- | ------------ | -------------------- |
+| Checkout   | ~10s         | Clone repository     |
+| Setup Node | ~5s          | Install Node.js      |
+| Install    | ~30-60s      | Install dependencies |
+| Build      | ~30-60s      | Build project        |
+| Upload     | ~10s         | Upload artifact      |
+| Deploy     | ~30s         | Deploy to Pages      |
+| **Total**  | **~2-3 min** | Complete deployment  |
 
 ---
 
@@ -294,6 +300,7 @@ sequenceDiagram
 **Problem:** Build step fails
 
 **Solutions:**
+
 1. Check Actions logs for errors
 2. Verify `package.json` dependencies
 3. Ensure Node.js version is 20+
@@ -304,6 +311,7 @@ sequenceDiagram
 **Problem:** Deploy step fails
 
 **Solutions:**
+
 1. Verify GitHub Pages is enabled
 2. Check repository permissions
 3. Ensure workflow has `pages: write` permission
@@ -314,6 +322,7 @@ sequenceDiagram
 **Problem:** Images/CSS/JS not loading
 
 **Solutions:**
+
 1. Verify `base: "./"` in `vite.config.ts`
 2. Check asset paths are relative
 3. Clear browser cache
@@ -324,6 +333,7 @@ sequenceDiagram
 **Problem:** Getting 404 when refreshing pages
 
 **Solutions:**
+
 1. Ensure HashRouter is used (not BrowserRouter)
 2. Verify routes use hash (`/#/search` not `/search`)
 3. Check that all routes are defined
@@ -333,6 +343,7 @@ sequenceDiagram
 **Problem:** Changes not appearing after deployment
 
 **Solutions:**
+
 1. Wait a few minutes (CDN cache)
 2. Hard refresh browser (Ctrl+Shift+R)
 3. Check Actions tab for successful deployment
@@ -395,6 +406,7 @@ Value: johndoe.github.io
 ### Deployment History
 
 GitHub Pages keeps a deployment history:
+
 - Each deployment is logged
 - Can view previous deployments
 - Can rollback if needed
@@ -409,14 +421,15 @@ The workflow needs:
 
 ```yaml
 permissions:
-  contents: read      # Read repository
-  pages: write        # Deploy to Pages
-  id-token: write     # OIDC authentication
+  contents: read # Read repository
+  pages: write # Deploy to Pages
+  id-token: write # OIDC authentication
 ```
 
 ### Repository Settings
 
 Ensure:
+
 - ✅ GitHub Pages is enabled
 - ✅ Source is set to "GitHub Actions"
 - ✅ Repository is public (or you have GitHub Pro)
@@ -542,4 +555,3 @@ graph LR
 [← Back to Documentation](./README.md)
 
 </div>
-

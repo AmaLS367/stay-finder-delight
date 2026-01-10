@@ -14,11 +14,11 @@
 
 Before you begin, ensure you have the following installed:
 
-| Requirement | Version | Purpose |
-|------------|---------|---------|
-| **Node.js** | 20+ | JavaScript runtime |
-| **npm** | 10+ | Package manager |
-| **Git** | Latest | Version control |
+| Requirement | Version | Purpose            |
+| ----------- | ------- | ------------------ |
+| **Node.js** | 20+     | JavaScript runtime |
+| **npm**     | 10+     | Package manager    |
+| **Git**     | Latest  | Version control    |
 
 ### ✅ Verify Installation
 
@@ -63,6 +63,7 @@ npm run dev
 ```
 
 The development server will start at:
+
 - **Local:** `http://localhost:8080`
 - **Network:** `http://[your-ip]:8080`
 
@@ -144,14 +145,14 @@ npm run lint         # Run ESLint
 
 ## 📁 Key Files to Know
 
-| File | Purpose |
-|------|---------|
-| `src/App.tsx` | Main app component, routing setup |
-| `src/main.tsx` | Application entry point |
-| `src/pages/Home.tsx` | Home page component |
-| `vite.config.ts` | Vite configuration |
-| `tailwind.config.ts` | Tailwind CSS configuration |
-| `tsconfig.json` | TypeScript configuration |
+| File                 | Purpose                           |
+| -------------------- | --------------------------------- |
+| `src/App.tsx`        | Main app component, routing setup |
+| `src/main.tsx`       | Application entry point           |
+| `src/pages/Home.tsx` | Home page component               |
+| `vite.config.ts`     | Vite configuration                |
+| `tailwind.config.ts` | Tailwind CSS configuration        |
+| `tsconfig.json`      | TypeScript configuration          |
 
 ---
 
@@ -187,7 +188,7 @@ const MyPage = lazy(() => import('./pages/MyPage'));
 ### 3. Using Custom Hooks
 
 ```typescript
-import { useWishlist } from '@/hooks/useWishlist';
+import { useWishlist } from "@/hooks/useWishlist";
 
 function MyComponent() {
   const { wishlist, toggleWishlist } = useWishlist();
@@ -202,6 +203,7 @@ function MyComponent() {
 ### Hot Module Replacement (HMR)
 
 Vite provides instant HMR:
+
 - **Component changes** - Update instantly without page reload
 - **Style changes** - Apply immediately
 - **State preservation** - React state is maintained during updates
@@ -209,6 +211,7 @@ Vite provides instant HMR:
 ### TypeScript
 
 The project uses strict TypeScript:
+
 - All files must have proper types
 - Use `@/` alias for imports from `src/`
 - Check types with: `npx tsc --noEmit`
@@ -307,4 +310,3 @@ npx tsc --noEmit
 **Ready to build?** Check out the [Architecture Guide](./architecture.md) →
 
 </div>
-

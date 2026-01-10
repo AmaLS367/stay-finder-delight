@@ -21,7 +21,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "heating", "washer"],
     "host": { "name": "Marie", "avatar": "https://i.pravatar.cc/150?u=marie", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Check-in after 3 PM"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Check-in after 3 PM"]
+    },
     "fees": { "cleaning": 45, "service": 25, "discountPercent": 10 },
     "areaHighlights": [
       { "name": "Eiffel Tower", "distance": "0.5 km", "type": "attraction" },
@@ -29,14 +32,70 @@
       { "name": "Metro Bir-Hakeim", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "John", "authorAvatar": "https://i.pravatar.cc/150?u=john", "rating": 5, "date": "2025-12-15", "text": "Amazing location and beautiful apartment. Marie was very helpful!" },
-      { "id": "r2", "authorName": "Sarah", "authorAvatar": "https://i.pravatar.cc/150?u=sarah", "rating": 5, "date": "2025-11-20", "text": "Perfect stay in Paris. The view of the Eiffel Tower is stunning." },
-      { "id": "r3", "authorName": "Michael", "authorAvatar": "https://i.pravatar.cc/150?u=michael", "rating": 4, "date": "2025-10-10", "text": "Great apartment, well equipped kitchen. Slightly noisy at night." },
-      { "id": "r4", "authorName": "Emma", "authorAvatar": "https://i.pravatar.cc/150?u=emma", "rating": 5, "date": "2025-09-05", "text": "Couldn't have asked for a better place to stay in Paris!" },
-      { "id": "r5", "authorName": "David", "authorAvatar": "https://i.pravatar.cc/150?u=david", "rating": 5, "date": "2025-08-22", "text": "Marie is an excellent host. Apartment was spotless." },
-      { "id": "r6", "authorName": "Lisa", "authorAvatar": "https://i.pravatar.cc/150?u=lisa", "rating": 4, "date": "2025-07-18", "text": "Lovely place, great location. Would definitely come back." },
-      { "id": "r7", "authorName": "James", "authorAvatar": "https://i.pravatar.cc/150?u=james", "rating": 5, "date": "2025-06-30", "text": "Exceptional experience! Highly recommend." },
-      { "id": "r8", "authorName": "Anna", "authorAvatar": "https://i.pravatar.cc/150?u=anna", "rating": 5, "date": "2025-05-12", "text": "Everything was perfect. The apartment has all you need." }
+      {
+        "id": "r1",
+        "authorName": "John",
+        "authorAvatar": "https://i.pravatar.cc/150?u=john",
+        "rating": 5,
+        "date": "2025-12-15",
+        "text": "Amazing location and beautiful apartment. Marie was very helpful!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Sarah",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sarah",
+        "rating": 5,
+        "date": "2025-11-20",
+        "text": "Perfect stay in Paris. The view of the Eiffel Tower is stunning."
+      },
+      {
+        "id": "r3",
+        "authorName": "Michael",
+        "authorAvatar": "https://i.pravatar.cc/150?u=michael",
+        "rating": 4,
+        "date": "2025-10-10",
+        "text": "Great apartment, well equipped kitchen. Slightly noisy at night."
+      },
+      {
+        "id": "r4",
+        "authorName": "Emma",
+        "authorAvatar": "https://i.pravatar.cc/150?u=emma",
+        "rating": 5,
+        "date": "2025-09-05",
+        "text": "Couldn't have asked for a better place to stay in Paris!"
+      },
+      {
+        "id": "r5",
+        "authorName": "David",
+        "authorAvatar": "https://i.pravatar.cc/150?u=david",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "Marie is an excellent host. Apartment was spotless."
+      },
+      {
+        "id": "r6",
+        "authorName": "Lisa",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lisa",
+        "rating": 4,
+        "date": "2025-07-18",
+        "text": "Lovely place, great location. Would definitely come back."
+      },
+      {
+        "id": "r7",
+        "authorName": "James",
+        "authorAvatar": "https://i.pravatar.cc/150?u=james",
+        "rating": 5,
+        "date": "2025-06-30",
+        "text": "Exceptional experience! Highly recommend."
+      },
+      {
+        "id": "r8",
+        "authorName": "Anna",
+        "authorAvatar": "https://i.pravatar.cc/150?u=anna",
+        "rating": 5,
+        "date": "2025-05-12",
+        "text": "Everything was perfect. The apartment has all you need."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -63,8 +122,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer"],
-    "host": { "name": "Pierre", "avatar": "https://i.pravatar.cc/150?u=pierre", "isSuperhost": false },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["No smoking", "Quiet hours after 10 PM"] },
+    "host": {
+      "name": "Pierre",
+      "avatar": "https://i.pravatar.cc/150?u=pierre",
+      "isSuperhost": false
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["No smoking", "Quiet hours after 10 PM"]
+    },
     "fees": { "cleaning": 30, "service": 18, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Place des Vosges", "distance": "0.3 km", "type": "attraction" },
@@ -72,14 +138,70 @@
       { "name": "Metro Saint-Paul", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Sophie", "authorAvatar": "https://i.pravatar.cc/150?u=sophie", "rating": 5, "date": "2025-12-01", "text": "Perfect location for exploring Paris on foot!" },
-      { "id": "r2", "authorName": "Tom", "authorAvatar": "https://i.pravatar.cc/150?u=tom", "rating": 4, "date": "2025-11-15", "text": "Cozy and clean. Great cafes nearby." },
-      { "id": "r3", "authorName": "Julia", "authorAvatar": "https://i.pravatar.cc/150?u=julia", "rating": 5, "date": "2025-10-28", "text": "Loved staying here. Pierre was very responsive." },
-      { "id": "r4", "authorName": "Mark", "authorAvatar": "https://i.pravatar.cc/150?u=mark", "rating": 5, "date": "2025-09-20", "text": "Great value for the location. Would book again." },
-      { "id": "r5", "authorName": "Claire", "authorAvatar": "https://i.pravatar.cc/150?u=claire", "rating": 4, "date": "2025-08-10", "text": "Nice studio, a bit small but perfect for a couple." },
-      { "id": "r6", "authorName": "Alex", "authorAvatar": "https://i.pravatar.cc/150?u=alex", "rating": 5, "date": "2025-07-05", "text": "Excellent location in the heart of Le Marais." },
-      { "id": "r7", "authorName": "Rachel", "authorAvatar": "https://i.pravatar.cc/150?u=rachel", "rating": 5, "date": "2025-06-22", "text": "Charming studio with everything you need." },
-      { "id": "r8", "authorName": "Chris", "authorAvatar": "https://i.pravatar.cc/150?u=chris", "rating": 4, "date": "2025-05-18", "text": "Good experience overall. Recommended!" }
+      {
+        "id": "r1",
+        "authorName": "Sophie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sophie",
+        "rating": 5,
+        "date": "2025-12-01",
+        "text": "Perfect location for exploring Paris on foot!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Tom",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tom",
+        "rating": 4,
+        "date": "2025-11-15",
+        "text": "Cozy and clean. Great cafes nearby."
+      },
+      {
+        "id": "r3",
+        "authorName": "Julia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=julia",
+        "rating": 5,
+        "date": "2025-10-28",
+        "text": "Loved staying here. Pierre was very responsive."
+      },
+      {
+        "id": "r4",
+        "authorName": "Mark",
+        "authorAvatar": "https://i.pravatar.cc/150?u=mark",
+        "rating": 5,
+        "date": "2025-09-20",
+        "text": "Great value for the location. Would book again."
+      },
+      {
+        "id": "r5",
+        "authorName": "Claire",
+        "authorAvatar": "https://i.pravatar.cc/150?u=claire",
+        "rating": 4,
+        "date": "2025-08-10",
+        "text": "Nice studio, a bit small but perfect for a couple."
+      },
+      {
+        "id": "r6",
+        "authorName": "Alex",
+        "authorAvatar": "https://i.pravatar.cc/150?u=alex",
+        "rating": 5,
+        "date": "2025-07-05",
+        "text": "Excellent location in the heart of Le Marais."
+      },
+      {
+        "id": "r7",
+        "authorName": "Rachel",
+        "authorAvatar": "https://i.pravatar.cc/150?u=rachel",
+        "rating": 5,
+        "date": "2025-06-22",
+        "text": "Charming studio with everything you need."
+      },
+      {
+        "id": "r8",
+        "authorName": "Chris",
+        "authorAvatar": "https://i.pravatar.cc/150?u=chris",
+        "rating": 4,
+        "date": "2025-05-18",
+        "text": "Good experience overall. Recommended!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -106,8 +228,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "workspace", "tv", "heating", "washer"],
-    "host": { "name": "James", "avatar": "https://i.pravatar.cc/150?u=james_uk", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Self check-in"] },
+    "host": {
+      "name": "James",
+      "avatar": "https://i.pravatar.cc/150?u=james_uk",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Self check-in"]
+    },
     "fees": { "cleaning": 40, "service": 22, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Brick Lane", "distance": "0.4 km", "type": "shopping" },
@@ -115,14 +244,70 @@
       { "name": "Liverpool Street Station", "distance": "0.8 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Mike", "authorAvatar": "https://i.pravatar.cc/150?u=mike_uk", "rating": 5, "date": "2025-12-10", "text": "Fantastic loft! Great for remote work." },
-      { "id": "r2", "authorName": "Hannah", "authorAvatar": "https://i.pravatar.cc/150?u=hannah", "rating": 5, "date": "2025-11-25", "text": "Stylish space in a great location." },
-      { "id": "r3", "authorName": "Oliver", "authorAvatar": "https://i.pravatar.cc/150?u=oliver", "rating": 4, "date": "2025-10-15", "text": "Modern and clean. Shoreditch is so vibrant!" },
-      { "id": "r4", "authorName": "Emily", "authorAvatar": "https://i.pravatar.cc/150?u=emily_uk", "rating": 5, "date": "2025-09-08", "text": "James was an excellent host. Highly recommend!" },
-      { "id": "r5", "authorName": "Ben", "authorAvatar": "https://i.pravatar.cc/150?u=ben", "rating": 5, "date": "2025-08-20", "text": "Perfect base for exploring East London." },
-      { "id": "r6", "authorName": "Kate", "authorAvatar": "https://i.pravatar.cc/150?u=kate", "rating": 4, "date": "2025-07-12", "text": "Loved the industrial design. Great coffee shops nearby." },
-      { "id": "r7", "authorName": "Ryan", "authorAvatar": "https://i.pravatar.cc/150?u=ryan", "rating": 5, "date": "2025-06-28", "text": "One of the best Airbnbs I've stayed in." },
-      { "id": "r8", "authorName": "Lucy", "authorAvatar": "https://i.pravatar.cc/150?u=lucy", "rating": 5, "date": "2025-05-15", "text": "Exactly as pictured. Would stay again!" }
+      {
+        "id": "r1",
+        "authorName": "Mike",
+        "authorAvatar": "https://i.pravatar.cc/150?u=mike_uk",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Fantastic loft! Great for remote work."
+      },
+      {
+        "id": "r2",
+        "authorName": "Hannah",
+        "authorAvatar": "https://i.pravatar.cc/150?u=hannah",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Stylish space in a great location."
+      },
+      {
+        "id": "r3",
+        "authorName": "Oliver",
+        "authorAvatar": "https://i.pravatar.cc/150?u=oliver",
+        "rating": 4,
+        "date": "2025-10-15",
+        "text": "Modern and clean. Shoreditch is so vibrant!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Emily",
+        "authorAvatar": "https://i.pravatar.cc/150?u=emily_uk",
+        "rating": 5,
+        "date": "2025-09-08",
+        "text": "James was an excellent host. Highly recommend!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Ben",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ben",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "Perfect base for exploring East London."
+      },
+      {
+        "id": "r6",
+        "authorName": "Kate",
+        "authorAvatar": "https://i.pravatar.cc/150?u=kate",
+        "rating": 4,
+        "date": "2025-07-12",
+        "text": "Loved the industrial design. Great coffee shops nearby."
+      },
+      {
+        "id": "r7",
+        "authorName": "Ryan",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ryan",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "One of the best Airbnbs I've stayed in."
+      },
+      {
+        "id": "r8",
+        "authorName": "Lucy",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lucy",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Exactly as pictured. Would stay again!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -149,8 +334,15 @@
     "beds": 4,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "parking", "tv", "heating", "washer", "petFriendly"],
-    "host": { "name": "Charlotte", "avatar": "https://i.pravatar.cc/150?u=charlotte", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 7 days before", "houseRules": ["Pets allowed", "No smoking indoors", "Respect neighbors"] },
+    "host": {
+      "name": "Charlotte",
+      "avatar": "https://i.pravatar.cc/150?u=charlotte",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 7 days before",
+      "houseRules": ["Pets allowed", "No smoking indoors", "Respect neighbors"]
+    },
     "fees": { "cleaning": 75, "service": 40, "discountPercent": 15 },
     "areaHighlights": [
       { "name": "Portobello Road Market", "distance": "0.2 km", "type": "shopping" },
@@ -158,14 +350,70 @@
       { "name": "Notting Hill Gate Station", "distance": "0.5 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Grace", "authorAvatar": "https://i.pravatar.cc/150?u=grace", "rating": 5, "date": "2025-12-05", "text": "Beautiful home in the most picturesque neighborhood!" },
-      { "id": "r2", "authorName": "William", "authorAvatar": "https://i.pravatar.cc/150?u=william", "rating": 5, "date": "2025-11-18", "text": "Perfect for families. Charlotte thought of everything." },
-      { "id": "r3", "authorName": "Sophia", "authorAvatar": "https://i.pravatar.cc/150?u=sophia", "rating": 5, "date": "2025-10-30", "text": "Loved waking up to the colorful houses!" },
-      { "id": "r4", "authorName": "Henry", "authorAvatar": "https://i.pravatar.cc/150?u=henry", "rating": 4, "date": "2025-09-22", "text": "Great house, very spacious. Portobello Market is amazing." },
-      { "id": "r5", "authorName": "Isabella", "authorAvatar": "https://i.pravatar.cc/150?u=isabella", "rating": 5, "date": "2025-08-15", "text": "A dream come true! Just like in the movies." },
-      { "id": "r6", "authorName": "George", "authorAvatar": "https://i.pravatar.cc/150?u=george", "rating": 5, "date": "2025-07-28", "text": "Exceptional property. Worth every penny." },
-      { "id": "r7", "authorName": "Amelia", "authorAvatar": "https://i.pravatar.cc/150?u=amelia", "rating": 5, "date": "2025-06-10", "text": "We didn't want to leave! Such a special place." },
-      { "id": "r8", "authorName": "Oscar", "authorAvatar": "https://i.pravatar.cc/150?u=oscar", "rating": 5, "date": "2025-05-05", "text": "Best Airbnb experience in London!" }
+      {
+        "id": "r1",
+        "authorName": "Grace",
+        "authorAvatar": "https://i.pravatar.cc/150?u=grace",
+        "rating": 5,
+        "date": "2025-12-05",
+        "text": "Beautiful home in the most picturesque neighborhood!"
+      },
+      {
+        "id": "r2",
+        "authorName": "William",
+        "authorAvatar": "https://i.pravatar.cc/150?u=william",
+        "rating": 5,
+        "date": "2025-11-18",
+        "text": "Perfect for families. Charlotte thought of everything."
+      },
+      {
+        "id": "r3",
+        "authorName": "Sophia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sophia",
+        "rating": 5,
+        "date": "2025-10-30",
+        "text": "Loved waking up to the colorful houses!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Henry",
+        "authorAvatar": "https://i.pravatar.cc/150?u=henry",
+        "rating": 4,
+        "date": "2025-09-22",
+        "text": "Great house, very spacious. Portobello Market is amazing."
+      },
+      {
+        "id": "r5",
+        "authorName": "Isabella",
+        "authorAvatar": "https://i.pravatar.cc/150?u=isabella",
+        "rating": 5,
+        "date": "2025-08-15",
+        "text": "A dream come true! Just like in the movies."
+      },
+      {
+        "id": "r6",
+        "authorName": "George",
+        "authorAvatar": "https://i.pravatar.cc/150?u=george",
+        "rating": 5,
+        "date": "2025-07-28",
+        "text": "Exceptional property. Worth every penny."
+      },
+      {
+        "id": "r7",
+        "authorName": "Amelia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=amelia",
+        "rating": 5,
+        "date": "2025-06-10",
+        "text": "We didn't want to leave! Such a special place."
+      },
+      {
+        "id": "r8",
+        "authorName": "Oscar",
+        "authorAvatar": "https://i.pravatar.cc/150?u=oscar",
+        "rating": 5,
+        "date": "2025-05-05",
+        "text": "Best Airbnb experience in London!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -193,7 +441,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer", "workspace"],
     "host": { "name": "Jan", "avatar": "https://i.pravatar.cc/150?u=jan", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Be mindful of neighbors"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Be mindful of neighbors"]
+    },
     "fees": { "cleaning": 50, "service": 25, "discountPercent": 8 },
     "areaHighlights": [
       { "name": "Anne Frank House", "distance": "0.4 km", "type": "attraction" },
@@ -201,14 +452,70 @@
       { "name": "Central Station", "distance": "1.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Lisa", "authorAvatar": "https://i.pravatar.cc/150?u=lisa_nl", "rating": 5, "date": "2025-12-08", "text": "The canal view is even better in person!" },
-      { "id": "r2", "authorName": "Thomas", "authorAvatar": "https://i.pravatar.cc/150?u=thomas", "rating": 5, "date": "2025-11-22", "text": "Perfect Amsterdam experience. Jan is a great host." },
-      { "id": "r3", "authorName": "Nina", "authorAvatar": "https://i.pravatar.cc/150?u=nina", "rating": 4, "date": "2025-10-15", "text": "Lovely apartment. Stairs are steep but that's typical for Amsterdam!" },
-      { "id": "r4", "authorName": "Peter", "authorAvatar": "https://i.pravatar.cc/150?u=peter", "rating": 5, "date": "2025-09-28", "text": "Best location in Amsterdam. Highly recommend!" },
-      { "id": "r5", "authorName": "Eva", "authorAvatar": "https://i.pravatar.cc/150?u=eva", "rating": 5, "date": "2025-08-19", "text": "Magical place! We loved every moment." },
-      { "id": "r6", "authorName": "Max", "authorAvatar": "https://i.pravatar.cc/150?u=max", "rating": 5, "date": "2025-07-10", "text": "Exactly what you'd expect from a classic Amsterdam apartment." },
-      { "id": "r7", "authorName": "Laura", "authorAvatar": "https://i.pravatar.cc/150?u=laura_nl", "rating": 4, "date": "2025-06-05", "text": "Great stay! The neighborhood is beautiful." },
-      { "id": "r8", "authorName": "David", "authorAvatar": "https://i.pravatar.cc/150?u=david_nl", "rating": 5, "date": "2025-05-20", "text": "Can't wait to come back!" }
+      {
+        "id": "r1",
+        "authorName": "Lisa",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lisa_nl",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "The canal view is even better in person!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Thomas",
+        "authorAvatar": "https://i.pravatar.cc/150?u=thomas",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Perfect Amsterdam experience. Jan is a great host."
+      },
+      {
+        "id": "r3",
+        "authorName": "Nina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=nina",
+        "rating": 4,
+        "date": "2025-10-15",
+        "text": "Lovely apartment. Stairs are steep but that's typical for Amsterdam!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Peter",
+        "authorAvatar": "https://i.pravatar.cc/150?u=peter",
+        "rating": 5,
+        "date": "2025-09-28",
+        "text": "Best location in Amsterdam. Highly recommend!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Eva",
+        "authorAvatar": "https://i.pravatar.cc/150?u=eva",
+        "rating": 5,
+        "date": "2025-08-19",
+        "text": "Magical place! We loved every moment."
+      },
+      {
+        "id": "r6",
+        "authorName": "Max",
+        "authorAvatar": "https://i.pravatar.cc/150?u=max",
+        "rating": 5,
+        "date": "2025-07-10",
+        "text": "Exactly what you'd expect from a classic Amsterdam apartment."
+      },
+      {
+        "id": "r7",
+        "authorName": "Laura",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laura_nl",
+        "rating": 4,
+        "date": "2025-06-05",
+        "text": "Great stay! The neighborhood is beautiful."
+      },
+      {
+        "id": "r8",
+        "authorName": "David",
+        "authorAvatar": "https://i.pravatar.cc/150?u=david_nl",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Can't wait to come back!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -235,8 +542,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv"],
-    "host": { "name": "Marieke", "avatar": "https://i.pravatar.cc/150?u=marieke", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["No parties", "Watch your step on deck", "Enjoy the water!"] },
+    "host": {
+      "name": "Marieke",
+      "avatar": "https://i.pravatar.cc/150?u=marieke",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["No parties", "Watch your step on deck", "Enjoy the water!"]
+    },
     "fees": { "cleaning": 35, "service": 28, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Hermitage Amsterdam", "distance": "0.5 km", "type": "attraction" },
@@ -244,14 +558,70 @@
       { "name": "Weesperplein Station", "distance": "0.6 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Claire", "authorAvatar": "https://i.pravatar.cc/150?u=claire_nl", "rating": 5, "date": "2025-12-12", "text": "Absolutely unique experience! The gentle rocking is so relaxing." },
-      { "id": "r2", "authorName": "Rob", "authorAvatar": "https://i.pravatar.cc/150?u=rob", "rating": 5, "date": "2025-11-28", "text": "Best part of our Amsterdam trip!" },
-      { "id": "r3", "authorName": "Marie", "authorAvatar": "https://i.pravatar.cc/150?u=marie_nl", "rating": 5, "date": "2025-10-20", "text": "Marieke made us feel so welcome. Loved the houseboat life!" },
-      { "id": "r4", "authorName": "Stefan", "authorAvatar": "https://i.pravatar.cc/150?u=stefan", "rating": 5, "date": "2025-09-15", "text": "A must-do in Amsterdam! So cozy and romantic." },
-      { "id": "r5", "authorName": "Anna", "authorAvatar": "https://i.pravatar.cc/150?u=anna_nl", "rating": 5, "date": "2025-08-08", "text": "Unique and beautiful. Photos don't do it justice!" },
-      { "id": "r6", "authorName": "Frank", "authorAvatar": "https://i.pravatar.cc/150?u=frank", "rating": 4, "date": "2025-07-25", "text": "Great experience, compact but has everything you need." },
-      { "id": "r7", "authorName": "Emma", "authorAvatar": "https://i.pravatar.cc/150?u=emma_nl", "rating": 5, "date": "2025-06-18", "text": "Waking up on the water was magical!" },
-      { "id": "r8", "authorName": "Lucas", "authorAvatar": "https://i.pravatar.cc/150?u=lucas", "rating": 5, "date": "2025-05-30", "text": "Already planning our next stay!" }
+      {
+        "id": "r1",
+        "authorName": "Claire",
+        "authorAvatar": "https://i.pravatar.cc/150?u=claire_nl",
+        "rating": 5,
+        "date": "2025-12-12",
+        "text": "Absolutely unique experience! The gentle rocking is so relaxing."
+      },
+      {
+        "id": "r2",
+        "authorName": "Rob",
+        "authorAvatar": "https://i.pravatar.cc/150?u=rob",
+        "rating": 5,
+        "date": "2025-11-28",
+        "text": "Best part of our Amsterdam trip!"
+      },
+      {
+        "id": "r3",
+        "authorName": "Marie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marie_nl",
+        "rating": 5,
+        "date": "2025-10-20",
+        "text": "Marieke made us feel so welcome. Loved the houseboat life!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Stefan",
+        "authorAvatar": "https://i.pravatar.cc/150?u=stefan",
+        "rating": 5,
+        "date": "2025-09-15",
+        "text": "A must-do in Amsterdam! So cozy and romantic."
+      },
+      {
+        "id": "r5",
+        "authorName": "Anna",
+        "authorAvatar": "https://i.pravatar.cc/150?u=anna_nl",
+        "rating": 5,
+        "date": "2025-08-08",
+        "text": "Unique and beautiful. Photos don't do it justice!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Frank",
+        "authorAvatar": "https://i.pravatar.cc/150?u=frank",
+        "rating": 4,
+        "date": "2025-07-25",
+        "text": "Great experience, compact but has everything you need."
+      },
+      {
+        "id": "r7",
+        "authorName": "Emma",
+        "authorAvatar": "https://i.pravatar.cc/150?u=emma_nl",
+        "rating": 5,
+        "date": "2025-06-18",
+        "text": "Waking up on the water was magical!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Lucas",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lucas",
+        "rating": 5,
+        "date": "2025-05-30",
+        "text": "Already planning our next stay!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": false,
@@ -278,8 +648,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer"],
-    "host": { "name": "Carlos", "avatar": "https://i.pravatar.cc/150?u=carlos", "isSuperhost": false },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Respect quiet hours"] },
+    "host": {
+      "name": "Carlos",
+      "avatar": "https://i.pravatar.cc/150?u=carlos",
+      "isSuperhost": false
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Respect quiet hours"]
+    },
     "fees": { "cleaning": 35, "service": 20, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Barcelona Cathedral", "distance": "0.2 km", "type": "attraction" },
@@ -287,14 +664,70 @@
       { "name": "Jaume I Metro", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Maria", "authorAvatar": "https://i.pravatar.cc/150?u=maria", "rating": 5, "date": "2025-12-06", "text": "Perfect location for exploring Barcelona!" },
-      { "id": "r2", "authorName": "Antonio", "authorAvatar": "https://i.pravatar.cc/150?u=antonio", "rating": 4, "date": "2025-11-20", "text": "Great apartment, very central. Can hear some street noise." },
-      { "id": "r3", "authorName": "Julia", "authorAvatar": "https://i.pravatar.cc/150?u=julia_es", "rating": 5, "date": "2025-10-12", "text": "Carlos was super helpful with local recommendations!" },
-      { "id": "r4", "authorName": "Pedro", "authorAvatar": "https://i.pravatar.cc/150?u=pedro", "rating": 4, "date": "2025-09-25", "text": "Good value for the Gothic Quarter location." },
-      { "id": "r5", "authorName": "Sofia", "authorAvatar": "https://i.pravatar.cc/150?u=sofia", "rating": 5, "date": "2025-08-18", "text": "Loved the balcony and the natural light!" },
-      { "id": "r6", "authorName": "Miguel", "authorAvatar": "https://i.pravatar.cc/150?u=miguel", "rating": 5, "date": "2025-07-30", "text": "Perfect for our Barcelona getaway." },
-      { "id": "r7", "authorName": "Elena", "authorAvatar": "https://i.pravatar.cc/150?u=elena", "rating": 4, "date": "2025-06-22", "text": "Nice apartment, we had a great stay." },
-      { "id": "r8", "authorName": "Diego", "authorAvatar": "https://i.pravatar.cc/150?u=diego", "rating": 5, "date": "2025-05-15", "text": "Would definitely book again!" }
+      {
+        "id": "r1",
+        "authorName": "Maria",
+        "authorAvatar": "https://i.pravatar.cc/150?u=maria",
+        "rating": 5,
+        "date": "2025-12-06",
+        "text": "Perfect location for exploring Barcelona!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Antonio",
+        "authorAvatar": "https://i.pravatar.cc/150?u=antonio",
+        "rating": 4,
+        "date": "2025-11-20",
+        "text": "Great apartment, very central. Can hear some street noise."
+      },
+      {
+        "id": "r3",
+        "authorName": "Julia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=julia_es",
+        "rating": 5,
+        "date": "2025-10-12",
+        "text": "Carlos was super helpful with local recommendations!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Pedro",
+        "authorAvatar": "https://i.pravatar.cc/150?u=pedro",
+        "rating": 4,
+        "date": "2025-09-25",
+        "text": "Good value for the Gothic Quarter location."
+      },
+      {
+        "id": "r5",
+        "authorName": "Sofia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sofia",
+        "rating": 5,
+        "date": "2025-08-18",
+        "text": "Loved the balcony and the natural light!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Miguel",
+        "authorAvatar": "https://i.pravatar.cc/150?u=miguel",
+        "rating": 5,
+        "date": "2025-07-30",
+        "text": "Perfect for our Barcelona getaway."
+      },
+      {
+        "id": "r7",
+        "authorName": "Elena",
+        "authorAvatar": "https://i.pravatar.cc/150?u=elena",
+        "rating": 4,
+        "date": "2025-06-22",
+        "text": "Nice apartment, we had a great stay."
+      },
+      {
+        "id": "r8",
+        "authorName": "Diego",
+        "authorAvatar": "https://i.pravatar.cc/150?u=diego",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Would definitely book again!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -321,8 +754,15 @@
     "beds": 3,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer", "pool"],
-    "host": { "name": "Isabella", "avatar": "https://i.pravatar.cc/150?u=isabella_es", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 7 days before", "houseRules": ["No smoking indoors", "Pool hours 8am-10pm", "No loud music"] },
+    "host": {
+      "name": "Isabella",
+      "avatar": "https://i.pravatar.cc/150?u=isabella_es",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 7 days before",
+      "houseRules": ["No smoking indoors", "Pool hours 8am-10pm", "No loud music"]
+    },
     "fees": { "cleaning": 60, "service": 32, "discountPercent": 12 },
     "areaHighlights": [
       { "name": "Barceloneta Beach", "distance": "0.1 km", "type": "nature" },
@@ -330,14 +770,70 @@
       { "name": "Barceloneta Metro", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Roberto", "authorAvatar": "https://i.pravatar.cc/150?u=roberto", "rating": 5, "date": "2025-12-10", "text": "Best beach house ever! The pool was amazing." },
-      { "id": "r2", "authorName": "Ana", "authorAvatar": "https://i.pravatar.cc/150?u=ana", "rating": 5, "date": "2025-11-25", "text": "Isabella is the best host! Perfect for families." },
-      { "id": "r3", "authorName": "Marco", "authorAvatar": "https://i.pravatar.cc/150?u=marco", "rating": 4, "date": "2025-10-18", "text": "Great location, just steps from the beach." },
-      { "id": "r4", "authorName": "Carmen", "authorAvatar": "https://i.pravatar.cc/150?u=carmen", "rating": 5, "date": "2025-09-10", "text": "We didn't want to leave! Amazing property." },
-      { "id": "r5", "authorName": "Luis", "authorAvatar": "https://i.pravatar.cc/150?u=luis", "rating": 5, "date": "2025-08-22", "text": "Perfect summer vacation spot!" },
-      { "id": "r6", "authorName": "Lucia", "authorAvatar": "https://i.pravatar.cc/150?u=lucia", "rating": 5, "date": "2025-07-14", "text": "The rooftop terrace has incredible views!" },
-      { "id": "r7", "authorName": "Javier", "authorAvatar": "https://i.pravatar.cc/150?u=javier", "rating": 4, "date": "2025-06-28", "text": "Great house, well equipped. Highly recommend." },
-      { "id": "r8", "authorName": "Paula", "authorAvatar": "https://i.pravatar.cc/150?u=paula", "rating": 5, "date": "2025-05-20", "text": "Dream vacation home!" }
+      {
+        "id": "r1",
+        "authorName": "Roberto",
+        "authorAvatar": "https://i.pravatar.cc/150?u=roberto",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Best beach house ever! The pool was amazing."
+      },
+      {
+        "id": "r2",
+        "authorName": "Ana",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ana",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Isabella is the best host! Perfect for families."
+      },
+      {
+        "id": "r3",
+        "authorName": "Marco",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marco",
+        "rating": 4,
+        "date": "2025-10-18",
+        "text": "Great location, just steps from the beach."
+      },
+      {
+        "id": "r4",
+        "authorName": "Carmen",
+        "authorAvatar": "https://i.pravatar.cc/150?u=carmen",
+        "rating": 5,
+        "date": "2025-09-10",
+        "text": "We didn't want to leave! Amazing property."
+      },
+      {
+        "id": "r5",
+        "authorName": "Luis",
+        "authorAvatar": "https://i.pravatar.cc/150?u=luis",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "Perfect summer vacation spot!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Lucia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lucia",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "The rooftop terrace has incredible views!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Javier",
+        "authorAvatar": "https://i.pravatar.cc/150?u=javier",
+        "rating": 4,
+        "date": "2025-06-28",
+        "text": "Great house, well equipped. Highly recommend."
+      },
+      {
+        "id": "r8",
+        "authorName": "Paula",
+        "authorAvatar": "https://i.pravatar.cc/150?u=paula",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Dream vacation home!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -364,8 +860,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "heating"],
-    "host": { "name": "Giuseppe", "avatar": "https://i.pravatar.cc/150?u=giuseppe", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Quiet after 11 PM"] },
+    "host": {
+      "name": "Giuseppe",
+      "avatar": "https://i.pravatar.cc/150?u=giuseppe",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Quiet after 11 PM"]
+    },
     "fees": { "cleaning": 40, "service": 22, "discountPercent": 7 },
     "areaHighlights": [
       { "name": "Colosseum", "distance": "0.3 km", "type": "attraction" },
@@ -373,14 +876,70 @@
       { "name": "Cavour Metro", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Francesca", "authorAvatar": "https://i.pravatar.cc/150?u=francesca", "rating": 5, "date": "2025-12-08", "text": "Waking up near the Colosseum is surreal!" },
-      { "id": "r2", "authorName": "Marco", "authorAvatar": "https://i.pravatar.cc/150?u=marco_it", "rating": 5, "date": "2025-11-22", "text": "Giuseppe is an amazing host with great recommendations." },
-      { "id": "r3", "authorName": "Giulia", "authorAvatar": "https://i.pravatar.cc/150?u=giulia", "rating": 4, "date": "2025-10-15", "text": "Beautiful apartment, very well located." },
-      { "id": "r4", "authorName": "Alessandro", "authorAvatar": "https://i.pravatar.cc/150?u=alessandro", "rating": 5, "date": "2025-09-08", "text": "Perfect base for exploring Rome!" },
-      { "id": "r5", "authorName": "Chiara", "authorAvatar": "https://i.pravatar.cc/150?u=chiara", "rating": 5, "date": "2025-08-20", "text": "The Monti neighborhood is so charming!" },
-      { "id": "r6", "authorName": "Luca", "authorAvatar": "https://i.pravatar.cc/150?u=luca", "rating": 4, "date": "2025-07-12", "text": "Great stay, excellent location." },
-      { "id": "r7", "authorName": "Valentina", "authorAvatar": "https://i.pravatar.cc/150?u=valentina", "rating": 5, "date": "2025-06-28", "text": "We loved every minute here!" },
-      { "id": "r8", "authorName": "Matteo", "authorAvatar": "https://i.pravatar.cc/150?u=matteo", "rating": 5, "date": "2025-05-15", "text": "Would stay here again in a heartbeat." }
+      {
+        "id": "r1",
+        "authorName": "Francesca",
+        "authorAvatar": "https://i.pravatar.cc/150?u=francesca",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Waking up near the Colosseum is surreal!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Marco",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marco_it",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Giuseppe is an amazing host with great recommendations."
+      },
+      {
+        "id": "r3",
+        "authorName": "Giulia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=giulia",
+        "rating": 4,
+        "date": "2025-10-15",
+        "text": "Beautiful apartment, very well located."
+      },
+      {
+        "id": "r4",
+        "authorName": "Alessandro",
+        "authorAvatar": "https://i.pravatar.cc/150?u=alessandro",
+        "rating": 5,
+        "date": "2025-09-08",
+        "text": "Perfect base for exploring Rome!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Chiara",
+        "authorAvatar": "https://i.pravatar.cc/150?u=chiara",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "The Monti neighborhood is so charming!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Luca",
+        "authorAvatar": "https://i.pravatar.cc/150?u=luca",
+        "rating": 4,
+        "date": "2025-07-12",
+        "text": "Great stay, excellent location."
+      },
+      {
+        "id": "r7",
+        "authorName": "Valentina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=valentina",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "We loved every minute here!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Matteo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=matteo",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Would stay here again in a heartbeat."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -407,8 +966,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "airConditioning", "tv", "heating", "workspace"],
-    "host": { "name": "Palazzo Roma", "avatar": "https://i.pravatar.cc/150?u=palazzo", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 3 days before", "houseRules": ["No smoking", "Quiet hours after 10 PM"] },
+    "host": {
+      "name": "Palazzo Roma",
+      "avatar": "https://i.pravatar.cc/150?u=palazzo",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 3 days before",
+      "houseRules": ["No smoking", "Quiet hours after 10 PM"]
+    },
     "fees": { "cleaning": 0, "service": 35, "discountPercent": 10 },
     "areaHighlights": [
       { "name": "St. Peter's Basilica", "distance": "0.5 km", "type": "attraction" },
@@ -416,14 +982,70 @@
       { "name": "Ottaviano Metro", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Isabella", "authorAvatar": "https://i.pravatar.cc/150?u=isabella_it", "rating": 5, "date": "2025-12-05", "text": "Exceptional service and beautiful room!" },
-      { "id": "r2", "authorName": "Roberto", "authorAvatar": "https://i.pravatar.cc/150?u=roberto_it", "rating": 5, "date": "2025-11-18", "text": "Perfect location for visiting the Vatican." },
-      { "id": "r3", "authorName": "Elena", "authorAvatar": "https://i.pravatar.cc/150?u=elena_it", "rating": 5, "date": "2025-10-30", "text": "Breakfast was incredible!" },
-      { "id": "r4", "authorName": "Paolo", "authorAvatar": "https://i.pravatar.cc/150?u=paolo", "rating": 5, "date": "2025-09-22", "text": "Luxury at its finest. Highly recommend." },
-      { "id": "r5", "authorName": "Sara", "authorAvatar": "https://i.pravatar.cc/150?u=sara_it", "rating": 4, "date": "2025-08-15", "text": "Beautiful suite, great staff." },
-      { "id": "r6", "authorName": "Andrea", "authorAvatar": "https://i.pravatar.cc/150?u=andrea", "rating": 5, "date": "2025-07-28", "text": "Worth every euro!" },
-      { "id": "r7", "authorName": "Laura", "authorAvatar": "https://i.pravatar.cc/150?u=laura_it", "rating": 5, "date": "2025-06-10", "text": "A truly special experience." },
-      { "id": "r8", "authorName": "Fabio", "authorAvatar": "https://i.pravatar.cc/150?u=fabio", "rating": 5, "date": "2025-05-05", "text": "Will definitely return!" }
+      {
+        "id": "r1",
+        "authorName": "Isabella",
+        "authorAvatar": "https://i.pravatar.cc/150?u=isabella_it",
+        "rating": 5,
+        "date": "2025-12-05",
+        "text": "Exceptional service and beautiful room!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Roberto",
+        "authorAvatar": "https://i.pravatar.cc/150?u=roberto_it",
+        "rating": 5,
+        "date": "2025-11-18",
+        "text": "Perfect location for visiting the Vatican."
+      },
+      {
+        "id": "r3",
+        "authorName": "Elena",
+        "authorAvatar": "https://i.pravatar.cc/150?u=elena_it",
+        "rating": 5,
+        "date": "2025-10-30",
+        "text": "Breakfast was incredible!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Paolo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=paolo",
+        "rating": 5,
+        "date": "2025-09-22",
+        "text": "Luxury at its finest. Highly recommend."
+      },
+      {
+        "id": "r5",
+        "authorName": "Sara",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sara_it",
+        "rating": 4,
+        "date": "2025-08-15",
+        "text": "Beautiful suite, great staff."
+      },
+      {
+        "id": "r6",
+        "authorName": "Andrea",
+        "authorAvatar": "https://i.pravatar.cc/150?u=andrea",
+        "rating": 5,
+        "date": "2025-07-28",
+        "text": "Worth every euro!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Laura",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laura_it",
+        "rating": 5,
+        "date": "2025-06-10",
+        "text": "A truly special experience."
+      },
+      {
+        "id": "r8",
+        "authorName": "Fabio",
+        "authorAvatar": "https://i.pravatar.cc/150?u=fabio",
+        "rating": 5,
+        "date": "2025-05-05",
+        "text": "Will definitely return!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -451,7 +1073,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer"],
     "host": { "name": "Joana", "avatar": "https://i.pravatar.cc/150?u=joana", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Respect the neighbors", "Enjoy the view!"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Respect the neighbors", "Enjoy the view!"]
+    },
     "fees": { "cleaning": 30, "service": 18, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "São Jorge Castle", "distance": "0.4 km", "type": "attraction" },
@@ -459,14 +1084,70 @@
       { "name": "Santa Apolónia Station", "distance": "0.5 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Miguel", "authorAvatar": "https://i.pravatar.cc/150?u=miguel_pt", "rating": 5, "date": "2025-12-10", "text": "The terrace view is absolutely stunning!" },
-      { "id": "r2", "authorName": "Ana", "authorAvatar": "https://i.pravatar.cc/150?u=ana_pt", "rating": 5, "date": "2025-11-25", "text": "Joana is a wonderful host. Perfect location!" },
-      { "id": "r3", "authorName": "Pedro", "authorAvatar": "https://i.pravatar.cc/150?u=pedro_pt", "rating": 4, "date": "2025-10-18", "text": "Charming apartment in the heart of Alfama." },
-      { "id": "r4", "authorName": "Sofia", "authorAvatar": "https://i.pravatar.cc/150?u=sofia_pt", "rating": 5, "date": "2025-09-10", "text": "We loved hearing fado at night from the terrace." },
-      { "id": "r5", "authorName": "Tiago", "authorAvatar": "https://i.pravatar.cc/150?u=tiago", "rating": 5, "date": "2025-08-22", "text": "Best Airbnb experience in Lisbon!" },
-      { "id": "r6", "authorName": "Marta", "authorAvatar": "https://i.pravatar.cc/150?u=marta", "rating": 4, "date": "2025-07-14", "text": "Great value, beautiful terrace." },
-      { "id": "r7", "authorName": "Rui", "authorAvatar": "https://i.pravatar.cc/150?u=rui", "rating": 5, "date": "2025-06-28", "text": "Exactly as described. Wonderful stay!" },
-      { "id": "r8", "authorName": "Catarina", "authorAvatar": "https://i.pravatar.cc/150?u=catarina", "rating": 5, "date": "2025-05-20", "text": "Can't wait to come back!" }
+      {
+        "id": "r1",
+        "authorName": "Miguel",
+        "authorAvatar": "https://i.pravatar.cc/150?u=miguel_pt",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "The terrace view is absolutely stunning!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Ana",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ana_pt",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Joana is a wonderful host. Perfect location!"
+      },
+      {
+        "id": "r3",
+        "authorName": "Pedro",
+        "authorAvatar": "https://i.pravatar.cc/150?u=pedro_pt",
+        "rating": 4,
+        "date": "2025-10-18",
+        "text": "Charming apartment in the heart of Alfama."
+      },
+      {
+        "id": "r4",
+        "authorName": "Sofia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sofia_pt",
+        "rating": 5,
+        "date": "2025-09-10",
+        "text": "We loved hearing fado at night from the terrace."
+      },
+      {
+        "id": "r5",
+        "authorName": "Tiago",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tiago",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "Best Airbnb experience in Lisbon!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Marta",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marta",
+        "rating": 4,
+        "date": "2025-07-14",
+        "text": "Great value, beautiful terrace."
+      },
+      {
+        "id": "r7",
+        "authorName": "Rui",
+        "authorAvatar": "https://i.pravatar.cc/150?u=rui",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Exactly as described. Wonderful stay!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Catarina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=catarina",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Can't wait to come back!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -493,8 +1174,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer", "workspace"],
-    "host": { "name": "Ricardo", "avatar": "https://i.pravatar.cc/150?u=ricardo", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["No smoking", "Creative vibes only!"] },
+    "host": {
+      "name": "Ricardo",
+      "avatar": "https://i.pravatar.cc/150?u=ricardo",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["No smoking", "Creative vibes only!"]
+    },
     "fees": { "cleaning": 35, "service": 22, "discountPercent": 8 },
     "areaHighlights": [
       { "name": "LX Factory", "distance": "0.1 km", "type": "shopping" },
@@ -502,14 +1190,70 @@
       { "name": "Alcântara-Mar Station", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Beatriz", "authorAvatar": "https://i.pravatar.cc/150?u=beatriz", "rating": 5, "date": "2025-12-08", "text": "Industrial chic at its finest!" },
-      { "id": "r2", "authorName": "João", "authorAvatar": "https://i.pravatar.cc/150?u=joao", "rating": 5, "date": "2025-11-22", "text": "LX Factory is incredible. Perfect location." },
-      { "id": "r3", "authorName": "Mariana", "authorAvatar": "https://i.pravatar.cc/150?u=mariana", "rating": 5, "date": "2025-10-15", "text": "Ricardo's design eye is amazing." },
-      { "id": "r4", "authorName": "Diogo", "authorAvatar": "https://i.pravatar.cc/150?u=diogo", "rating": 4, "date": "2025-09-08", "text": "Great space for creative work." },
-      { "id": "r5", "authorName": "Inês", "authorAvatar": "https://i.pravatar.cc/150?u=ines", "rating": 5, "date": "2025-08-20", "text": "The Sunday market is so fun!" },
-      { "id": "r6", "authorName": "Gonçalo", "authorAvatar": "https://i.pravatar.cc/150?u=goncalo", "rating": 5, "date": "2025-07-12", "text": "Instagram-worthy at every corner." },
-      { "id": "r7", "authorName": "Leonor", "authorAvatar": "https://i.pravatar.cc/150?u=leonor", "rating": 5, "date": "2025-06-28", "text": "Loved everything about this place!" },
-      { "id": "r8", "authorName": "Bruno", "authorAvatar": "https://i.pravatar.cc/150?u=bruno", "rating": 5, "date": "2025-05-15", "text": "Best decision of our trip!" }
+      {
+        "id": "r1",
+        "authorName": "Beatriz",
+        "authorAvatar": "https://i.pravatar.cc/150?u=beatriz",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Industrial chic at its finest!"
+      },
+      {
+        "id": "r2",
+        "authorName": "João",
+        "authorAvatar": "https://i.pravatar.cc/150?u=joao",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "LX Factory is incredible. Perfect location."
+      },
+      {
+        "id": "r3",
+        "authorName": "Mariana",
+        "authorAvatar": "https://i.pravatar.cc/150?u=mariana",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "Ricardo's design eye is amazing."
+      },
+      {
+        "id": "r4",
+        "authorName": "Diogo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=diogo",
+        "rating": 4,
+        "date": "2025-09-08",
+        "text": "Great space for creative work."
+      },
+      {
+        "id": "r5",
+        "authorName": "Inês",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ines",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "The Sunday market is so fun!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Gonçalo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=goncalo",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Instagram-worthy at every corner."
+      },
+      {
+        "id": "r7",
+        "authorName": "Leonor",
+        "authorAvatar": "https://i.pravatar.cc/150?u=leonor",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Loved everything about this place!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Bruno",
+        "authorAvatar": "https://i.pravatar.cc/150?u=bruno",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Best decision of our trip!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -537,7 +1281,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer"],
     "host": { "name": "Petra", "avatar": "https://i.pravatar.cc/150?u=petra", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Shoes off inside"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Shoes off inside"]
+    },
     "fees": { "cleaning": 25, "service": 16, "discountPercent": 10 },
     "areaHighlights": [
       { "name": "Old Town Square", "distance": "0.2 km", "type": "attraction" },
@@ -545,14 +1292,70 @@
       { "name": "Můstek Metro", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Jan", "authorAvatar": "https://i.pravatar.cc/150?u=jan_cz", "rating": 5, "date": "2025-12-12", "text": "The Art Nouveau details are breathtaking!" },
-      { "id": "r2", "authorName": "Eva", "authorAvatar": "https://i.pravatar.cc/150?u=eva_cz", "rating": 5, "date": "2025-11-28", "text": "Petra is an excellent host. Great communication." },
-      { "id": "r3", "authorName": "Tomáš", "authorAvatar": "https://i.pravatar.cc/150?u=tomas", "rating": 4, "date": "2025-10-20", "text": "Beautiful apartment, great location." },
-      { "id": "r4", "authorName": "Klára", "authorAvatar": "https://i.pravatar.cc/150?u=klara", "rating": 5, "date": "2025-09-15", "text": "Like staying in a museum! In the best way." },
-      { "id": "r5", "authorName": "Martin", "authorAvatar": "https://i.pravatar.cc/150?u=martin_cz", "rating": 5, "date": "2025-08-08", "text": "Perfect Prague experience." },
-      { "id": "r6", "authorName": "Tereza", "authorAvatar": "https://i.pravatar.cc/150?u=tereza", "rating": 5, "date": "2025-07-25", "text": "The stained glass windows are stunning!" },
-      { "id": "r7", "authorName": "Lukáš", "authorAvatar": "https://i.pravatar.cc/150?u=lukas", "rating": 4, "date": "2025-06-18", "text": "Great value for Old Town location." },
-      { "id": "r8", "authorName": "Kateřina", "authorAvatar": "https://i.pravatar.cc/150?u=katerina", "rating": 5, "date": "2025-05-30", "text": "Magical stay!" }
+      {
+        "id": "r1",
+        "authorName": "Jan",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jan_cz",
+        "rating": 5,
+        "date": "2025-12-12",
+        "text": "The Art Nouveau details are breathtaking!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Eva",
+        "authorAvatar": "https://i.pravatar.cc/150?u=eva_cz",
+        "rating": 5,
+        "date": "2025-11-28",
+        "text": "Petra is an excellent host. Great communication."
+      },
+      {
+        "id": "r3",
+        "authorName": "Tomáš",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tomas",
+        "rating": 4,
+        "date": "2025-10-20",
+        "text": "Beautiful apartment, great location."
+      },
+      {
+        "id": "r4",
+        "authorName": "Klára",
+        "authorAvatar": "https://i.pravatar.cc/150?u=klara",
+        "rating": 5,
+        "date": "2025-09-15",
+        "text": "Like staying in a museum! In the best way."
+      },
+      {
+        "id": "r5",
+        "authorName": "Martin",
+        "authorAvatar": "https://i.pravatar.cc/150?u=martin_cz",
+        "rating": 5,
+        "date": "2025-08-08",
+        "text": "Perfect Prague experience."
+      },
+      {
+        "id": "r6",
+        "authorName": "Tereza",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tereza",
+        "rating": 5,
+        "date": "2025-07-25",
+        "text": "The stained glass windows are stunning!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Lukáš",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lukas",
+        "rating": 4,
+        "date": "2025-06-18",
+        "text": "Great value for Old Town location."
+      },
+      {
+        "id": "r8",
+        "authorName": "Kateřina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=katerina",
+        "rating": 5,
+        "date": "2025-05-30",
+        "text": "Magical stay!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -579,8 +1382,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "workspace", "washer"],
-    "host": { "name": "Viktor", "avatar": "https://i.pravatar.cc/150?u=viktor", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["No smoking", "No parties", "Enjoy the views!"] },
+    "host": {
+      "name": "Viktor",
+      "avatar": "https://i.pravatar.cc/150?u=viktor",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["No smoking", "No parties", "Enjoy the views!"]
+    },
     "fees": { "cleaning": 40, "service": 26, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Prague Castle", "distance": "0.6 km", "type": "attraction" },
@@ -588,14 +1398,70 @@
       { "name": "Malostranská Metro", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Helena", "authorAvatar": "https://i.pravatar.cc/150?u=helena", "rating": 5, "date": "2025-12-05", "text": "The castle view at sunset is unforgettable!" },
-      { "id": "r2", "authorName": "Ondřej", "authorAvatar": "https://i.pravatar.cc/150?u=ondrej", "rating": 5, "date": "2025-11-18", "text": "Viktor is an outstanding host." },
-      { "id": "r3", "authorName": "Marie", "authorAvatar": "https://i.pravatar.cc/150?u=marie_cz", "rating": 5, "date": "2025-10-30", "text": "Best views in Prague, hands down." },
-      { "id": "r4", "authorName": "Petr", "authorAvatar": "https://i.pravatar.cc/150?u=petr", "rating": 5, "date": "2025-09-22", "text": "Romantic getaway perfection!" },
-      { "id": "r5", "authorName": "Zuzana", "authorAvatar": "https://i.pravatar.cc/150?u=zuzana", "rating": 5, "date": "2025-08-15", "text": "We extended our stay - it's that good!" },
-      { "id": "r6", "authorName": "Filip", "authorAvatar": "https://i.pravatar.cc/150?u=filip", "rating": 5, "date": "2025-07-28", "text": "Worth every penny for these views." },
-      { "id": "r7", "authorName": "Barbora", "authorAvatar": "https://i.pravatar.cc/150?u=barbora", "rating": 5, "date": "2025-06-10", "text": "Pure magic!" },
-      { "id": "r8", "authorName": "Jakub", "authorAvatar": "https://i.pravatar.cc/150?u=jakub", "rating": 5, "date": "2025-05-05", "text": "Will definitely return!" }
+      {
+        "id": "r1",
+        "authorName": "Helena",
+        "authorAvatar": "https://i.pravatar.cc/150?u=helena",
+        "rating": 5,
+        "date": "2025-12-05",
+        "text": "The castle view at sunset is unforgettable!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Ondřej",
+        "authorAvatar": "https://i.pravatar.cc/150?u=ondrej",
+        "rating": 5,
+        "date": "2025-11-18",
+        "text": "Viktor is an outstanding host."
+      },
+      {
+        "id": "r3",
+        "authorName": "Marie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marie_cz",
+        "rating": 5,
+        "date": "2025-10-30",
+        "text": "Best views in Prague, hands down."
+      },
+      {
+        "id": "r4",
+        "authorName": "Petr",
+        "authorAvatar": "https://i.pravatar.cc/150?u=petr",
+        "rating": 5,
+        "date": "2025-09-22",
+        "text": "Romantic getaway perfection!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Zuzana",
+        "authorAvatar": "https://i.pravatar.cc/150?u=zuzana",
+        "rating": 5,
+        "date": "2025-08-15",
+        "text": "We extended our stay - it's that good!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Filip",
+        "authorAvatar": "https://i.pravatar.cc/150?u=filip",
+        "rating": 5,
+        "date": "2025-07-28",
+        "text": "Worth every penny for these views."
+      },
+      {
+        "id": "r7",
+        "authorName": "Barbora",
+        "authorAvatar": "https://i.pravatar.cc/150?u=barbora",
+        "rating": 5,
+        "date": "2025-06-10",
+        "text": "Pure magic!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Jakub",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jakub",
+        "rating": 5,
+        "date": "2025-05-05",
+        "text": "Will definitely return!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -622,8 +1488,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer", "workspace", "petFriendly"],
-    "host": { "name": "Nina", "avatar": "https://i.pravatar.cc/150?u=nina_de", "isSuperhost": false },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["Pets welcome", "No smoking inside", "Respect quiet hours"] },
+    "host": {
+      "name": "Nina",
+      "avatar": "https://i.pravatar.cc/150?u=nina_de",
+      "isSuperhost": false
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["Pets welcome", "No smoking inside", "Respect quiet hours"]
+    },
     "fees": { "cleaning": 30, "service": 15, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Görlitzer Park", "distance": "0.3 km", "type": "nature" },
@@ -631,14 +1504,70 @@
       { "name": "Görlitzer Bahnhof U-Bahn", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Max", "authorAvatar": "https://i.pravatar.cc/150?u=max_de", "rating": 5, "date": "2025-12-10", "text": "Perfect Kreuzberg experience!" },
-      { "id": "r2", "authorName": "Sophie", "authorAvatar": "https://i.pravatar.cc/150?u=sophie_de", "rating": 4, "date": "2025-11-25", "text": "Loved the artsy vibe. Great neighborhood." },
-      { "id": "r3", "authorName": "Felix", "authorAvatar": "https://i.pravatar.cc/150?u=felix", "rating": 5, "date": "2025-10-18", "text": "Nina's local tips were invaluable!" },
-      { "id": "r4", "authorName": "Lena", "authorAvatar": "https://i.pravatar.cc/150?u=lena", "rating": 5, "date": "2025-09-10", "text": "Authentic Berlin living!" },
-      { "id": "r5", "authorName": "Jonas", "authorAvatar": "https://i.pravatar.cc/150?u=jonas", "rating": 4, "date": "2025-08-22", "text": "Great space, excellent location for nightlife." },
-      { "id": "r6", "authorName": "Anna", "authorAvatar": "https://i.pravatar.cc/150?u=anna_de", "rating": 5, "date": "2025-07-14", "text": "Street art everywhere! Love this area." },
-      { "id": "r7", "authorName": "Tim", "authorAvatar": "https://i.pravatar.cc/150?u=tim", "rating": 4, "date": "2025-06-28", "text": "Cool loft, good value." },
-      { "id": "r8", "authorName": "Laura", "authorAvatar": "https://i.pravatar.cc/150?u=laura_de", "rating": 5, "date": "2025-05-20", "text": "Best location in Berlin!" }
+      {
+        "id": "r1",
+        "authorName": "Max",
+        "authorAvatar": "https://i.pravatar.cc/150?u=max_de",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Perfect Kreuzberg experience!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Sophie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sophie_de",
+        "rating": 4,
+        "date": "2025-11-25",
+        "text": "Loved the artsy vibe. Great neighborhood."
+      },
+      {
+        "id": "r3",
+        "authorName": "Felix",
+        "authorAvatar": "https://i.pravatar.cc/150?u=felix",
+        "rating": 5,
+        "date": "2025-10-18",
+        "text": "Nina's local tips were invaluable!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Lena",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lena",
+        "rating": 5,
+        "date": "2025-09-10",
+        "text": "Authentic Berlin living!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Jonas",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jonas",
+        "rating": 4,
+        "date": "2025-08-22",
+        "text": "Great space, excellent location for nightlife."
+      },
+      {
+        "id": "r6",
+        "authorName": "Anna",
+        "authorAvatar": "https://i.pravatar.cc/150?u=anna_de",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "Street art everywhere! Love this area."
+      },
+      {
+        "id": "r7",
+        "authorName": "Tim",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tim",
+        "rating": 4,
+        "date": "2025-06-28",
+        "text": "Cool loft, good value."
+      },
+      {
+        "id": "r8",
+        "authorName": "Laura",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laura_de",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Best location in Berlin!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -651,7 +1580,7 @@
     "country": "Germany",
     "area": "Mitte",
     "type": "apartment",
-    "coords": { "lat": 52.5200, "lng": 13.4050 },
+    "coords": { "lat": 52.52, "lng": 13.405 },
     "pricePerNight": 145,
     "rating": 4.92,
     "reviewsCount": 156,
@@ -665,8 +1594,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "workspace", "washer", "airConditioning"],
-    "host": { "name": "Thomas", "avatar": "https://i.pravatar.cc/150?u=thomas_de", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 3 days before", "houseRules": ["No smoking", "Self check-in", "Keep it minimal!"] },
+    "host": {
+      "name": "Thomas",
+      "avatar": "https://i.pravatar.cc/150?u=thomas_de",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 3 days before",
+      "houseRules": ["No smoking", "Self check-in", "Keep it minimal!"]
+    },
     "fees": { "cleaning": 35, "service": 20, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Museum Island", "distance": "0.5 km", "type": "attraction" },
@@ -674,14 +1610,70 @@
       { "name": "Hackescher Markt S-Bahn", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Sarah", "authorAvatar": "https://i.pravatar.cc/150?u=sarah_de", "rating": 5, "date": "2025-12-08", "text": "Perfectly designed space. So calming!" },
-      { "id": "r2", "authorName": "Marcus", "authorAvatar": "https://i.pravatar.cc/150?u=marcus", "rating": 5, "date": "2025-11-22", "text": "Thomas has impeccable taste." },
-      { "id": "r3", "authorName": "Julia", "authorAvatar": "https://i.pravatar.cc/150?u=julia_de", "rating": 5, "date": "2025-10-15", "text": "Best designed Airbnb I've stayed in." },
-      { "id": "r4", "authorName": "Michael", "authorAvatar": "https://i.pravatar.cc/150?u=michael_de", "rating": 4, "date": "2025-09-08", "text": "Great for business travel. Excellent wifi." },
-      { "id": "r5", "authorName": "Hannah", "authorAvatar": "https://i.pravatar.cc/150?u=hannah_de", "rating": 5, "date": "2025-08-20", "text": "Central location, peaceful retreat." },
-      { "id": "r6", "authorName": "Paul", "authorAvatar": "https://i.pravatar.cc/150?u=paul_de", "rating": 5, "date": "2025-07-12", "text": "Minimalist perfection!" },
-      { "id": "r7", "authorName": "Emma", "authorAvatar": "https://i.pravatar.cc/150?u=emma_de", "rating": 5, "date": "2025-06-28", "text": "Everything you need, nothing you don't." },
-      { "id": "r8", "authorName": "David", "authorAvatar": "https://i.pravatar.cc/150?u=david_de", "rating": 5, "date": "2025-05-15", "text": "Will book again on next Berlin trip." }
+      {
+        "id": "r1",
+        "authorName": "Sarah",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sarah_de",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Perfectly designed space. So calming!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Marcus",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marcus",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Thomas has impeccable taste."
+      },
+      {
+        "id": "r3",
+        "authorName": "Julia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=julia_de",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "Best designed Airbnb I've stayed in."
+      },
+      {
+        "id": "r4",
+        "authorName": "Michael",
+        "authorAvatar": "https://i.pravatar.cc/150?u=michael_de",
+        "rating": 4,
+        "date": "2025-09-08",
+        "text": "Great for business travel. Excellent wifi."
+      },
+      {
+        "id": "r5",
+        "authorName": "Hannah",
+        "authorAvatar": "https://i.pravatar.cc/150?u=hannah_de",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "Central location, peaceful retreat."
+      },
+      {
+        "id": "r6",
+        "authorName": "Paul",
+        "authorAvatar": "https://i.pravatar.cc/150?u=paul_de",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Minimalist perfection!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Emma",
+        "authorAvatar": "https://i.pravatar.cc/150?u=emma_de",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Everything you need, nothing you don't."
+      },
+      {
+        "id": "r8",
+        "authorName": "David",
+        "authorAvatar": "https://i.pravatar.cc/150?u=david_de",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Will book again on next Berlin trip."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -708,8 +1700,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv"],
-    "host": { "name": "Amélie", "avatar": "https://i.pravatar.cc/150?u=amelie", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "No parties", "Be inspired!"] },
+    "host": {
+      "name": "Amélie",
+      "avatar": "https://i.pravatar.cc/150?u=amelie",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "No parties", "Be inspired!"]
+    },
     "fees": { "cleaning": 30, "service": 18, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Sacré-Cœur", "distance": "0.3 km", "type": "attraction" },
@@ -717,14 +1716,70 @@
       { "name": "Abbesses Metro", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Claire", "authorAvatar": "https://i.pravatar.cc/150?u=claire_fr", "rating": 5, "date": "2025-12-06", "text": "Like stepping into a Toulouse-Lautrec painting!" },
-      { "id": "r2", "authorName": "Antoine", "authorAvatar": "https://i.pravatar.cc/150?u=antoine", "rating": 5, "date": "2025-11-20", "text": "Amélie is wonderful. Charming space!" },
-      { "id": "r3", "authorName": "Isabelle", "authorAvatar": "https://i.pravatar.cc/150?u=isabelle", "rating": 4, "date": "2025-10-12", "text": "Cozy and romantic. Hill is steep but worth it!" },
-      { "id": "r4", "authorName": "François", "authorAvatar": "https://i.pravatar.cc/150?u=francois", "rating": 5, "date": "2025-09-25", "text": "Magical Montmartre experience." },
-      { "id": "r5", "authorName": "Sophie", "authorAvatar": "https://i.pravatar.cc/150?u=sophie_fr", "rating": 5, "date": "2025-08-18", "text": "I didn't want to leave!" },
-      { "id": "r6", "authorName": "Marc", "authorAvatar": "https://i.pravatar.cc/150?u=marc", "rating": 5, "date": "2025-07-30", "text": "The view from the window is incredible." },
-      { "id": "r7", "authorName": "Camille", "authorAvatar": "https://i.pravatar.cc/150?u=camille", "rating": 4, "date": "2025-06-22", "text": "Authentic and charming." },
-      { "id": "r8", "authorName": "Philippe", "authorAvatar": "https://i.pravatar.cc/150?u=philippe", "rating": 5, "date": "2025-05-15", "text": "Pure Parisian romance!" }
+      {
+        "id": "r1",
+        "authorName": "Claire",
+        "authorAvatar": "https://i.pravatar.cc/150?u=claire_fr",
+        "rating": 5,
+        "date": "2025-12-06",
+        "text": "Like stepping into a Toulouse-Lautrec painting!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Antoine",
+        "authorAvatar": "https://i.pravatar.cc/150?u=antoine",
+        "rating": 5,
+        "date": "2025-11-20",
+        "text": "Amélie is wonderful. Charming space!"
+      },
+      {
+        "id": "r3",
+        "authorName": "Isabelle",
+        "authorAvatar": "https://i.pravatar.cc/150?u=isabelle",
+        "rating": 4,
+        "date": "2025-10-12",
+        "text": "Cozy and romantic. Hill is steep but worth it!"
+      },
+      {
+        "id": "r4",
+        "authorName": "François",
+        "authorAvatar": "https://i.pravatar.cc/150?u=francois",
+        "rating": 5,
+        "date": "2025-09-25",
+        "text": "Magical Montmartre experience."
+      },
+      {
+        "id": "r5",
+        "authorName": "Sophie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sophie_fr",
+        "rating": 5,
+        "date": "2025-08-18",
+        "text": "I didn't want to leave!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Marc",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marc",
+        "rating": 5,
+        "date": "2025-07-30",
+        "text": "The view from the window is incredible."
+      },
+      {
+        "id": "r7",
+        "authorName": "Camille",
+        "authorAvatar": "https://i.pravatar.cc/150?u=camille",
+        "rating": 4,
+        "date": "2025-06-22",
+        "text": "Authentic and charming."
+      },
+      {
+        "id": "r8",
+        "authorName": "Philippe",
+        "authorAvatar": "https://i.pravatar.cc/150?u=philippe",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Pure Parisian romance!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -737,7 +1792,7 @@
     "country": "United Kingdom",
     "area": "Covent Garden",
     "type": "hotel",
-    "coords": { "lat": 51.5117, "lng": -0.1240 },
+    "coords": { "lat": 51.5117, "lng": -0.124 },
     "pricePerNight": 245,
     "rating": 4.91,
     "reviewsCount": 234,
@@ -751,8 +1806,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "airConditioning", "tv", "heating", "workspace"],
-    "host": { "name": "The Henrietta", "avatar": "https://i.pravatar.cc/150?u=henrietta", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 48 hours before", "houseRules": ["No smoking", "24-hour reception"] },
+    "host": {
+      "name": "The Henrietta",
+      "avatar": "https://i.pravatar.cc/150?u=henrietta",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 48 hours before",
+      "houseRules": ["No smoking", "24-hour reception"]
+    },
     "fees": { "cleaning": 0, "service": 32, "discountPercent": 8 },
     "areaHighlights": [
       { "name": "Covent Garden Piazza", "distance": "0.1 km", "type": "shopping" },
@@ -760,14 +1822,70 @@
       { "name": "Covent Garden Tube", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Victoria", "authorAvatar": "https://i.pravatar.cc/150?u=victoria", "rating": 5, "date": "2025-12-10", "text": "Exceptional service and perfect location!" },
-      { "id": "r2", "authorName": "Edward", "authorAvatar": "https://i.pravatar.cc/150?u=edward", "rating": 5, "date": "2025-11-25", "text": "The breakfast is incredible." },
-      { "id": "r3", "authorName": "Catherine", "authorAvatar": "https://i.pravatar.cc/150?u=catherine", "rating": 5, "date": "2025-10-18", "text": "Stylish rooms, friendly staff." },
-      { "id": "r4", "authorName": "Richard", "authorAvatar": "https://i.pravatar.cc/150?u=richard", "rating": 4, "date": "2025-09-10", "text": "Great West End location." },
-      { "id": "r5", "authorName": "Margaret", "authorAvatar": "https://i.pravatar.cc/150?u=margaret", "rating": 5, "date": "2025-08-22", "text": "Will definitely stay again!" },
-      { "id": "r6", "authorName": "Charles", "authorAvatar": "https://i.pravatar.cc/150?u=charles", "rating": 5, "date": "2025-07-14", "text": "Luxury without pretension." },
-      { "id": "r7", "authorName": "Diana", "authorAvatar": "https://i.pravatar.cc/150?u=diana", "rating": 5, "date": "2025-06-28", "text": "The attention to detail is remarkable." },
-      { "id": "r8", "authorName": "Philip", "authorAvatar": "https://i.pravatar.cc/150?u=philip_uk", "rating": 4, "date": "2025-05-20", "text": "Great base for theater nights." }
+      {
+        "id": "r1",
+        "authorName": "Victoria",
+        "authorAvatar": "https://i.pravatar.cc/150?u=victoria",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Exceptional service and perfect location!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Edward",
+        "authorAvatar": "https://i.pravatar.cc/150?u=edward",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "The breakfast is incredible."
+      },
+      {
+        "id": "r3",
+        "authorName": "Catherine",
+        "authorAvatar": "https://i.pravatar.cc/150?u=catherine",
+        "rating": 5,
+        "date": "2025-10-18",
+        "text": "Stylish rooms, friendly staff."
+      },
+      {
+        "id": "r4",
+        "authorName": "Richard",
+        "authorAvatar": "https://i.pravatar.cc/150?u=richard",
+        "rating": 4,
+        "date": "2025-09-10",
+        "text": "Great West End location."
+      },
+      {
+        "id": "r5",
+        "authorName": "Margaret",
+        "authorAvatar": "https://i.pravatar.cc/150?u=margaret",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "Will definitely stay again!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Charles",
+        "authorAvatar": "https://i.pravatar.cc/150?u=charles",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "Luxury without pretension."
+      },
+      {
+        "id": "r7",
+        "authorName": "Diana",
+        "authorAvatar": "https://i.pravatar.cc/150?u=diana",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "The attention to detail is remarkable."
+      },
+      {
+        "id": "r8",
+        "authorName": "Philip",
+        "authorAvatar": "https://i.pravatar.cc/150?u=philip_uk",
+        "rating": 4,
+        "date": "2025-05-20",
+        "text": "Great base for theater nights."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -780,7 +1898,7 @@
     "country": "Netherlands",
     "area": "Oud-Zuid",
     "type": "house",
-    "coords": { "lat": 52.3550, "lng": 4.8700 },
+    "coords": { "lat": 52.355, "lng": 4.87 },
     "pricePerNight": 265,
     "rating": 4.93,
     "reviewsCount": 98,
@@ -794,8 +1912,15 @@
     "beds": 3,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer", "parking"],
-    "host": { "name": "Pieter", "avatar": "https://i.pravatar.cc/150?u=pieter", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 7 days before", "houseRules": ["No smoking", "No parties", "Bikes available!"] },
+    "host": {
+      "name": "Pieter",
+      "avatar": "https://i.pravatar.cc/150?u=pieter",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 7 days before",
+      "houseRules": ["No smoking", "No parties", "Bikes available!"]
+    },
     "fees": { "cleaning": 65, "service": 35, "discountPercent": 10 },
     "areaHighlights": [
       { "name": "Vondelpark", "distance": "0.3 km", "type": "nature" },
@@ -803,14 +1928,70 @@
       { "name": "Museumplein Tram", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Willem", "authorAvatar": "https://i.pravatar.cc/150?u=willem", "rating": 5, "date": "2025-12-08", "text": "Beautiful home near all the museums!" },
-      { "id": "r2", "authorName": "Charlotte", "authorAvatar": "https://i.pravatar.cc/150?u=charlotte_nl", "rating": 5, "date": "2025-11-22", "text": "Pieter's bikes were a great bonus." },
-      { "id": "r3", "authorName": "Bas", "authorAvatar": "https://i.pravatar.cc/150?u=bas", "rating": 5, "date": "2025-10-15", "text": "Spacious and stylish. Perfect for families." },
-      { "id": "r4", "authorName": "Anouk", "authorAvatar": "https://i.pravatar.cc/150?u=anouk", "rating": 4, "date": "2025-09-08", "text": "Great neighborhood, lovely house." },
-      { "id": "r5", "authorName": "Daan", "authorAvatar": "https://i.pravatar.cc/150?u=daan", "rating": 5, "date": "2025-08-20", "text": "Vondelpark is amazing!" },
-      { "id": "r6", "authorName": "Lotte", "authorAvatar": "https://i.pravatar.cc/150?u=lotte", "rating": 5, "date": "2025-07-12", "text": "Best family stay in Amsterdam." },
-      { "id": "r7", "authorName": "Joris", "authorAvatar": "https://i.pravatar.cc/150?u=joris", "rating": 5, "date": "2025-06-28", "text": "Thoughtfully designed home." },
-      { "id": "r8", "authorName": "Emma", "authorAvatar": "https://i.pravatar.cc/150?u=emma_nl2", "rating": 5, "date": "2025-05-15", "text": "Highly recommend!" }
+      {
+        "id": "r1",
+        "authorName": "Willem",
+        "authorAvatar": "https://i.pravatar.cc/150?u=willem",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Beautiful home near all the museums!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Charlotte",
+        "authorAvatar": "https://i.pravatar.cc/150?u=charlotte_nl",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Pieter's bikes were a great bonus."
+      },
+      {
+        "id": "r3",
+        "authorName": "Bas",
+        "authorAvatar": "https://i.pravatar.cc/150?u=bas",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "Spacious and stylish. Perfect for families."
+      },
+      {
+        "id": "r4",
+        "authorName": "Anouk",
+        "authorAvatar": "https://i.pravatar.cc/150?u=anouk",
+        "rating": 4,
+        "date": "2025-09-08",
+        "text": "Great neighborhood, lovely house."
+      },
+      {
+        "id": "r5",
+        "authorName": "Daan",
+        "authorAvatar": "https://i.pravatar.cc/150?u=daan",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "Vondelpark is amazing!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Lotte",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lotte",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Best family stay in Amsterdam."
+      },
+      {
+        "id": "r7",
+        "authorName": "Joris",
+        "authorAvatar": "https://i.pravatar.cc/150?u=joris",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Thoughtfully designed home."
+      },
+      {
+        "id": "r8",
+        "authorName": "Emma",
+        "authorAvatar": "https://i.pravatar.cc/150?u=emma_nl2",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Highly recommend!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -838,7 +2019,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer", "workspace"],
     "host": { "name": "Martí", "avatar": "https://i.pravatar.cc/150?u=marti", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Respect modernist details"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Respect modernist details"]
+    },
     "fees": { "cleaning": 45, "service": 24, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Casa Batlló", "distance": "0.4 km", "type": "attraction" },
@@ -846,14 +2030,70 @@
       { "name": "Passeig de Gràcia Metro", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Jordi", "authorAvatar": "https://i.pravatar.cc/150?u=jordi", "rating": 5, "date": "2025-12-06", "text": "Stunning modernist details throughout!" },
-      { "id": "r2", "authorName": "Marta", "authorAvatar": "https://i.pravatar.cc/150?u=marta_es", "rating": 5, "date": "2025-11-20", "text": "Martí is a wonderful host." },
-      { "id": "r3", "authorName": "Xavier", "authorAvatar": "https://i.pravatar.cc/150?u=xavier", "rating": 4, "date": "2025-10-12", "text": "Great location on Passeig de Gràcia." },
-      { "id": "r4", "authorName": "Núria", "authorAvatar": "https://i.pravatar.cc/150?u=nuria", "rating": 5, "date": "2025-09-25", "text": "Like staying in a Gaudí dream!" },
-      { "id": "r5", "authorName": "Oriol", "authorAvatar": "https://i.pravatar.cc/150?u=oriol", "rating": 5, "date": "2025-08-18", "text": "Impeccable apartment." },
-      { "id": "r6", "authorName": "Laia", "authorAvatar": "https://i.pravatar.cc/150?u=laia", "rating": 5, "date": "2025-07-30", "text": "The tile work is gorgeous!" },
-      { "id": "r7", "authorName": "Arnau", "authorAvatar": "https://i.pravatar.cc/150?u=arnau", "rating": 4, "date": "2025-06-22", "text": "Excellent base for exploring." },
-      { "id": "r8", "authorName": "Clara", "authorAvatar": "https://i.pravatar.cc/150?u=clara_es", "rating": 5, "date": "2025-05-15", "text": "Highly recommended!" }
+      {
+        "id": "r1",
+        "authorName": "Jordi",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jordi",
+        "rating": 5,
+        "date": "2025-12-06",
+        "text": "Stunning modernist details throughout!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Marta",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marta_es",
+        "rating": 5,
+        "date": "2025-11-20",
+        "text": "Martí is a wonderful host."
+      },
+      {
+        "id": "r3",
+        "authorName": "Xavier",
+        "authorAvatar": "https://i.pravatar.cc/150?u=xavier",
+        "rating": 4,
+        "date": "2025-10-12",
+        "text": "Great location on Passeig de Gràcia."
+      },
+      {
+        "id": "r4",
+        "authorName": "Núria",
+        "authorAvatar": "https://i.pravatar.cc/150?u=nuria",
+        "rating": 5,
+        "date": "2025-09-25",
+        "text": "Like staying in a Gaudí dream!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Oriol",
+        "authorAvatar": "https://i.pravatar.cc/150?u=oriol",
+        "rating": 5,
+        "date": "2025-08-18",
+        "text": "Impeccable apartment."
+      },
+      {
+        "id": "r6",
+        "authorName": "Laia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laia",
+        "rating": 5,
+        "date": "2025-07-30",
+        "text": "The tile work is gorgeous!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Arnau",
+        "authorAvatar": "https://i.pravatar.cc/150?u=arnau",
+        "rating": 4,
+        "date": "2025-06-22",
+        "text": "Excellent base for exploring."
+      },
+      {
+        "id": "r8",
+        "authorName": "Clara",
+        "authorAvatar": "https://i.pravatar.cc/150?u=clara_es",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Highly recommended!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -880,8 +2120,15 @@
     "beds": 4,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer", "heating"],
-    "host": { "name": "Lucia", "avatar": "https://i.pravatar.cc/150?u=lucia_it", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["No smoking", "Enjoy la dolce vita!"] },
+    "host": {
+      "name": "Lucia",
+      "avatar": "https://i.pravatar.cc/150?u=lucia_it",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["No smoking", "Enjoy la dolce vita!"]
+    },
     "fees": { "cleaning": 55, "service": 30, "discountPercent": 12 },
     "areaHighlights": [
       { "name": "Piazza Santa Maria", "distance": "0.2 km", "type": "attraction" },
@@ -889,14 +2136,70 @@
       { "name": "Tram 8", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Simone", "authorAvatar": "https://i.pravatar.cc/150?u=simone", "rating": 5, "date": "2025-12-10", "text": "Trastevere is magical! Lucia's home is perfect." },
-      { "id": "r2", "authorName": "Federica", "authorAvatar": "https://i.pravatar.cc/150?u=federica", "rating": 5, "date": "2025-11-25", "text": "Best neighborhood in Rome." },
-      { "id": "r3", "authorName": "Lorenzo", "authorAvatar": "https://i.pravatar.cc/150?u=lorenzo", "rating": 5, "date": "2025-10-18", "text": "The private terrace is incredible!" },
-      { "id": "r4", "authorName": "Sofia", "authorAvatar": "https://i.pravatar.cc/150?u=sofia_it", "rating": 5, "date": "2025-09-10", "text": "Lucia's restaurant tips were spot-on." },
-      { "id": "r5", "authorName": "Andrea", "authorAvatar": "https://i.pravatar.cc/150?u=andrea_it", "rating": 4, "date": "2025-08-22", "text": "Great space for our family." },
-      { "id": "r6", "authorName": "Elisa", "authorAvatar": "https://i.pravatar.cc/150?u=elisa", "rating": 5, "date": "2025-07-14", "text": "We fell in love with Trastevere!" },
-      { "id": "r7", "authorName": "Marco", "authorAvatar": "https://i.pravatar.cc/150?u=marco_it2", "rating": 5, "date": "2025-06-28", "text": "Perfect Roman holiday." },
-      { "id": "r8", "authorName": "Giorgia", "authorAvatar": "https://i.pravatar.cc/150?u=giorgia", "rating": 5, "date": "2025-05-20", "text": "Already planning our return!" }
+      {
+        "id": "r1",
+        "authorName": "Simone",
+        "authorAvatar": "https://i.pravatar.cc/150?u=simone",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Trastevere is magical! Lucia's home is perfect."
+      },
+      {
+        "id": "r2",
+        "authorName": "Federica",
+        "authorAvatar": "https://i.pravatar.cc/150?u=federica",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Best neighborhood in Rome."
+      },
+      {
+        "id": "r3",
+        "authorName": "Lorenzo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lorenzo",
+        "rating": 5,
+        "date": "2025-10-18",
+        "text": "The private terrace is incredible!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Sofia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sofia_it",
+        "rating": 5,
+        "date": "2025-09-10",
+        "text": "Lucia's restaurant tips were spot-on."
+      },
+      {
+        "id": "r5",
+        "authorName": "Andrea",
+        "authorAvatar": "https://i.pravatar.cc/150?u=andrea_it",
+        "rating": 4,
+        "date": "2025-08-22",
+        "text": "Great space for our family."
+      },
+      {
+        "id": "r6",
+        "authorName": "Elisa",
+        "authorAvatar": "https://i.pravatar.cc/150?u=elisa",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "We fell in love with Trastevere!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Marco",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marco_it2",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Perfect Roman holiday."
+      },
+      {
+        "id": "r8",
+        "authorName": "Giorgia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=giorgia",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Already planning our return!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -923,8 +2226,15 @@
     "beds": 1,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv"],
-    "host": { "name": "Francisca", "avatar": "https://i.pravatar.cc/150?u=francisca", "isSuperhost": false },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Don't miss the pastéis de Belém!"] },
+    "host": {
+      "name": "Francisca",
+      "avatar": "https://i.pravatar.cc/150?u=francisca",
+      "isSuperhost": false
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Don't miss the pastéis de Belém!"]
+    },
     "fees": { "cleaning": 25, "service": 16, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Belém Tower", "distance": "0.5 km", "type": "attraction" },
@@ -932,14 +2242,70 @@
       { "name": "Tram 15E", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Manuel", "authorAvatar": "https://i.pravatar.cc/150?u=manuel", "rating": 5, "date": "2025-12-08", "text": "Great views of the river!" },
-      { "id": "r2", "authorName": "Helena", "authorAvatar": "https://i.pravatar.cc/150?u=helena_pt", "rating": 4, "date": "2025-11-22", "text": "Nice studio, easy access to monuments." },
-      { "id": "r3", "authorName": "André", "authorAvatar": "https://i.pravatar.cc/150?u=andre", "rating": 5, "date": "2025-10-15", "text": "The famous pastéis de nata are steps away!" },
-      { "id": "r4", "authorName": "Carla", "authorAvatar": "https://i.pravatar.cc/150?u=carla", "rating": 5, "date": "2025-09-08", "text": "Perfect for history lovers." },
-      { "id": "r5", "authorName": "Nuno", "authorAvatar": "https://i.pravatar.cc/150?u=nuno", "rating": 4, "date": "2025-08-20", "text": "Good value, comfortable stay." },
-      { "id": "r6", "authorName": "Rita", "authorAvatar": "https://i.pravatar.cc/150?u=rita", "rating": 5, "date": "2025-07-12", "text": "Loved the waterfront location!" },
-      { "id": "r7", "authorName": "Paulo", "authorAvatar": "https://i.pravatar.cc/150?u=paulo", "rating": 4, "date": "2025-06-28", "text": "Nice studio, as described." },
-      { "id": "r8", "authorName": "Teresa", "authorAvatar": "https://i.pravatar.cc/150?u=teresa", "rating": 5, "date": "2025-05-15", "text": "Great experience!" }
+      {
+        "id": "r1",
+        "authorName": "Manuel",
+        "authorAvatar": "https://i.pravatar.cc/150?u=manuel",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Great views of the river!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Helena",
+        "authorAvatar": "https://i.pravatar.cc/150?u=helena_pt",
+        "rating": 4,
+        "date": "2025-11-22",
+        "text": "Nice studio, easy access to monuments."
+      },
+      {
+        "id": "r3",
+        "authorName": "André",
+        "authorAvatar": "https://i.pravatar.cc/150?u=andre",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "The famous pastéis de nata are steps away!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Carla",
+        "authorAvatar": "https://i.pravatar.cc/150?u=carla",
+        "rating": 5,
+        "date": "2025-09-08",
+        "text": "Perfect for history lovers."
+      },
+      {
+        "id": "r5",
+        "authorName": "Nuno",
+        "authorAvatar": "https://i.pravatar.cc/150?u=nuno",
+        "rating": 4,
+        "date": "2025-08-20",
+        "text": "Good value, comfortable stay."
+      },
+      {
+        "id": "r6",
+        "authorName": "Rita",
+        "authorAvatar": "https://i.pravatar.cc/150?u=rita",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Loved the waterfront location!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Paulo",
+        "authorAvatar": "https://i.pravatar.cc/150?u=paulo",
+        "rating": 4,
+        "date": "2025-06-28",
+        "text": "Nice studio, as described."
+      },
+      {
+        "id": "r8",
+        "authorName": "Teresa",
+        "authorAvatar": "https://i.pravatar.cc/150?u=teresa",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Great experience!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -952,7 +2318,7 @@
     "country": "Czech Republic",
     "area": "Vinohrady",
     "type": "apartment",
-    "coords": { "lat": 50.0755, "lng": 14.4500 },
+    "coords": { "lat": 50.0755, "lng": 14.45 },
     "pricePerNight": 110,
     "rating": 4.86,
     "reviewsCount": 189,
@@ -966,8 +2332,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer"],
-    "host": { "name": "Monika", "avatar": "https://i.pravatar.cc/150?u=monika", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Wine recommendations available!"] },
+    "host": {
+      "name": "Monika",
+      "avatar": "https://i.pravatar.cc/150?u=monika",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Wine recommendations available!"]
+    },
     "fees": { "cleaning": 20, "service": 14, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Riegrovy Sady Park", "distance": "0.3 km", "type": "nature" },
@@ -975,14 +2348,70 @@
       { "name": "Jiřího z Poděbrad Metro", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Michal", "authorAvatar": "https://i.pravatar.cc/150?u=michal", "rating": 5, "date": "2025-12-06", "text": "Vinohrady is the best neighborhood!" },
-      { "id": "r2", "authorName": "Lenka", "authorAvatar": "https://i.pravatar.cc/150?u=lenka", "rating": 5, "date": "2025-11-20", "text": "Monika's wine tips were amazing." },
-      { "id": "r3", "authorName": "Radek", "authorAvatar": "https://i.pravatar.cc/150?u=radek", "rating": 4, "date": "2025-10-12", "text": "Cozy apartment, great cafes nearby." },
-      { "id": "r4", "authorName": "Iveta", "authorAvatar": "https://i.pravatar.cc/150?u=iveta", "rating": 5, "date": "2025-09-25", "text": "We loved the local vibe!" },
-      { "id": "r5", "authorName": "Marek", "authorAvatar": "https://i.pravatar.cc/150?u=marek", "rating": 5, "date": "2025-08-18", "text": "Perfect stay in Prague." },
-      { "id": "r6", "authorName": "Simona", "authorAvatar": "https://i.pravatar.cc/150?u=simona", "rating": 4, "date": "2025-07-30", "text": "Nice apartment, helpful host." },
-      { "id": "r7", "authorName": "Adam", "authorAvatar": "https://i.pravatar.cc/150?u=adam_cz", "rating": 5, "date": "2025-06-22", "text": "Great value!" },
-      { "id": "r8", "authorName": "Lucie", "authorAvatar": "https://i.pravatar.cc/150?u=lucie", "rating": 5, "date": "2025-05-15", "text": "Would definitely stay again." }
+      {
+        "id": "r1",
+        "authorName": "Michal",
+        "authorAvatar": "https://i.pravatar.cc/150?u=michal",
+        "rating": 5,
+        "date": "2025-12-06",
+        "text": "Vinohrady is the best neighborhood!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Lenka",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lenka",
+        "rating": 5,
+        "date": "2025-11-20",
+        "text": "Monika's wine tips were amazing."
+      },
+      {
+        "id": "r3",
+        "authorName": "Radek",
+        "authorAvatar": "https://i.pravatar.cc/150?u=radek",
+        "rating": 4,
+        "date": "2025-10-12",
+        "text": "Cozy apartment, great cafes nearby."
+      },
+      {
+        "id": "r4",
+        "authorName": "Iveta",
+        "authorAvatar": "https://i.pravatar.cc/150?u=iveta",
+        "rating": 5,
+        "date": "2025-09-25",
+        "text": "We loved the local vibe!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Marek",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marek",
+        "rating": 5,
+        "date": "2025-08-18",
+        "text": "Perfect stay in Prague."
+      },
+      {
+        "id": "r6",
+        "authorName": "Simona",
+        "authorAvatar": "https://i.pravatar.cc/150?u=simona",
+        "rating": 4,
+        "date": "2025-07-30",
+        "text": "Nice apartment, helpful host."
+      },
+      {
+        "id": "r7",
+        "authorName": "Adam",
+        "authorAvatar": "https://i.pravatar.cc/150?u=adam_cz",
+        "rating": 5,
+        "date": "2025-06-22",
+        "text": "Great value!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Lucie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lucie",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Would definitely stay again."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -995,7 +2424,7 @@
     "country": "Germany",
     "area": "Prenzlauer Berg",
     "type": "house",
-    "coords": { "lat": 52.5388, "lng": 13.4200 },
+    "coords": { "lat": 52.5388, "lng": 13.42 },
     "pricePerNight": 185,
     "rating": 4.91,
     "reviewsCount": 124,
@@ -1009,8 +2438,15 @@
     "beds": 4,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer", "petFriendly", "parking"],
-    "host": { "name": "Katharina", "avatar": "https://i.pravatar.cc/150?u=katharina", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 5 days before", "houseRules": ["Kids welcome", "Pets welcome", "No parties"] },
+    "host": {
+      "name": "Katharina",
+      "avatar": "https://i.pravatar.cc/150?u=katharina",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 5 days before",
+      "houseRules": ["Kids welcome", "Pets welcome", "No parties"]
+    },
     "fees": { "cleaning": 50, "service": 25, "discountPercent": 8 },
     "areaHighlights": [
       { "name": "Mauerpark", "distance": "0.4 km", "type": "nature" },
@@ -1018,14 +2454,70 @@
       { "name": "Eberswalder Straße U-Bahn", "distance": "0.5 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Stefan", "authorAvatar": "https://i.pravatar.cc/150?u=stefan_de", "rating": 5, "date": "2025-12-10", "text": "Perfect for our family trip!" },
-      { "id": "r2", "authorName": "Claudia", "authorAvatar": "https://i.pravatar.cc/150?u=claudia", "rating": 5, "date": "2025-11-25", "text": "Katharina thought of everything." },
-      { "id": "r3", "authorName": "Markus", "authorAvatar": "https://i.pravatar.cc/150?u=markus", "rating": 5, "date": "2025-10-18", "text": "Kids loved the Sunday flea market!" },
-      { "id": "r4", "authorName": "Sabine", "authorAvatar": "https://i.pravatar.cc/150?u=sabine", "rating": 4, "date": "2025-09-10", "text": "Spacious home, great location." },
-      { "id": "r5", "authorName": "Daniel", "authorAvatar": "https://i.pravatar.cc/150?u=daniel_de", "rating": 5, "date": "2025-08-22", "text": "The neighborhood is so family-friendly!" },
-      { "id": "r6", "authorName": "Monika", "authorAvatar": "https://i.pravatar.cc/150?u=monika_de", "rating": 5, "date": "2025-07-14", "text": "Our dog loved the nearby park." },
-      { "id": "r7", "authorName": "Andreas", "authorAvatar": "https://i.pravatar.cc/150?u=andreas", "rating": 5, "date": "2025-06-28", "text": "Will definitely return!" },
-      { "id": "r8", "authorName": "Christina", "authorAvatar": "https://i.pravatar.cc/150?u=christina", "rating": 5, "date": "2025-05-20", "text": "Best Berlin experience ever!" }
+      {
+        "id": "r1",
+        "authorName": "Stefan",
+        "authorAvatar": "https://i.pravatar.cc/150?u=stefan_de",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Perfect for our family trip!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Claudia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=claudia",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Katharina thought of everything."
+      },
+      {
+        "id": "r3",
+        "authorName": "Markus",
+        "authorAvatar": "https://i.pravatar.cc/150?u=markus",
+        "rating": 5,
+        "date": "2025-10-18",
+        "text": "Kids loved the Sunday flea market!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Sabine",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sabine",
+        "rating": 4,
+        "date": "2025-09-10",
+        "text": "Spacious home, great location."
+      },
+      {
+        "id": "r5",
+        "authorName": "Daniel",
+        "authorAvatar": "https://i.pravatar.cc/150?u=daniel_de",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "The neighborhood is so family-friendly!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Monika",
+        "authorAvatar": "https://i.pravatar.cc/150?u=monika_de",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "Our dog loved the nearby park."
+      },
+      {
+        "id": "r7",
+        "authorName": "Andreas",
+        "authorAvatar": "https://i.pravatar.cc/150?u=andreas",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Will definitely return!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Christina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=christina",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Best Berlin experience ever!"
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -1038,7 +2530,7 @@
     "country": "France",
     "area": "Saint-Germain-des-Prés",
     "type": "apartment",
-    "coords": { "lat": 48.8534, "lng": 2.3330 },
+    "coords": { "lat": 48.8534, "lng": 2.333 },
     "pricePerNight": 320,
     "rating": 4.98,
     "reviewsCount": 76,
@@ -1052,8 +2544,15 @@
     "beds": 2,
     "baths": 2,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "heating", "washer", "workspace"],
-    "host": { "name": "Marguerite", "avatar": "https://i.pravatar.cc/150?u=marguerite", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation up to 7 days before", "houseRules": ["No smoking", "No parties", "Luxury experience"] },
+    "host": {
+      "name": "Marguerite",
+      "avatar": "https://i.pravatar.cc/150?u=marguerite",
+      "isSuperhost": true
+    },
+    "policies": {
+      "cancellation": "Free cancellation up to 7 days before",
+      "houseRules": ["No smoking", "No parties", "Luxury experience"]
+    },
     "fees": { "cleaning": 80, "service": 45, "discountPercent": 15 },
     "areaHighlights": [
       { "name": "Café de Flore", "distance": "0.2 km", "type": "restaurant" },
@@ -1061,14 +2560,70 @@
       { "name": "Saint-Germain-des-Prés Metro", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Nathalie", "authorAvatar": "https://i.pravatar.cc/150?u=nathalie", "rating": 5, "date": "2025-12-08", "text": "Absolute perfection. Worth every euro." },
-      { "id": "r2", "authorName": "Olivier", "authorAvatar": "https://i.pravatar.cc/150?u=olivier", "rating": 5, "date": "2025-11-22", "text": "Marguerite's apartment is a work of art." },
-      { "id": "r3", "authorName": "Catherine", "authorAvatar": "https://i.pravatar.cc/150?u=catherine_fr", "rating": 5, "date": "2025-10-15", "text": "The definition of Parisian elegance." },
-      { "id": "r4", "authorName": "Laurent", "authorAvatar": "https://i.pravatar.cc/150?u=laurent", "rating": 5, "date": "2025-09-08", "text": "Anniversary trip couldn't have been better." },
-      { "id": "r5", "authorName": "Pauline", "authorAvatar": "https://i.pravatar.cc/150?u=pauline", "rating": 5, "date": "2025-08-20", "text": "Like staying at a friend's incredibly chic home." },
-      { "id": "r6", "authorName": "Thierry", "authorAvatar": "https://i.pravatar.cc/150?u=thierry", "rating": 5, "date": "2025-07-12", "text": "Exceptional in every way." },
-      { "id": "r7", "authorName": "Sylvie", "authorAvatar": "https://i.pravatar.cc/150?u=sylvie", "rating": 5, "date": "2025-06-28", "text": "Dream Paris stay came true!" },
-      { "id": "r8", "authorName": "Eric", "authorAvatar": "https://i.pravatar.cc/150?u=eric_fr", "rating": 5, "date": "2025-05-15", "text": "Simply the best." }
+      {
+        "id": "r1",
+        "authorName": "Nathalie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=nathalie",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Absolute perfection. Worth every euro."
+      },
+      {
+        "id": "r2",
+        "authorName": "Olivier",
+        "authorAvatar": "https://i.pravatar.cc/150?u=olivier",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Marguerite's apartment is a work of art."
+      },
+      {
+        "id": "r3",
+        "authorName": "Catherine",
+        "authorAvatar": "https://i.pravatar.cc/150?u=catherine_fr",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "The definition of Parisian elegance."
+      },
+      {
+        "id": "r4",
+        "authorName": "Laurent",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laurent",
+        "rating": 5,
+        "date": "2025-09-08",
+        "text": "Anniversary trip couldn't have been better."
+      },
+      {
+        "id": "r5",
+        "authorName": "Pauline",
+        "authorAvatar": "https://i.pravatar.cc/150?u=pauline",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "Like staying at a friend's incredibly chic home."
+      },
+      {
+        "id": "r6",
+        "authorName": "Thierry",
+        "authorAvatar": "https://i.pravatar.cc/150?u=thierry",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Exceptional in every way."
+      },
+      {
+        "id": "r7",
+        "authorName": "Sylvie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sylvie",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Dream Paris stay came true!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Eric",
+        "authorAvatar": "https://i.pravatar.cc/150?u=eric_fr",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Simply the best."
+      }
     ],
     "instantBook": false,
     "freeCancellation": true,
@@ -1081,7 +2636,7 @@
     "country": "United Kingdom",
     "area": "Camden",
     "type": "apartment",
-    "coords": { "lat": 51.5390, "lng": -0.1426 },
+    "coords": { "lat": 51.539, "lng": -0.1426 },
     "pricePerNight": 135,
     "rating": 4.78,
     "reviewsCount": 198,
@@ -1095,8 +2650,15 @@
     "beds": 2,
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer"],
-    "host": { "name": "Freddie", "avatar": "https://i.pravatar.cc/150?u=freddie", "isSuperhost": false },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking indoors", "Music lovers welcome!"] },
+    "host": {
+      "name": "Freddie",
+      "avatar": "https://i.pravatar.cc/150?u=freddie",
+      "isSuperhost": false
+    },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking indoors", "Music lovers welcome!"]
+    },
     "fees": { "cleaning": 30, "service": 18, "discountPercent": 0 },
     "areaHighlights": [
       { "name": "Camden Market", "distance": "0.3 km", "type": "shopping" },
@@ -1104,14 +2666,70 @@
       { "name": "Camden Town Tube", "distance": "0.4 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Amy", "authorAvatar": "https://i.pravatar.cc/150?u=amy", "rating": 5, "date": "2025-12-06", "text": "Camden is so fun! Great base." },
-      { "id": "r2", "authorName": "Jack", "authorAvatar": "https://i.pravatar.cc/150?u=jack_uk", "rating": 4, "date": "2025-11-20", "text": "Eclectic decor, perfect for the area." },
-      { "id": "r3", "authorName": "Zoe", "authorAvatar": "https://i.pravatar.cc/150?u=zoe", "rating": 4, "date": "2025-10-12", "text": "Loved the canal walks!" },
-      { "id": "r4", "authorName": "Harry", "authorAvatar": "https://i.pravatar.cc/150?u=harry", "rating": 5, "date": "2025-09-25", "text": "The market is amazing!" },
-      { "id": "r5", "authorName": "Lily", "authorAvatar": "https://i.pravatar.cc/150?u=lily", "rating": 4, "date": "2025-08-18", "text": "Good value in a fun neighborhood." },
-      { "id": "r6", "authorName": "Noah", "authorAvatar": "https://i.pravatar.cc/150?u=noah", "rating": 5, "date": "2025-07-30", "text": "Freddie is a great host!" },
-      { "id": "r7", "authorName": "Mia", "authorAvatar": "https://i.pravatar.cc/150?u=mia", "rating": 4, "date": "2025-06-22", "text": "Really enjoyed our stay." },
-      { "id": "r8", "authorName": "Oscar", "authorAvatar": "https://i.pravatar.cc/150?u=oscar_uk", "rating": 5, "date": "2025-05-15", "text": "Would stay again!" }
+      {
+        "id": "r1",
+        "authorName": "Amy",
+        "authorAvatar": "https://i.pravatar.cc/150?u=amy",
+        "rating": 5,
+        "date": "2025-12-06",
+        "text": "Camden is so fun! Great base."
+      },
+      {
+        "id": "r2",
+        "authorName": "Jack",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jack_uk",
+        "rating": 4,
+        "date": "2025-11-20",
+        "text": "Eclectic decor, perfect for the area."
+      },
+      {
+        "id": "r3",
+        "authorName": "Zoe",
+        "authorAvatar": "https://i.pravatar.cc/150?u=zoe",
+        "rating": 4,
+        "date": "2025-10-12",
+        "text": "Loved the canal walks!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Harry",
+        "authorAvatar": "https://i.pravatar.cc/150?u=harry",
+        "rating": 5,
+        "date": "2025-09-25",
+        "text": "The market is amazing!"
+      },
+      {
+        "id": "r5",
+        "authorName": "Lily",
+        "authorAvatar": "https://i.pravatar.cc/150?u=lily",
+        "rating": 4,
+        "date": "2025-08-18",
+        "text": "Good value in a fun neighborhood."
+      },
+      {
+        "id": "r6",
+        "authorName": "Noah",
+        "authorAvatar": "https://i.pravatar.cc/150?u=noah",
+        "rating": 5,
+        "date": "2025-07-30",
+        "text": "Freddie is a great host!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Mia",
+        "authorAvatar": "https://i.pravatar.cc/150?u=mia",
+        "rating": 4,
+        "date": "2025-06-22",
+        "text": "Really enjoyed our stay."
+      },
+      {
+        "id": "r8",
+        "authorName": "Oscar",
+        "authorAvatar": "https://i.pravatar.cc/150?u=oscar_uk",
+        "rating": 5,
+        "date": "2025-05-15",
+        "text": "Would stay again!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -1139,7 +2757,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "heating", "tv", "washer"],
     "host": { "name": "Iris", "avatar": "https://i.pravatar.cc/150?u=iris", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Food tour map provided!"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Food tour map provided!"]
+    },
     "fees": { "cleaning": 35, "service": 20, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Albert Cuyp Market", "distance": "0.1 km", "type": "shopping" },
@@ -1147,14 +2768,70 @@
       { "name": "Ferdinand Bol Tram", "distance": "0.2 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Bram", "authorAvatar": "https://i.pravatar.cc/150?u=bram", "rating": 5, "date": "2025-12-10", "text": "Best neighborhood for food lovers!" },
-      { "id": "r2", "authorName": "Sophie", "authorAvatar": "https://i.pravatar.cc/150?u=sophie_nl", "rating": 5, "date": "2025-11-25", "text": "Iris's food map was amazing." },
-      { "id": "r3", "authorName": "Tim", "authorAvatar": "https://i.pravatar.cc/150?u=tim_nl", "rating": 4, "date": "2025-10-18", "text": "Albert Cuyp Market is a must!" },
-      { "id": "r4", "authorName": "Linda", "authorAvatar": "https://i.pravatar.cc/150?u=linda", "rating": 5, "date": "2025-09-10", "text": "Cozy apartment, wonderful host." },
-      { "id": "r5", "authorName": "Jeroen", "authorAvatar": "https://i.pravatar.cc/150?u=jeroen", "rating": 5, "date": "2025-08-22", "text": "De Pijp is the place to be!" },
-      { "id": "r6", "authorName": "Marieke", "authorAvatar": "https://i.pravatar.cc/150?u=marieke_nl", "rating": 5, "date": "2025-07-14", "text": "Loved every minute!" },
-      { "id": "r7", "authorName": "Koen", "authorAvatar": "https://i.pravatar.cc/150?u=koen", "rating": 4, "date": "2025-06-28", "text": "Great location, comfy bed." },
-      { "id": "r8", "authorName": "Floor", "authorAvatar": "https://i.pravatar.cc/150?u=floor", "rating": 5, "date": "2025-05-20", "text": "Perfect Amsterdam stay!" }
+      {
+        "id": "r1",
+        "authorName": "Bram",
+        "authorAvatar": "https://i.pravatar.cc/150?u=bram",
+        "rating": 5,
+        "date": "2025-12-10",
+        "text": "Best neighborhood for food lovers!"
+      },
+      {
+        "id": "r2",
+        "authorName": "Sophie",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sophie_nl",
+        "rating": 5,
+        "date": "2025-11-25",
+        "text": "Iris's food map was amazing."
+      },
+      {
+        "id": "r3",
+        "authorName": "Tim",
+        "authorAvatar": "https://i.pravatar.cc/150?u=tim_nl",
+        "rating": 4,
+        "date": "2025-10-18",
+        "text": "Albert Cuyp Market is a must!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Linda",
+        "authorAvatar": "https://i.pravatar.cc/150?u=linda",
+        "rating": 5,
+        "date": "2025-09-10",
+        "text": "Cozy apartment, wonderful host."
+      },
+      {
+        "id": "r5",
+        "authorName": "Jeroen",
+        "authorAvatar": "https://i.pravatar.cc/150?u=jeroen",
+        "rating": 5,
+        "date": "2025-08-22",
+        "text": "De Pijp is the place to be!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Marieke",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marieke_nl",
+        "rating": 5,
+        "date": "2025-07-14",
+        "text": "Loved every minute!"
+      },
+      {
+        "id": "r7",
+        "authorName": "Koen",
+        "authorAvatar": "https://i.pravatar.cc/150?u=koen",
+        "rating": 4,
+        "date": "2025-06-28",
+        "text": "Great location, comfy bed."
+      },
+      {
+        "id": "r8",
+        "authorName": "Floor",
+        "authorAvatar": "https://i.pravatar.cc/150?u=floor",
+        "rating": 5,
+        "date": "2025-05-20",
+        "text": "Perfect Amsterdam stay!"
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,
@@ -1182,7 +2859,10 @@
     "baths": 1,
     "amenities": ["wifi", "kitchen", "airConditioning", "tv", "washer"],
     "host": { "name": "Pau", "avatar": "https://i.pravatar.cc/150?u=pau", "isSuperhost": true },
-    "policies": { "cancellation": "Free cancellation within 48 hours", "houseRules": ["No smoking", "Explore the plazas!"] },
+    "policies": {
+      "cancellation": "Free cancellation within 48 hours",
+      "houseRules": ["No smoking", "Explore the plazas!"]
+    },
     "fees": { "cleaning": 30, "service": 17, "discountPercent": 5 },
     "areaHighlights": [
       { "name": "Plaça del Sol", "distance": "0.2 km", "type": "attraction" },
@@ -1190,14 +2870,70 @@
       { "name": "Fontana Metro", "distance": "0.3 km", "type": "transport" }
     ],
     "reviews": [
-      { "id": "r1", "authorName": "Alba", "authorAvatar": "https://i.pravatar.cc/150?u=alba", "rating": 5, "date": "2025-12-08", "text": "Gràcia feels like a village in the city!" },
-      { "id": "r2", "authorName": "David", "authorAvatar": "https://i.pravatar.cc/150?u=david_es", "rating": 5, "date": "2025-11-22", "text": "Pau is an amazing host." },
-      { "id": "r3", "authorName": "Cristina", "authorAvatar": "https://i.pravatar.cc/150?u=cristina", "rating": 5, "date": "2025-10-15", "text": "Loved the local atmosphere!" },
-      { "id": "r4", "authorName": "Sergio", "authorAvatar": "https://i.pravatar.cc/150?u=sergio", "rating": 4, "date": "2025-09-08", "text": "Great apartment, easy walk to Park Güell." },
-      { "id": "r5", "authorName": "Marina", "authorAvatar": "https://i.pravatar.cc/150?u=marina", "rating": 5, "date": "2025-08-20", "text": "The plazas at night are magical!" },
-      { "id": "r6", "authorName": "Víctor", "authorAvatar": "https://i.pravatar.cc/150?u=victor", "rating": 5, "date": "2025-07-12", "text": "Best neighborhood in Barcelona." },
-      { "id": "r7", "authorName": "Laura", "authorAvatar": "https://i.pravatar.cc/150?u=laura_es", "rating": 5, "date": "2025-06-28", "text": "Would definitely return!" },
-      { "id": "r8", "authorName": "Marc", "authorAvatar": "https://i.pravatar.cc/150?u=marc_es", "rating": 4, "date": "2025-05-15", "text": "Authentic Barcelona experience." }
+      {
+        "id": "r1",
+        "authorName": "Alba",
+        "authorAvatar": "https://i.pravatar.cc/150?u=alba",
+        "rating": 5,
+        "date": "2025-12-08",
+        "text": "Gràcia feels like a village in the city!"
+      },
+      {
+        "id": "r2",
+        "authorName": "David",
+        "authorAvatar": "https://i.pravatar.cc/150?u=david_es",
+        "rating": 5,
+        "date": "2025-11-22",
+        "text": "Pau is an amazing host."
+      },
+      {
+        "id": "r3",
+        "authorName": "Cristina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=cristina",
+        "rating": 5,
+        "date": "2025-10-15",
+        "text": "Loved the local atmosphere!"
+      },
+      {
+        "id": "r4",
+        "authorName": "Sergio",
+        "authorAvatar": "https://i.pravatar.cc/150?u=sergio",
+        "rating": 4,
+        "date": "2025-09-08",
+        "text": "Great apartment, easy walk to Park Güell."
+      },
+      {
+        "id": "r5",
+        "authorName": "Marina",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marina",
+        "rating": 5,
+        "date": "2025-08-20",
+        "text": "The plazas at night are magical!"
+      },
+      {
+        "id": "r6",
+        "authorName": "Víctor",
+        "authorAvatar": "https://i.pravatar.cc/150?u=victor",
+        "rating": 5,
+        "date": "2025-07-12",
+        "text": "Best neighborhood in Barcelona."
+      },
+      {
+        "id": "r7",
+        "authorName": "Laura",
+        "authorAvatar": "https://i.pravatar.cc/150?u=laura_es",
+        "rating": 5,
+        "date": "2025-06-28",
+        "text": "Would definitely return!"
+      },
+      {
+        "id": "r8",
+        "authorName": "Marc",
+        "authorAvatar": "https://i.pravatar.cc/150?u=marc_es",
+        "rating": 4,
+        "date": "2025-05-15",
+        "text": "Authentic Barcelona experience."
+      }
     ],
     "instantBook": true,
     "freeCancellation": true,

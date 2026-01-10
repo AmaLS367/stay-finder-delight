@@ -40,4 +40,3 @@ describe("useLocalStorage", () => {
     expect(window.localStorage.getItem("counter_test")).toBe("2");
   });
 });
-

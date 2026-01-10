@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Users, MapPin, X, Printer, Search } from 'lucide-react';
-import { Layout } from '@/components/layout/Layout';
-import { toast } from '@/components/ui/sonner';
-import { useBookings } from '@/hooks/useBookings';
-import { formatPrice, formatDateRange, formatGuests } from '@/lib/formatters';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Calendar, Users, MapPin, X, Printer, Search } from "lucide-react";
+import { Layout } from "@/components/layout/Layout";
+import { toast } from "@/components/ui/sonner";
+import { useBookings } from "@/hooks/useBookings";
+import { formatPrice, formatDateRange, formatGuests } from "@/lib/formatters";
 
 export default function Trips() {
   const { upcomingBookings, pastBookings, cancelBooking } = useBookings();
-  const [tab, setTab] = useState<'upcoming' | 'past'>('upcoming');
+  const [tab, setTab] = useState<"upcoming" | "past">("upcoming");
 
-  const bookings = tab === 'upcoming' ? upcomingBookings : pastBookings;
+  const bookings = tab === "upcoming" ? upcomingBookings : pastBookings;
 
   const handlePrint = (bookingId: string) => {
-    const booking = [...upcomingBookings, ...pastBookings].find(b => b.id === bookingId);
+    const booking = [...upcomingBookings, ...pastBookings].find((b) => b.id === bookingId);
     if (!booking) return;
 
-    const printWindow = window.open('', '_blank');
+    const printWindow = window.open("", "_blank");
     if (!printWindow) {
-      toast.error('Popup blocked. Allow popups to print the receipt.');
+      toast.error("Popup blocked. Allow popups to print the receipt.");
       return;
     }
 
@@ -62,7 +62,7 @@ export default function Trips() {
         printWindow.focus();
         printWindow.print();
       } catch {
-        toast.error('Print failed');
+        toast.error("Print failed");
       }
     };
 
@@ -82,21 +82,21 @@ export default function Trips() {
 
         <div className="flex gap-4 mb-8 border-b border-border">
           <button
-            onClick={() => setTab('upcoming')}
+            onClick={() => setTab("upcoming")}
             className={`pb-3 px-1 font-medium transition-colors ${
-              tab === 'upcoming'
-                ? 'text-foreground border-b-2 border-foreground'
-                : 'text-muted-foreground'
+              tab === "upcoming"
+                ? "text-foreground border-b-2 border-foreground"
+                : "text-muted-foreground"
             }`}
           >
             Upcoming ({upcomingBookings.length})
           </button>
           <button
-            onClick={() => setTab('past')}
+            onClick={() => setTab("past")}
             className={`pb-3 px-1 font-medium transition-colors ${
-              tab === 'past'
-                ? 'text-foreground border-b-2 border-foreground'
-                : 'text-muted-foreground'
+              tab === "past"
+                ? "text-foreground border-b-2 border-foreground"
+                : "text-muted-foreground"
             }`}
           >
             Past ({pastBookings.length})
@@ -105,8 +105,11 @@ export default function Trips() {
 
         {bookings.length > 0 ? (
           <div className="space-y-6">
-            {bookings.map(booking => (
-              <div key={booking.id} className="flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-border bg-card">
+            {bookings.map((booking) => (
+              <div
+                key={booking.id}
+                className="flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-border bg-card"
+              >
                 <Link to={`/listing/${booking.listingId}`} className="shrink-0">
                   <img
                     src={booking.listing.images[0]}
@@ -117,7 +120,10 @@ export default function Trips() {
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <Link to={`/listing/${booking.listingId}`} className="font-semibold text-lg hover:underline">
+                      <Link
+                        to={`/listing/${booking.listingId}`}
+                        className="font-semibold text-lg hover:underline"
+                      >
                         {booking.listing.title}
                       </Link>
                       <p className="flex items-center gap-1 text-muted-foreground text-sm mt-1">
@@ -125,15 +131,19 @@ export default function Trips() {
                         {booking.listing.city}, {booking.listing.country}
                       </p>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      booking.status === 'confirmed' ? 'bg-green-100 text-green-700' :
-                      booking.status === 'cancelled' ? 'bg-red-100 text-red-700' :
-                      'bg-muted text-muted-foreground'
-                    }`}>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        booking.status === "confirmed"
+                          ? "bg-green-100 text-green-700"
+                          : booking.status === "cancelled"
+                            ? "bg-red-100 text-red-700"
+                            : "bg-muted text-muted-foreground"
+                      }`}
+                    >
                       {booking.status}
                     </span>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-4 mt-4 text-sm">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -153,7 +163,7 @@ export default function Trips() {
                     >
                       <Printer className="h-4 w-4" /> Receipt
                     </button>
-                    {tab === 'upcoming' && booking.status !== 'cancelled' && (
+                    {tab === "upcoming" && booking.status !== "cancelled" && (
                       <button
                         onClick={() => cancelBooking(booking.id)}
                         className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-red-600 border border-red-200 rounded-lg hover:bg-red-50 transition-colors"
@@ -169,10 +179,12 @@ export default function Trips() {
         ) : (
           <div className="text-center py-16">
             <p className="text-lg font-medium mb-2">
-              {tab === 'upcoming' ? 'No upcoming trips' : 'No past trips'}
+              {tab === "upcoming" ? "No upcoming trips" : "No past trips"}
             </p>
             <p className="text-muted-foreground mb-6">
-              {tab === 'upcoming' ? 'Time to plan your next adventure!' : 'Your travel history will appear here'}
+              {tab === "upcoming"
+                ? "Time to plan your next adventure!"
+                : "Your travel history will appear here"}
             </p>
             <Link
               to="/search"

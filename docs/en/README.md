@@ -57,21 +57,21 @@ graph TB
         A --> C[Common Components]
         A --> D[UI Components]
     end
-    
+
     subgraph "State Management"
         E[Custom Hooks] --> F[LocalStorage]
         E --> G[React State]
     end
-    
+
     subgraph "Data Layer"
         H[Static JSON] --> I[Listings Data]
         F --> J[User Data]
     end
-    
+
     subgraph "Routing"
         K[HashRouter] --> A
     end
-    
+
     B --> E
     C --> E
     A --> K
@@ -164,6 +164,7 @@ The app uses a **hybrid state management approach**:
 ### Routing Strategy
 
 Uses **HashRouter** instead of BrowserRouter to:
+
 - Avoid 404 errors on GitHub Pages
 - Work with static hosting
 - Enable deep linking without server configuration
@@ -174,17 +175,17 @@ Uses **HashRouter** instead of BrowserRouter to:
 
 <div align="center">
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Framework** | React 18.3 | UI library |
-| **Language** | TypeScript 5.8 | Type safety |
-| **Build Tool** | Vite 5.4 | Fast dev server & bundling |
-| **UI Library** | shadcn/ui | Component primitives |
-| **Styling** | Tailwind CSS 3.4 | Utility-first CSS |
-| **Routing** | React Router 6.30 | Client-side routing |
-| **Icons** | Lucide React | Icon library |
-| **Forms** | React Hook Form + Zod | Form handling & validation |
-| **Date Utils** | date-fns 3.6 | Date manipulation |
+| Layer          | Technology            | Purpose                    |
+| -------------- | --------------------- | -------------------------- |
+| **Framework**  | React 18.3            | UI library                 |
+| **Language**   | TypeScript 5.8        | Type safety                |
+| **Build Tool** | Vite 5.4              | Fast dev server & bundling |
+| **UI Library** | shadcn/ui             | Component primitives       |
+| **Styling**    | Tailwind CSS 3.4      | Utility-first CSS          |
+| **Routing**    | React Router 6.30     | Client-side routing        |
+| **Icons**      | Lucide React          | Icon library               |
+| **Forms**      | React Hook Form + Zod | Form handling & validation |
+| **Date Utils** | date-fns 3.6          | Date manipulation          |
 
 </div>
 
@@ -244,4 +245,3 @@ For questions or issues:
 **Ready to dive in?** Start with the [Getting Started Guide](./getting-started.md) →
 
 </div>
-

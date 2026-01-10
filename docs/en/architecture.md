@@ -103,23 +103,23 @@ graph TB
         A --> C[Common Components]
         C --> D[UI Components]
     end
-    
+
     subgraph "Business Logic Layer"
         E[Custom Hooks] --> F[State Management]
         E --> G[Data Processing]
     end
-    
+
     subgraph "Data Layer"
         H[Static JSON] --> I[Listings Data]
         J[LocalStorage] --> K[User Data]
     end
-    
+
     subgraph "Infrastructure Layer"
         L[Routing] --> A
         M[Build Tools] --> N[Vite]
         O[Styling] --> P[Tailwind]
     end
-    
+
     A --> E
     E --> H
     E --> J
@@ -137,14 +137,14 @@ sequenceDiagram
     participant Hook
     participant Storage
     participant Data
-    
+
     User->>Page: Interacts with UI
     Page->>Hook: Calls hook function
     Hook->>Storage: Reads/Writes data
     Storage->>Hook: Returns data
     Hook->>Page: Updates state
     Page->>User: UI updates
-    
+
     Note over Page,Data: Static data flow
     Page->>Data: Reads listings.json
     Data->>Page: Returns listings
@@ -165,33 +165,33 @@ graph TD
     C --> F[Listing Page]
     C --> G[Trips Page]
     C --> H[Wishlist Page]
-    
+
     D --> I[Layout]
     E --> I
     F --> I
     G --> I
     H --> I
-    
+
     I --> J[Navbar]
     I --> K[Footer]
     I --> L[Page Content]
-    
+
     L --> M[SearchForm]
     L --> N[ListingCard]
     L --> O[UI Components]
-    
+
     M --> O
     N --> O
 ```
 
 ### Component Categories
 
-| Category | Purpose | Examples |
-|----------|---------|----------|
-| **Pages** | Top-level route components | `Home.tsx`, `Search.tsx` |
-| **Layout** | Structure and navigation | `Layout.tsx`, `Navbar.tsx` |
+| Category   | Purpose                      | Examples                            |
+| ---------- | ---------------------------- | ----------------------------------- |
+| **Pages**  | Top-level route components   | `Home.tsx`, `Search.tsx`            |
+| **Layout** | Structure and navigation     | `Layout.tsx`, `Navbar.tsx`          |
 | **Common** | Reusable business components | `ListingCard.tsx`, `SearchForm.tsx` |
-| **UI** | Low-level primitives | `Button`, `Card`, `Dialog` |
+| **UI**     | Low-level primitives         | `Button`, `Card`, `Dialog`          |
 
 ---
 
@@ -208,7 +208,7 @@ graph LR
     B --> F[/#/trips - Trips]
     B --> G[/#/wishlist - Wishlist]
     B --> H[* - 404]
-    
+
     style C fill:#e1f5ff
     style D fill:#e1f5ff
     style E fill:#e1f5ff
@@ -235,17 +235,17 @@ graph TB
     subgraph "Component State"
         A[useState] --> B[Local Component State]
     end
-    
+
     subgraph "Persistent State"
         C[useLocalStorage] --> D[LocalStorage]
         E[useWishlist] --> C
         F[useBookings] --> C
     end
-    
+
     subgraph "URL State"
         G[useSearchParams] --> H[Query Parameters]
     end
-    
+
     I[Pages] --> A
     I --> E
     I --> F
@@ -254,12 +254,12 @@ graph TB
 
 ### State Management Strategy
 
-| State Type | Solution | Use Case |
-|-----------|----------|----------|
-| **Component State** | `useState` | UI state, form inputs |
-| **Persistent State** | `useLocalStorage` | Wishlist, bookings |
-| **URL State** | `useSearchParams` | Search filters, pagination |
-| **Derived State** | `useMemo` | Filtered lists, calculations |
+| State Type           | Solution          | Use Case                     |
+| -------------------- | ----------------- | ---------------------------- |
+| **Component State**  | `useState`        | UI state, form inputs        |
+| **Persistent State** | `useLocalStorage` | Wishlist, bookings           |
+| **URL State**        | `useSearchParams` | Search filters, pagination   |
+| **Derived State**    | `useMemo`         | Filtered lists, calculations |
 
 ---
 
@@ -272,13 +272,13 @@ graph TD
     A[useLocalStorage] --> B[Base Hook]
     B --> C[useWishlist]
     B --> D[useBookings]
-    
+
     C --> E[Wishlist Operations]
     D --> F[Booking Operations]
-    
+
     E --> G[Add/Remove/Toggle]
     F --> H[Create/Cancel/Filter]
-    
+
     G --> I[LocalStorage]
     H --> I
 ```
@@ -291,7 +291,7 @@ graph LR
     C[useWishlist] --> A
     D[useBookings] --> A
     D --> E[dateUtils]
-    
+
     F[Pages] --> C
     F --> D
 ```
@@ -309,7 +309,7 @@ sequenceDiagram
     participant SearchPage
     participant QueryParams
     participant Listings
-    
+
     User->>SearchForm: Enters search criteria
     SearchForm->>QueryParams: Builds URL
     QueryParams->>SearchPage: Updates route
@@ -327,7 +327,7 @@ sequenceDiagram
     participant useBookings
     participant LocalStorage
     participant TripsPage
-    
+
     User->>ListingPage: Clicks "Reserve"
     ListingPage->>useBookings: createBooking()
     useBookings->>LocalStorage: Saves booking
@@ -351,7 +351,7 @@ graph TB
     A[Tailwind CSS] --> B[Utility Classes]
     B --> C[Components]
     C --> D[Pages]
-    
+
     E[Custom Config] --> A
     F[Theme Variables] --> A
     G[Custom Utilities] --> A
@@ -378,19 +378,19 @@ graph LR
     B --> E[Listing]
     B --> F[Trips]
     B --> G[Wishlist]
-    
+
     H[Route Change] --> I[Load Component]
     I --> J[Render]
 ```
 
 ### Optimization Strategies
 
-| Technique | Implementation | Benefit |
-|-----------|---------------|---------|
-| **Lazy Loading** | `React.lazy()` | Smaller initial bundle |
-| **Code Splitting** | Route-based | Load on demand |
-| **Memoization** | `useMemo`, `useCallback` | Prevent re-renders |
-| **Image Optimization** | Lazy loading | Faster page load |
+| Technique              | Implementation           | Benefit                |
+| ---------------------- | ------------------------ | ---------------------- |
+| **Lazy Loading**       | `React.lazy()`           | Smaller initial bundle |
+| **Code Splitting**     | Route-based              | Load on demand         |
+| **Memoization**        | `useMemo`, `useCallback` | Prevent re-renders     |
+| **Image Optimization** | Lazy loading             | Faster page load       |
 
 ---
 
@@ -403,15 +403,15 @@ graph TB
     A[Type Definitions] --> B[Interfaces]
     A --> C[Types]
     A --> D[Enums]
-    
+
     B --> E[Listing]
     B --> F[Booking]
     B --> G[Host]
-    
+
     E --> H[Components]
     F --> H
     G --> H
-    
+
     H --> I[Type Safety]
 ```
 
@@ -436,7 +436,7 @@ graph LR
     D --> E[Optimization]
     E --> F[Static Assets]
     F --> G[dist/]
-    
+
     H[GitHub Actions] --> B
     G --> I[GitHub Pages]
 ```
@@ -449,7 +449,7 @@ sequenceDiagram
     participant GitHub
     participant Actions
     participant Pages
-    
+
     Dev->>GitHub: Push to main
     GitHub->>Actions: Triggers workflow
     Actions->>Actions: Install deps
@@ -472,7 +472,7 @@ graph TB
     E[shadcn/ui] --> F[UI Components]
     G[Tailwind] --> H[Styling]
     I[TypeScript] --> J[Type Safety]
-    
+
     B --> K[Application]
     D --> K
     F --> K
@@ -486,13 +486,13 @@ graph TB
 
 ### Patterns Used
 
-| Pattern | Implementation | Purpose |
-|---------|---------------|---------|
-| **Component Composition** | Small, focused components | Reusability |
-| **Custom Hooks** | Business logic extraction | Code organization |
-| **Higher-Order Components** | Layout wrapper | Code reuse |
-| **Render Props** | Flexible component API | Flexibility |
-| **Controlled Components** | Form inputs | Predictable state |
+| Pattern                     | Implementation            | Purpose           |
+| --------------------------- | ------------------------- | ----------------- |
+| **Component Composition**   | Small, focused components | Reusability       |
+| **Custom Hooks**            | Business logic extraction | Code organization |
+| **Higher-Order Components** | Layout wrapper            | Code reuse        |
+| **Render Props**            | Flexible component API    | Flexibility       |
+| **Controlled Components**   | Form inputs               | Predictable state |
 
 ---
 
@@ -520,4 +520,3 @@ graph TD
 **Next:** Learn about [Components](./components.md) →
 
 </div>
-

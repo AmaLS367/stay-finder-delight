@@ -22,4 +22,3 @@ describe("routing smoke", () => {
     expect(title).toBeInTheDocument();
   });
 });
-

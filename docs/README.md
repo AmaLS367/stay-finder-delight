@@ -53,4 +53,3 @@
 **StayFinder** - A production-like booking UI demo built with React, TypeScript and Vite
 
 </div>
-

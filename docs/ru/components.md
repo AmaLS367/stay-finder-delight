@@ -28,7 +28,7 @@ graph TB
     A --> C[Layout]
     A --> D[Common]
     A --> E[UI]
-    
+
     B --> F[Home, Search, Listing, etc.]
     C --> G[Layout, Navbar, Footer]
     D --> H[ListingCard, SearchForm]
@@ -46,12 +46,14 @@ graph TB
 **Расположение:** `src/pages/Home.tsx`
 
 Главная страница с:
+
 - Hero секцией с формой поиска
 - Популярными направлениями
 - Рекомендуемыми размещениями
 - Секцией преимуществ
 
 **Возможности:**
+
 - Отображает популярные направления из объявлений
 - Показывает топовые рекомендуемые размещения
 - Включает hero форму поиска
@@ -61,6 +63,7 @@ graph TB
 **Расположение:** `src/pages/Search.tsx`
 
 Страница результатов поиска с фильтрацией и сортировкой:
+
 - Форма поиска
 - Боковая панель фильтров (цена, тип, рейтинг, удобства)
 - Опции сортировки
@@ -70,6 +73,7 @@ graph TB
 **Props:** Нет (читает из URL query params)
 
 **Управление состоянием:**
+
 - Использует `useSearchParams` для URL состояния
 - Локальное состояние для фильтров
 - `useMemo` для отфильтрованных результатов
@@ -79,6 +83,7 @@ graph TB
 **Расположение:** `src/pages/Listing.tsx`
 
 Детальный просмотр объявления с:
+
 - Галереей изображений с lightbox
 - Формой бронирования
 - Секцией отзывов
@@ -89,6 +94,7 @@ graph TB
 **Маршрут:** `/listing/:id`
 
 **Возможности:**
+
 - Карусель изображений
 - Выбор дат для бронирования
 - Выбор количества гостей
@@ -101,6 +107,7 @@ graph TB
 **Расположение:** `src/pages/Trips.tsx`
 
 Страница управления поездками пользователя:
+
 - Предстоящие поездки
 - Прошедшие поездки
 - Отмена поездки
@@ -113,6 +120,7 @@ graph TB
 **Расположение:** `src/pages/Wishlist.tsx`
 
 Страница сохраненных объявлений:
+
 - Сетка элементов из избранного
 - Удаление из избранного
 - Пустое состояние
@@ -146,6 +154,7 @@ interface LayoutProps {
 ```
 
 **Возможности:**
+
 - Обертывает страницы с Navbar и Footer
 - Обеспечивает согласованную структуру страницы
 - Обрабатывает адаптивный макет
@@ -157,12 +166,14 @@ interface LayoutProps {
 Компонент панели навигации.
 
 **Возможности:**
+
 - Адаптивный дизайн (мобильное меню)
 - Подсветка активного маршрута
 - Логотип и брендинг
 - Ссылки навигации: Home, Trips, Wishlist
 
 **Состояние:**
+
 - `isOpen` - Переключение мобильного меню
 
 ### Footer
@@ -170,6 +181,7 @@ interface LayoutProps {
 **Расположение:** `src/components/layout/Footer.tsx`
 
 Компонент футера с:
+
 - Ссылками
 - Информацией об авторских правах
 - Социальными ссылками (если применимо)
@@ -191,6 +203,7 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 ```
 
 **Возможности:**
+
 - Стилизация активного состояния
 - Стилизация состояния ожидания
 - Совместим с API NavLink React Router
@@ -200,7 +213,7 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 ```typescript
 import { NavLink } from '@/components/NavLink';
 
-<NavLink 
+<NavLink
   to="/trips"
   className="link-base"
   activeClassName="link-active"
@@ -229,6 +242,7 @@ interface ListingCardProps {
 ```
 
 **Возможности:**
+
 - Карусель изображений с навигацией
 - Кнопка переключения избранного
 - Отображение рейтинга
@@ -244,6 +258,7 @@ interface ListingCardProps {
 ```
 
 **Интерактивные элементы:**
+
 - Навигация по изображениям (предыдущее/следующее)
 - Переключение избранного
 - Клик для перехода к деталям
@@ -258,7 +273,7 @@ interface ListingCardProps {
 
 ```typescript
 interface SearchFormProps {
-  variant?: 'hero' | 'compact';
+  variant?: "hero" | "compact";
   initialValues?: {
     location?: string;
     checkIn?: string;
@@ -269,10 +284,12 @@ interface SearchFormProps {
 ```
 
 **Варианты:**
+
 - `hero` - Большая форма в стиле hero (главная страница)
 - `compact` - Компактная встроенная форма (страница поиска)
 
 **Возможности:**
+
 - Автозаполнение местоположения
 - Выбор дат (заезд/выезд)
 - Счетчик гостей
@@ -286,7 +303,7 @@ interface SearchFormProps {
 <SearchForm variant="hero" />
 
 // Компактный вариант с начальными значениями
-<SearchForm 
+<SearchForm
   variant="compact"
   initialValues={{
     location: "Париж",
@@ -305,30 +322,30 @@ StayFinder использует компоненты **shadcn/ui**, постро
 
 ### Список компонентов
 
-| Компонент | Расположение | Назначение |
-|-----------|----------|---------|
-| **Accordion** | `accordion.tsx` | Сворачиваемые секции контента |
-| **Alert** | `alert.tsx` | Сообщения-предупреждения |
-| **Alert Dialog** | `alert-dialog.tsx` | Модальные диалоги подтверждения |
-| **Avatar** | `avatar.tsx` | Изображения профилей пользователей |
-| **Badge** | `badge.tsx` | Метки статуса и теги |
-| **Button** | `button.tsx` | Интерактивные кнопки |
-| **Card** | `card.tsx` | Контейнеры контента |
-| **Checkbox** | `checkbox.tsx` | Чекбоксы |
-| **Dialog** | `dialog.tsx` | Модальные диалоги |
-| **Dropdown Menu** | `dropdown-menu.tsx` | Контекстные меню |
-| **Form** | `form.tsx` | Обертка формы с валидацией |
-| **Input** | `input.tsx` | Текстовые поля ввода |
-| **Label** | `label.tsx` | Метки форм |
-| **Select** | `select.tsx` | Выпадающие списки |
-| **Separator** | `separator.tsx` | Визуальные разделители |
-| **Sheet** | `sheet.tsx` | Выдвижные панели |
-| **Skeleton** | `skeleton.tsx` | Плейсхолдеры загрузки |
-| **Slider** | `slider.tsx` | Поля диапазона |
-| **Switch** | `switch.tsx` | Переключатели |
-| **Tabs** | `tabs.tsx` | Интерфейсы с вкладками |
-| **Toast** | `toast.tsx` | Уведомления-тосты |
-| **Tooltip** | `tooltip.tsx` | Всплывающие подсказки |
+| Компонент         | Расположение        | Назначение                         |
+| ----------------- | ------------------- | ---------------------------------- |
+| **Accordion**     | `accordion.tsx`     | Сворачиваемые секции контента      |
+| **Alert**         | `alert.tsx`         | Сообщения-предупреждения           |
+| **Alert Dialog**  | `alert-dialog.tsx`  | Модальные диалоги подтверждения    |
+| **Avatar**        | `avatar.tsx`        | Изображения профилей пользователей |
+| **Badge**         | `badge.tsx`         | Метки статуса и теги               |
+| **Button**        | `button.tsx`        | Интерактивные кнопки               |
+| **Card**          | `card.tsx`          | Контейнеры контента                |
+| **Checkbox**      | `checkbox.tsx`      | Чекбоксы                           |
+| **Dialog**        | `dialog.tsx`        | Модальные диалоги                  |
+| **Dropdown Menu** | `dropdown-menu.tsx` | Контекстные меню                   |
+| **Form**          | `form.tsx`          | Обертка формы с валидацией         |
+| **Input**         | `input.tsx`         | Текстовые поля ввода               |
+| **Label**         | `label.tsx`         | Метки форм                         |
+| **Select**        | `select.tsx`        | Выпадающие списки                  |
+| **Separator**     | `separator.tsx`     | Визуальные разделители             |
+| **Sheet**         | `sheet.tsx`         | Выдвижные панели                   |
+| **Skeleton**      | `skeleton.tsx`      | Плейсхолдеры загрузки              |
+| **Slider**        | `slider.tsx`        | Поля диапазона                     |
+| **Switch**        | `switch.tsx`        | Переключатели                      |
+| **Tabs**          | `tabs.tsx`          | Интерфейсы с вкладками             |
+| **Toast**         | `toast.tsx`         | Уведомления-тосты                  |
+| **Tooltip**       | `tooltip.tsx`       | Всплывающие подсказки              |
 
 ### Наиболее используемые компоненты
 
@@ -416,11 +433,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 **Использование:**
 
 ```typescript
-import { toast } from '@/components/ui/sonner';
+import { toast } from "@/components/ui/sonner";
 
-toast.success('Операция выполнена');
-toast.error('Произошла ошибка');
-toast.message('Информационное сообщение');
+toast.success("Операция выполнена");
+toast.error("Произошла ошибка");
+toast.message("Информационное сообщение");
 ```
 
 ---
@@ -433,17 +450,17 @@ graph TD
     A --> C[Общие компоненты]
     C --> D[UI компоненты]
     B --> D
-    
+
     E[Home] --> F[SearchForm]
     E --> G[ListingCard]
     F --> D
     G --> D
-    
+
     H[Search] --> F
     H --> G
     H --> I[UI фильтров]
     I --> D
-    
+
     J[Listing] --> K[Галерея изображений]
     J --> L[Форма бронирования]
     K --> D
@@ -490,17 +507,14 @@ interface ComponentProps {
 Использование `class-variance-authority`:
 
 ```typescript
-const buttonVariants = cva(
-  "базовые-классы",
-  {
-    variants: {
-      variant: {
-        default: "классы-по-умолчанию",
-        outline: "классы-outline",
-      },
+const buttonVariants = cva("базовые-классы", {
+  variants: {
+    variant: {
+      default: "классы-по-умолчанию",
+      outline: "классы-outline",
     },
-  }
-);
+  },
+});
 ```
 
 ---
@@ -522,10 +536,8 @@ const buttonVariants = cva(
 Компоненты используют CSS переменные для темизации:
 
 ```css
---background: цвет темы
---foreground: цвет текста
---primary: основной цвет
---secondary: вторичный цвет
+--background: цвет темы --foreground: цвет текста --primary: основной цвет --secondary: вторичный
+  цвет;
 ```
 
 ### Адаптивный дизайн
@@ -555,12 +567,12 @@ const buttonVariants = cva(
 
 ### Техники оптимизации
 
-| Техника | Реализация |
-|----------|---------------|
-| **Мemoизация** | `React.memo()` для дорогих компонентов |
-| **Ленивая загрузка** | Разделение кода по маршрутам |
-| **Оптимизация изображений** | Ленивая загрузка, правильный размер |
-| **Разделение кода** | Динамические импорты для страниц |
+| Техника                     | Реализация                             |
+| --------------------------- | -------------------------------------- |
+| **Мemoизация**              | `React.memo()` для дорогих компонентов |
+| **Ленивая загрузка**        | Разделение кода по маршрутам           |
+| **Оптимизация изображений** | Ленивая загрузка, правильный размер    |
+| **Разделение кода**         | Динамические импорты для страниц       |
 
 ### Лучшие практики
 
@@ -622,4 +634,3 @@ export function MyPage() {
 **Следующее:** Изучите [Кастомные Hooks](./hooks.md) →
 
 </div>
-

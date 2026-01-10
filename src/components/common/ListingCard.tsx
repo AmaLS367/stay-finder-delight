@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, ChevronLeft, ChevronRight, Star, Zap } from 'lucide-react';
-import { formatPrice } from '@/lib/formatters';
-import { useWishlist } from '@/hooks/useWishlist';
-import type { Listing } from '@/types';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Heart, ChevronLeft, ChevronRight, Star, Zap } from "lucide-react";
+import { formatPrice } from "@/lib/formatters";
+import { useWishlist } from "@/hooks/useWishlist";
+import type { Listing } from "@/types";
 
 interface ListingCardProps {
   listing: Listing;
@@ -17,13 +17,13 @@ export function ListingCard({ listing }: ListingCardProps) {
   const nextImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setCurrentImage(prev => (prev + 1) % listing.images.length);
+    setCurrentImage((prev) => (prev + 1) % listing.images.length);
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setCurrentImage(prev => (prev - 1 + listing.images.length) % listing.images.length);
+    setCurrentImage((prev) => (prev - 1 + listing.images.length) % listing.images.length);
   };
 
   const handleWishlist = (e: React.MouseEvent) => {
@@ -69,7 +69,7 @@ export function ListingCard({ listing }: ListingCardProps) {
               <span
                 key={idx}
                 className={`h-1.5 w-1.5 rounded-full transition-colors ${
-                  idx === currentImage ? 'bg-white' : 'bg-white/50'
+                  idx === currentImage ? "bg-white" : "bg-white/50"
                 }`}
               />
             ))}
@@ -80,10 +80,10 @@ export function ListingCard({ listing }: ListingCardProps) {
         <button
           onClick={handleWishlist}
           className="absolute right-3 top-3 p-2 rounded-full bg-white/80 hover:bg-white transition-colors"
-          aria-label={isSaved ? 'Remove from wishlist' : 'Add to wishlist'}
+          aria-label={isSaved ? "Remove from wishlist" : "Add to wishlist"}
         >
           <Heart
-            className={`h-4 w-4 ${isSaved ? 'fill-red-500 text-red-500' : 'text-foreground'}`}
+            className={`h-4 w-4 ${isSaved ? "fill-red-500 text-red-500" : "text-foreground"}`}
           />
         </button>
 

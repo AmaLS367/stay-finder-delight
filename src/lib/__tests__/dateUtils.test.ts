@@ -1,11 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { addDays, format } from "date-fns";
-import {
-  getLocalTodayISODate,
-  isUpcoming,
-  isPast,
-  generateICSContent,
-} from "@/lib/dateUtils";
+import { getLocalTodayISODate, isUpcoming, isPast, generateICSContent } from "@/lib/dateUtils";
 
 describe("dateUtils", () => {
   it("getLocalTodayISODate returns YYYY-MM-DD", () => {
@@ -37,13 +32,7 @@ describe("dateUtils", () => {
     const checkIn = "2026-01-10";
     const checkOut = "2026-01-12";
 
-    const content = generateICSContent(
-      "Test Stay",
-      "Test City",
-      checkIn,
-      checkOut,
-      "Line1\nLine2"
-    );
+    const content = generateICSContent("Test Stay", "Test City", checkIn, checkOut, "Line1\nLine2");
 
     const dtstampLine = content.split("\n").find((l) => l.startsWith("DTSTAMP:"));
     expect(dtstampLine).toBeTruthy();
@@ -56,4 +45,3 @@ describe("dateUtils", () => {
     expect(content).toContain("DESCRIPTION:Line1\\nLine2");
   });
 });
-

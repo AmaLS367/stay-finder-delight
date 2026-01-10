@@ -1,18 +1,21 @@
-import { useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Clock, Heart, Star } from 'lucide-react';
-import { Layout } from '@/components/layout/Layout';
-import { SearchForm } from '@/components/common/SearchForm';
-import { ListingCard } from '@/components/common/ListingCard';
-import listings from '@/data/listings.json';
-import type { Listing } from '@/types';
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
+import { Shield, Clock, Heart, Star } from "lucide-react";
+import { Layout } from "@/components/layout/Layout";
+import { SearchForm } from "@/components/common/SearchForm";
+import { ListingCard } from "@/components/common/ListingCard";
+import listings from "@/data/listings.json";
+import type { Listing } from "@/types";
 
 export default function Home() {
   const typedListings = listings as Listing[];
 
   const trendingDestinations = useMemo(() => {
-    const cityMap = new Map<string, { city: string; country: string; image: string; count: number }>();
-    typedListings.forEach(l => {
+    const cityMap = new Map<
+      string,
+      { city: string; country: string; image: string; count: number }
+    >();
+    typedListings.forEach((l) => {
       if (!cityMap.has(l.city)) {
         cityMap.set(l.city, { city: l.city, country: l.country, image: l.images[0], count: 1 });
       } else {
@@ -23,16 +26,22 @@ export default function Home() {
   }, [typedListings]);
 
   const featuredStays = useMemo(() => {
-    return [...typedListings]
-      .sort((a, b) => b.rating - a.rating)
-      .slice(0, 6);
+    return [...typedListings].sort((a, b) => b.rating - a.rating).slice(0, 6);
   }, [typedListings]);
 
   const benefits = [
-    { icon: Shield, title: 'Secure booking', description: 'Your payment and personal data are protected' },
-    { icon: Clock, title: 'Free cancellation', description: 'Flexible booking with free cancellation options' },
-    { icon: Heart, title: 'Verified stays', description: 'Every property is reviewed for quality' },
-    { icon: Star, title: 'Top-rated hosts', description: 'Stay with experienced, trusted hosts' },
+    {
+      icon: Shield,
+      title: "Secure booking",
+      description: "Your payment and personal data are protected",
+    },
+    {
+      icon: Clock,
+      title: "Free cancellation",
+      description: "Flexible booking with free cancellation options",
+    },
+    { icon: Heart, title: "Verified stays", description: "Every property is reviewed for quality" },
+    { icon: Star, title: "Top-rated hosts", description: "Stay with experienced, trusted hosts" },
   ];
 
   return (
@@ -59,7 +68,7 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">Trending destinations</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {trendingDestinations.map(dest => (
+            {trendingDestinations.map((dest) => (
               <Link
                 key={dest.city}
                 to={`/search?location=${encodeURIComponent(dest.city)}`}
@@ -92,7 +101,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredStays.map(listing => (
+            {featuredStays.map((listing) => (
               <ListingCard key={listing.id} listing={listing} />
             ))}
           </div>
@@ -104,7 +113,7 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Why book with us</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map(b => (
+            {benefits.map((b) => (
               <div key={b.title} className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-muted mb-4">
                   <b.icon className="h-6 w-6" />

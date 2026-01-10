@@ -1,14 +1,14 @@
-import { Suspense, lazy } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from 'next-themes';
-import { Toaster } from '@/components/ui/sonner';
+import { Suspense, lazy } from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/sonner";
 
-const Home = lazy(() => import('./pages/Home'));
-const Search = lazy(() => import('./pages/Search'));
-const Listing = lazy(() => import('./pages/Listing'));
-const Trips = lazy(() => import('./pages/Trips'));
-const Wishlist = lazy(() => import('./pages/Wishlist'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const Home = lazy(() => import("./pages/Home"));
+const Search = lazy(() => import("./pages/Search"));
+const Listing = lazy(() => import("./pages/Listing"));
+const Trips = lazy(() => import("./pages/Trips"));
+const Wishlist = lazy(() => import("./pages/Wishlist"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function LoadingFallback() {
   return (

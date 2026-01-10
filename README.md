@@ -90,6 +90,7 @@ npm run preview
 Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 
 **English:**
+
 - 📖 [Getting Started](./docs/en/getting-started.md) - Quick start guide
 - 🏗️ [Architecture](./docs/en/architecture.md) - Project structure and design patterns
 - 🧩 [Components](./docs/en/components.md) - Component library documentation
@@ -98,6 +99,7 @@ Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 - 🚀 [Deployment](./docs/en/deployment.md) - Deployment guide
 
 **Русский:**
+
 - 📖 [Быстрый старт](./docs/ru/getting-started.md) - Руководство по быстрому старту
 - 🏗️ [Архитектура](./docs/ru/architecture.md) - Структура проекта и паттерны
 - 🧩 [Компоненты](./docs/ru/components.md) - Документация библиотеки компонентов
@@ -111,18 +113,18 @@ Comprehensive documentation is available in the [`docs/`](./docs/) directory:
 
 <div align="center">
 
-| Category | Technology |
-|----------|-----------|
-| **Framework** | React 18.3 |
-| **Language** | TypeScript 5.8 |
-| **Build Tool** | Vite 5.4 |
-| **UI Components** | shadcn/ui (Radix UI) |
-| **Styling** | Tailwind CSS 3.4 |
-| **Routing** | React Router 6.30 (HashRouter) |
-| **Icons** | Lucide React |
-| **Forms** | React Hook Form + Zod |
-| **State Management** | React Hooks + LocalStorage |
-| **Date Handling** | date-fns 3.6 |
+| Category             | Technology                     |
+| -------------------- | ------------------------------ |
+| **Framework**        | React 18.3                     |
+| **Language**         | TypeScript 5.8                 |
+| **Build Tool**       | Vite 5.4                       |
+| **UI Components**    | shadcn/ui (Radix UI)           |
+| **Styling**          | Tailwind CSS 3.4               |
+| **Routing**          | React Router 6.30 (HashRouter) |
+| **Icons**            | Lucide React                   |
+| **Forms**            | React Hook Form + Zod          |
+| **State Management** | React Hooks + LocalStorage     |
+| **Date Handling**    | date-fns 3.6                   |
 
 </div>
 
@@ -173,10 +175,12 @@ For detailed deployment instructions, see [Deployment Guide](./docs/deployment.m
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
 
 You are free to:
+
 - **Share** — copy and redistribute the material in any medium or format
 - **Adapt** — remix, transform, and build upon the material
 
 Under the following terms:
+
 - **Attribution** — You must give appropriate credit
 - **NonCommercial** — You may not use the material for commercial purposes
 

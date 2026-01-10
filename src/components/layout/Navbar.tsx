@@ -1,7 +1,7 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, X, MapPin, Sun, Moon } from 'lucide-react';
-import { useState } from 'react';
-import { useTheme } from 'next-themes';
+import { Link, useLocation } from "react-router-dom";
+import { Heart, Menu, X, MapPin, Sun, Moon } from "lucide-react";
+import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +9,13 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/trips', label: 'Trips' },
-    { href: '/wishlist', label: 'Wishlist', icon: Heart },
+    { href: "/", label: "Home" },
+    { href: "/trips", label: "Trips" },
+    { href: "/wishlist", label: "Wishlist", icon: Heart },
   ];
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -29,19 +29,19 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className={`flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-foreground ${
-                  location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                  location.pathname === link.href ? "text-foreground" : "text-muted-foreground"
                 }`}
               >
                 {link.icon && <link.icon className="h-4 w-4" />}
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
@@ -76,13 +76,13 @@ export function Navbar() {
         {/* Mobile nav */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center gap-2 px-2 py-3 text-sm font-medium ${
-                  location.pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                  location.pathname === link.href ? "text-foreground" : "text-muted-foreground"
                 }`}
               >
                 {link.icon && <link.icon className="h-4 w-4" />}

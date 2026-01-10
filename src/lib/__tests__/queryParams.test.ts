@@ -66,4 +66,3 @@ describe("queryParams", () => {
     expect(decoded).toEqual(ids);
   });
 });
-

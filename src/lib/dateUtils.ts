@@ -1,12 +1,21 @@
 // Date utilities
 
-import { format, differenceInDays, isAfter, isBefore, parseISO, addDays, startOfDay, endOfDay } from 'date-fns';
+import {
+  format,
+  differenceInDays,
+  isAfter,
+  isBefore,
+  parseISO,
+  addDays,
+  startOfDay,
+  endOfDay,
+} from "date-fns";
 
 export function getLocalTodayISODate(): string {
   const today = new Date();
   const year = String(today.getFullYear());
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const day = String(today.getDate()).padStart(2, '0');
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
 }
 
@@ -21,22 +30,22 @@ export function isValidDateRange(checkIn: string, checkOut: string): boolean {
   const end = parseISO(checkOut);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  
+
   return isAfter(start, addDays(today, -1)) && isAfter(end, start);
 }
 
 export function getDefaultCheckIn(): string {
   const tomorrow = addDays(new Date(), 1);
-  return format(tomorrow, 'yyyy-MM-dd');
+  return format(tomorrow, "yyyy-MM-dd");
 }
 
 export function getDefaultCheckOut(): string {
   const nextWeek = addDays(new Date(), 4);
-  return format(nextWeek, 'yyyy-MM-dd');
+  return format(nextWeek, "yyyy-MM-dd");
 }
 
 export function formatForDisplay(dateString: string): string {
-  return format(parseISO(dateString), 'MMM d, yyyy');
+  return format(parseISO(dateString), "MMM d, yyyy");
 }
 
 export function isUpcoming(checkIn: string): boolean {
@@ -53,17 +62,17 @@ export function isPast(checkOut: string): boolean {
 // Generate ICS file content for calendar
 function formatUtcDateTime(date: Date): string {
   const year = String(date.getUTCFullYear());
-  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const day = String(date.getUTCDate()).padStart(2, '0');
-  const hours = String(date.getUTCHours()).padStart(2, '0');
-  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
-  const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  const hours = String(date.getUTCHours()).padStart(2, "0");
+  const minutes = String(date.getUTCMinutes()).padStart(2, "0");
+  const seconds = String(date.getUTCSeconds()).padStart(2, "0");
   return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
 }
 
 function formatICSDateValue(dateString: string): string {
   const date = parseISO(dateString);
-  return format(date, 'yyyyMMdd');
+  return format(date, "yyyyMMdd");
 }
 
 export function generateICSContent(
@@ -71,7 +80,7 @@ export function generateICSContent(
   location: string,
   checkIn: string,
   checkOut: string,
-  description: string
+  description: string,
 ): string {
   const now = new Date();
   const uid = `${now.getTime()}@stayfinder.app`;
@@ -87,15 +96,15 @@ DTSTART;VALUE=DATE:${formatICSDateValue(checkIn)}
 DTEND;VALUE=DATE:${formatICSDateValue(checkOut)}
 SUMMARY:${title}
 LOCATION:${location}
-DESCRIPTION:${description.replace(/\n/g, '\\n')}
+DESCRIPTION:${description.replace(/\n/g, "\\n")}
 END:VEVENT
 END:VCALENDAR`;
 }
 
 export function downloadICSFile(content: string, filename: string): void {
-  const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+  const blob = new Blob([content], { type: "text/calendar;charset=utf-8" });
   const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   link.href = url;
   link.download = filename;
   document.body.appendChild(link);

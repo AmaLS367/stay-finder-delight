@@ -29,7 +29,7 @@ export interface Policies {
 export interface AreaHighlight {
   name: string;
   distance: string;
-  type: 'restaurant' | 'attraction' | 'transport' | 'shopping' | 'nature';
+  type: "restaurant" | "attraction" | "transport" | "shopping" | "nature";
 }
 
 export interface Listing {
@@ -38,7 +38,7 @@ export interface Listing {
   city: string;
   country: string;
   area: string;
-  type: 'apartment' | 'house' | 'hotel';
+  type: "apartment" | "house" | "hotel";
   coords: { lat: number; lng: number };
   pricePerNight: number;
   rating: number;
@@ -67,7 +67,7 @@ export interface Booking {
   checkOut: string;
   guests: number;
   totalPrice: number;
-  status: 'confirmed' | 'cancelled' | 'completed';
+  status: "confirmed" | "cancelled" | "completed";
   createdAt: string;
 }
 
@@ -81,10 +81,10 @@ export interface SearchParams {
 export interface FilterParams {
   priceMin?: number;
   priceMax?: number;
-  type?: ('apartment' | 'house' | 'hotel')[];
+  type?: ("apartment" | "house" | "hotel")[];
   minRating?: number;
   amenities?: string[];
   instantBook?: boolean;
 }
 
-export type SortOption = 'recommended' | 'price_asc' | 'rating' | 'reviews';
+export type SortOption = "recommended" | "price_asc" | "rating" | "reviews";

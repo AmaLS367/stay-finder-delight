@@ -13,6 +13,7 @@
 ## 📚 Data Overview
 
 StayFinder uses a **frontend-only architecture** with:
+
 - **Static JSON data** - Listings stored in `src/data/listings.json`
 - **LocalStorage** - User data (wishlist, bookings) persisted in browser
 - **TypeScript types** - Full type definitions in `src/types/index.ts`
@@ -30,7 +31,7 @@ interface Listing {
   city: string;
   country: string;
   area: string;
-  type: 'apartment' | 'house' | 'hotel';
+  type: "apartment" | "house" | "hotel";
   coords: { lat: number; lng: number };
   pricePerNight: number;
   rating: number;
@@ -54,32 +55,32 @@ interface Listing {
 
 ### Field Descriptions
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | `string` | Unique listing identifier |
-| `title` | `string` | Listing title/name |
-| `city` | `string` | City name |
-| `country` | `string` | Country name |
-| `area` | `string` | Neighborhood/area name |
-| `type` | `'apartment' \| 'house' \| 'hotel'` | Property type |
-| `coords` | `{ lat: number; lng: number }` | Geographic coordinates |
-| `pricePerNight` | `number` | Price per night in base currency |
-| `rating` | `number` | Average rating (0-5) |
-| `reviewsCount` | `number` | Total number of reviews |
-| `images` | `string[]` | Array of image URLs |
-| `maxGuests` | `number` | Maximum guest capacity |
-| `bedrooms` | `number` | Number of bedrooms |
-| `beds` | `number` | Number of beds |
-| `baths` | `number` | Number of bathrooms |
-| `amenities` | `string[]` | Array of amenity IDs |
-| `host` | `Host` | Host information object |
-| `policies` | `Policies` | Cancellation and house rules |
-| `fees` | `Fees` | Additional fees structure |
-| `areaHighlights` | `AreaHighlight[]` | Nearby points of interest |
-| `reviews` | `Review[]` | Array of review objects |
-| `instantBook` | `boolean` | Instant booking available |
-| `freeCancellation` | `boolean` | Free cancellation available |
-| `description` | `string` | Full listing description |
+| Field              | Type                                | Description                      |
+| ------------------ | ----------------------------------- | -------------------------------- |
+| `id`               | `string`                            | Unique listing identifier        |
+| `title`            | `string`                            | Listing title/name               |
+| `city`             | `string`                            | City name                        |
+| `country`          | `string`                            | Country name                     |
+| `area`             | `string`                            | Neighborhood/area name           |
+| `type`             | `'apartment' \| 'house' \| 'hotel'` | Property type                    |
+| `coords`           | `{ lat: number; lng: number }`      | Geographic coordinates           |
+| `pricePerNight`    | `number`                            | Price per night in base currency |
+| `rating`           | `number`                            | Average rating (0-5)             |
+| `reviewsCount`     | `number`                            | Total number of reviews          |
+| `images`           | `string[]`                          | Array of image URLs              |
+| `maxGuests`        | `number`                            | Maximum guest capacity           |
+| `bedrooms`         | `number`                            | Number of bedrooms               |
+| `beds`             | `number`                            | Number of beds                   |
+| `baths`            | `number`                            | Number of bathrooms              |
+| `amenities`        | `string[]`                          | Array of amenity IDs             |
+| `host`             | `Host`                              | Host information object          |
+| `policies`         | `Policies`                          | Cancellation and house rules     |
+| `fees`             | `Fees`                              | Additional fees structure        |
+| `areaHighlights`   | `AreaHighlight[]`                   | Nearby points of interest        |
+| `reviews`          | `Review[]`                          | Array of review objects          |
+| `instantBook`      | `boolean`                           | Instant booking available        |
+| `freeCancellation` | `boolean`                           | Free cancellation available      |
+| `description`      | `string`                            | Full listing description         |
 
 ---
 
@@ -192,7 +193,7 @@ interface Policies {
 interface AreaHighlight {
   name: string;
   distance: string;
-  type: 'restaurant' | 'attraction' | 'transport' | 'shopping' | 'nature';
+  type: "restaurant" | "attraction" | "transport" | "shopping" | "nature";
 }
 ```
 
@@ -227,18 +228,18 @@ interface Booking {
   checkOut: string;
   guests: number;
   totalPrice: number;
-  status: 'confirmed' | 'cancelled' | 'completed';
+  status: "confirmed" | "cancelled" | "completed";
   createdAt: string;
 }
 ```
 
 ### Status Values
 
-| Status | Description |
-|--------|-------------|
+| Status        | Description              |
+| ------------- | ------------------------ |
 | `'confirmed'` | Active, upcoming booking |
-| `'cancelled'` | Cancelled by user |
-| `'completed'` | Past booking |
+| `'cancelled'` | Cancelled by user        |
+| `'completed'` | Past booking             |
 
 ### Booking ID Format
 
@@ -274,7 +275,7 @@ interface SearchParams {
 interface FilterParams {
   priceMin?: number;
   priceMax?: number;
-  type?: ('apartment' | 'house' | 'hotel')[];
+  type?: ("apartment" | "house" | "hotel")[];
   minRating?: number;
   amenities?: string[];
   instantBook?: boolean;
@@ -287,18 +288,18 @@ interface FilterParams {
 
 Available amenity IDs (from `src/lib/constants.ts`):
 
-| ID | Label | Icon |
-|----|-------|------|
-| `wifi` | WiFi | Wifi |
-| `kitchen` | Kitchen | UtensilsCrossed |
-| `parking` | Free parking | Car |
-| `pool` | Pool | Waves |
-| `petFriendly` | Pet friendly | PawPrint |
-| `airConditioning` | Air conditioning | Wind |
-| `washer` | Washer | WashingMachine |
-| `tv` | TV | Tv |
-| `heating` | Heating | Flame |
-| `workspace` | Workspace | Laptop |
+| ID                | Label            | Icon            |
+| ----------------- | ---------------- | --------------- |
+| `wifi`            | WiFi             | Wifi            |
+| `kitchen`         | Kitchen          | UtensilsCrossed |
+| `parking`         | Free parking     | Car             |
+| `pool`            | Pool             | Waves           |
+| `petFriendly`     | Pet friendly     | PawPrint        |
+| `airConditioning` | Air conditioning | Wind            |
+| `washer`          | Washer           | WashingMachine  |
+| `tv`              | TV               | Tv              |
+| `heating`         | Heating          | Flame           |
+| `workspace`       | Workspace        | Laptop          |
 
 ---
 
@@ -308,10 +309,10 @@ Available amenity IDs (from `src/lib/constants.ts`):
 
 ```typescript
 export const STORAGE_KEYS = {
-  WISHLIST: 'stayfinder_wishlist',
-  BOOKINGS: 'stayfinder_bookings',
-  RECENT_SEARCHES: 'stayfinder_recent_searches',
-  RECENTLY_VIEWED: 'stayfinder_recently_viewed',
+  WISHLIST: "stayfinder_wishlist",
+  BOOKINGS: "stayfinder_bookings",
+  RECENT_SEARCHES: "stayfinder_recent_searches",
+  RECENTLY_VIEWED: "stayfinder_recently_viewed",
 } as const;
 ```
 
@@ -335,7 +336,9 @@ export const STORAGE_KEYS = {
     {
       "id": "booking_1704067200000_abc123",
       "listingId": "paris-1",
-      "listing": { /* full Listing object */ },
+      "listing": {
+        /* full Listing object */
+      },
       "checkIn": "2024-01-15",
       "checkOut": "2024-01-20",
       "guests": 2,
@@ -372,7 +375,7 @@ sequenceDiagram
     participant Component
     participant Hook
     participant LocalStorage
-    
+
     User->>Component: Action
     Component->>Hook: Update
     Hook->>LocalStorage: Save
@@ -403,16 +406,34 @@ graph TB
 Location: `src/types/index.ts`
 
 ```typescript
-export interface Host { /* ... */ }
-export interface Review { /* ... */ }
-export interface Fees { /* ... */ }
-export interface Policies { /* ... */ }
-export interface AreaHighlight { /* ... */ }
-export interface Listing { /* ... */ }
-export interface Booking { /* ... */ }
-export interface SearchParams { /* ... */ }
-export interface FilterParams { /* ... */ }
-export type SortOption = 'recommended' | 'price_asc' | 'rating' | 'reviews';
+export interface Host {
+  /* ... */
+}
+export interface Review {
+  /* ... */
+}
+export interface Fees {
+  /* ... */
+}
+export interface Policies {
+  /* ... */
+}
+export interface AreaHighlight {
+  /* ... */
+}
+export interface Listing {
+  /* ... */
+}
+export interface Booking {
+  /* ... */
+}
+export interface SearchParams {
+  /* ... */
+}
+export interface FilterParams {
+  /* ... */
+}
+export type SortOption = "recommended" | "price_asc" | "rating" | "reviews";
 ```
 
 ---
@@ -425,7 +446,7 @@ All data is validated through TypeScript:
 
 ```typescript
 // Type assertion when importing JSON
-import listings from '@/data/listings.json';
+import listings from "@/data/listings.json";
 const typedListings = listings as Listing[];
 
 // Type checking in functions
@@ -439,7 +460,7 @@ function filterListings(listings: Listing[]): Listing[] {
 For user input, consider using Zod schemas:
 
 ```typescript
-import { z } from 'zod';
+import { z } from "zod";
 
 const searchParamsSchema = z.object({
   location: z.string().optional(),
@@ -467,9 +488,7 @@ const searchParamsSchema = z.object({
   "pricePerNight": 185,
   "rating": 4.92,
   "reviewsCount": 324,
-  "images": [
-    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  ],
+  "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"],
   "maxGuests": 4,
   "bedrooms": 2,
   "beds": 2,
@@ -594,7 +613,7 @@ graph TB
     A --> E[Features]
     A --> F[Host]
     A --> G[Reviews]
-    
+
     B --> B1[title, type, description]
     C --> C1[city, country, coords]
     D --> D1[pricePerNight, fees]
@@ -610,4 +629,3 @@ graph TB
 **Next:** Learn about [Deployment](./deployment.md) →
 
 </div>
-

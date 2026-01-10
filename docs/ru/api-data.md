@@ -13,6 +13,7 @@
 ## 📚 Обзор данных
 
 StayFinder использует **архитектуру только фронтенда** с:
+
 - **Статические JSON данные** - Объявления хранятся в `src/data/listings.json`
 - **LocalStorage** - Данные пользователя (избранное, бронирования) сохраняются в браузере
 - **TypeScript типы** - Полные определения типов в `src/types/index.ts`
@@ -30,7 +31,7 @@ interface Listing {
   city: string;
   country: string;
   area: string;
-  type: 'apartment' | 'house' | 'hotel';
+  type: "apartment" | "house" | "hotel";
   coords: { lat: number; lng: number };
   pricePerNight: number;
   rating: number;
@@ -54,32 +55,32 @@ interface Listing {
 
 ### Описание полей
 
-| Поле | Тип | Описание |
-|-------|------|-------------|
-| `id` | `string` | Уникальный идентификатор объявления |
-| `title` | `string` | Заголовок/название объявления |
-| `city` | `string` | Название города |
-| `country` | `string` | Название страны |
-| `area` | `string` | Название района/области |
-| `type` | `'apartment' \| 'house' \| 'hotel'` | Тип недвижимости |
-| `coords` | `{ lat: number; lng: number }` | Географические координаты |
-| `pricePerNight` | `number` | Цена за ночь в базовой валюте |
-| `rating` | `number` | Средний рейтинг (0-5) |
-| `reviewsCount` | `number` | Общее количество отзывов |
-| `images` | `string[]` | Массив URL изображений |
-| `maxGuests` | `number` | Максимальная вместимость гостей |
-| `bedrooms` | `number` | Количество спален |
-| `beds` | `number` | Количество кроватей |
-| `baths` | `number` | Количество ванных комнат |
-| `amenities` | `string[]` | Массив ID удобств |
-| `host` | `Host` | Объект информации о хозяине |
-| `policies` | `Policies` | Правила отмены и проживания |
-| `fees` | `Fees` | Структура дополнительных сборов |
-| `areaHighlights` | `AreaHighlight[]` | Близлежащие достопримечательности |
-| `reviews` | `Review[]` | Массив объектов отзывов |
-| `instantBook` | `boolean` | Доступно мгновенное бронирование |
-| `freeCancellation` | `boolean` | Доступна бесплатная отмена |
-| `description` | `string` | Полное описание объявления |
+| Поле               | Тип                                 | Описание                            |
+| ------------------ | ----------------------------------- | ----------------------------------- |
+| `id`               | `string`                            | Уникальный идентификатор объявления |
+| `title`            | `string`                            | Заголовок/название объявления       |
+| `city`             | `string`                            | Название города                     |
+| `country`          | `string`                            | Название страны                     |
+| `area`             | `string`                            | Название района/области             |
+| `type`             | `'apartment' \| 'house' \| 'hotel'` | Тип недвижимости                    |
+| `coords`           | `{ lat: number; lng: number }`      | Географические координаты           |
+| `pricePerNight`    | `number`                            | Цена за ночь в базовой валюте       |
+| `rating`           | `number`                            | Средний рейтинг (0-5)               |
+| `reviewsCount`     | `number`                            | Общее количество отзывов            |
+| `images`           | `string[]`                          | Массив URL изображений              |
+| `maxGuests`        | `number`                            | Максимальная вместимость гостей     |
+| `bedrooms`         | `number`                            | Количество спален                   |
+| `beds`             | `number`                            | Количество кроватей                 |
+| `baths`            | `number`                            | Количество ванных комнат            |
+| `amenities`        | `string[]`                          | Массив ID удобств                   |
+| `host`             | `Host`                              | Объект информации о хозяине         |
+| `policies`         | `Policies`                          | Правила отмены и проживания         |
+| `fees`             | `Fees`                              | Структура дополнительных сборов     |
+| `areaHighlights`   | `AreaHighlight[]`                   | Близлежащие достопримечательности   |
+| `reviews`          | `Review[]`                          | Массив объектов отзывов             |
+| `instantBook`      | `boolean`                           | Доступно мгновенное бронирование    |
+| `freeCancellation` | `boolean`                           | Доступна бесплатная отмена          |
+| `description`      | `string`                            | Полное описание объявления          |
 
 ---
 
@@ -192,7 +193,7 @@ interface Policies {
 interface AreaHighlight {
   name: string;
   distance: string;
-  type: 'restaurant' | 'attraction' | 'transport' | 'shopping' | 'nature';
+  type: "restaurant" | "attraction" | "transport" | "shopping" | "nature";
 }
 ```
 
@@ -227,18 +228,18 @@ interface Booking {
   checkOut: string;
   guests: number;
   totalPrice: number;
-  status: 'confirmed' | 'cancelled' | 'completed';
+  status: "confirmed" | "cancelled" | "completed";
   createdAt: string;
 }
 ```
 
 ### Значения статуса
 
-| Статус | Описание |
-|--------|-------------|
+| Статус        | Описание                           |
+| ------------- | ---------------------------------- |
 | `'confirmed'` | Активное, предстоящее бронирование |
-| `'cancelled'` | Отмененное пользователем |
-| `'completed'` | Прошедшее бронирование |
+| `'cancelled'` | Отмененное пользователем           |
+| `'completed'` | Прошедшее бронирование             |
 
 ### Формат ID бронирования
 
@@ -274,7 +275,7 @@ interface SearchParams {
 interface FilterParams {
   priceMin?: number;
   priceMax?: number;
-  type?: ('apartment' | 'house' | 'hotel')[];
+  type?: ("apartment" | "house" | "hotel")[];
   minRating?: number;
   amenities?: string[];
   instantBook?: boolean;
@@ -287,18 +288,18 @@ interface FilterParams {
 
 Доступные ID удобств (из `src/lib/constants.ts`):
 
-| ID | Метка | Иконка |
-|----|-------|------|
-| `wifi` | WiFi | Wifi |
-| `kitchen` | Кухня | UtensilsCrossed |
-| `parking` | Бесплатная парковка | Car |
-| `pool` | Бассейн | Waves |
-| `petFriendly` | Разрешены животные | PawPrint |
-| `airConditioning` | Кондиционер | Wind |
-| `washer` | Стиральная машина | WashingMachine |
-| `tv` | Телевизор | Tv |
-| `heating` | Отопление | Flame |
-| `workspace` | Рабочее место | Laptop |
+| ID                | Метка               | Иконка          |
+| ----------------- | ------------------- | --------------- |
+| `wifi`            | WiFi                | Wifi            |
+| `kitchen`         | Кухня               | UtensilsCrossed |
+| `parking`         | Бесплатная парковка | Car             |
+| `pool`            | Бассейн             | Waves           |
+| `petFriendly`     | Разрешены животные  | PawPrint        |
+| `airConditioning` | Кондиционер         | Wind            |
+| `washer`          | Стиральная машина   | WashingMachine  |
+| `tv`              | Телевизор           | Tv              |
+| `heating`         | Отопление           | Flame           |
+| `workspace`       | Рабочее место       | Laptop          |
 
 ---
 
@@ -308,10 +309,10 @@ interface FilterParams {
 
 ```typescript
 export const STORAGE_KEYS = {
-  WISHLIST: 'stayfinder_wishlist',
-  BOOKINGS: 'stayfinder_bookings',
-  RECENT_SEARCHES: 'stayfinder_recent_searches',
-  RECENTLY_VIEWED: 'stayfinder_recently_viewed',
+  WISHLIST: "stayfinder_wishlist",
+  BOOKINGS: "stayfinder_bookings",
+  RECENT_SEARCHES: "stayfinder_recent_searches",
+  RECENTLY_VIEWED: "stayfinder_recently_viewed",
 } as const;
 ```
 
@@ -335,7 +336,9 @@ export const STORAGE_KEYS = {
     {
       "id": "booking_1704067200000_abc123",
       "listingId": "paris-1",
-      "listing": { /* полный объект Listing */ },
+      "listing": {
+        /* полный объект Listing */
+      },
       "checkIn": "2024-01-15",
       "checkOut": "2024-01-20",
       "guests": 2,
@@ -372,7 +375,7 @@ sequenceDiagram
     participant Component as Компонент
     participant Hook as Hook
     participant LocalStorage as LocalStorage
-    
+
     User->>Component: Действие
     Component->>Hook: Обновление
     Hook->>LocalStorage: Сохранить
@@ -403,16 +406,34 @@ graph TB
 Расположение: `src/types/index.ts`
 
 ```typescript
-export interface Host { /* ... */ }
-export interface Review { /* ... */ }
-export interface Fees { /* ... */ }
-export interface Policies { /* ... */ }
-export interface AreaHighlight { /* ... */ }
-export interface Listing { /* ... */ }
-export interface Booking { /* ... */ }
-export interface SearchParams { /* ... */ }
-export interface FilterParams { /* ... */ }
-export type SortOption = 'recommended' | 'price_asc' | 'rating' | 'reviews';
+export interface Host {
+  /* ... */
+}
+export interface Review {
+  /* ... */
+}
+export interface Fees {
+  /* ... */
+}
+export interface Policies {
+  /* ... */
+}
+export interface AreaHighlight {
+  /* ... */
+}
+export interface Listing {
+  /* ... */
+}
+export interface Booking {
+  /* ... */
+}
+export interface SearchParams {
+  /* ... */
+}
+export interface FilterParams {
+  /* ... */
+}
+export type SortOption = "recommended" | "price_asc" | "rating" | "reviews";
 ```
 
 ---
@@ -425,7 +446,7 @@ export type SortOption = 'recommended' | 'price_asc' | 'rating' | 'reviews';
 
 ```typescript
 // Приведение типов при импорте JSON
-import listings from '@/data/listings.json';
+import listings from "@/data/listings.json";
 const typedListings = listings as Listing[];
 
 // Проверка типов в функциях
@@ -439,7 +460,7 @@ function filterListings(listings: Listing[]): Listing[] {
 Для пользовательского ввода рекомендуется использовать схемы Zod:
 
 ```typescript
-import { z } from 'zod';
+import { z } from "zod";
 
 const searchParamsSchema = z.object({
   location: z.string().optional(),
@@ -467,9 +488,7 @@ const searchParamsSchema = z.object({
   "pricePerNight": 185,
   "rating": 4.92,
   "reviewsCount": 324,
-  "images": [
-    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  ],
+  "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"],
   "maxGuests": 4,
   "bedrooms": 2,
   "beds": 2,
@@ -595,7 +614,7 @@ graph TB
     A --> E[Особенности]
     A --> F[Хозяин]
     A --> G[Отзывы]
-    
+
     B --> B1[title, type, description]
     C --> C1[city, country, coords]
     D --> D1[pricePerNight, fees]
@@ -611,4 +630,3 @@ graph TB
 **Следующее:** Изучите [Развертывание](./deployment.md) →
 
 </div>
-

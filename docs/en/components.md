@@ -28,7 +28,7 @@ graph TB
     A --> C[Layout]
     A --> D[Common]
     A --> E[UI]
-    
+
     B --> F[Home, Search, Listing, etc.]
     C --> G[Layout, Navbar, Footer]
     D --> H[ListingCard, SearchForm]
@@ -46,12 +46,14 @@ Page components are top-level route components that represent full pages.
 **Location:** `src/pages/Home.tsx`
 
 Main landing page featuring:
+
 - Hero section with search form
 - Trending destinations
 - Featured stays
 - Benefits section
 
 **Features:**
+
 - Displays trending destinations from listings
 - Shows top-rated featured stays
 - Includes hero search form
@@ -61,6 +63,7 @@ Main landing page featuring:
 **Location:** `src/pages/Search.tsx`
 
 Search results page with filtering and sorting:
+
 - Search form
 - Filter sidebar (price, type, rating, amenities)
 - Sort options
@@ -70,6 +73,7 @@ Search results page with filtering and sorting:
 **Props:** None (reads from URL query params)
 
 **State Management:**
+
 - Uses `useSearchParams` for URL state
 - Local state for filters
 - `useMemo` for filtered results
@@ -79,6 +83,7 @@ Search results page with filtering and sorting:
 **Location:** `src/pages/Listing.tsx`
 
 Detailed listing view with:
+
 - Image gallery with lightbox
 - Booking form
 - Reviews section
@@ -89,6 +94,7 @@ Detailed listing view with:
 **Route:** `/listing/:id`
 
 **Features:**
+
 - Image carousel
 - Date picker for booking
 - Guest selector
@@ -101,6 +107,7 @@ Detailed listing view with:
 **Location:** `src/pages/Trips.tsx`
 
 User's trip management page:
+
 - Upcoming trips
 - Past trips
 - Trip cancellation
@@ -113,6 +120,7 @@ User's trip management page:
 **Location:** `src/pages/Wishlist.tsx`
 
 Saved listings page:
+
 - Grid of wishlisted items
 - Remove from wishlist
 - Empty state
@@ -146,6 +154,7 @@ interface LayoutProps {
 ```
 
 **Features:**
+
 - Wraps pages with Navbar and Footer
 - Provides consistent page structure
 - Handles responsive layout
@@ -157,12 +166,14 @@ interface LayoutProps {
 Navigation bar component.
 
 **Features:**
+
 - Responsive design (mobile menu)
 - Active route highlighting
 - Logo and branding
 - Navigation links: Home, Trips, Wishlist
 
 **State:**
+
 - `isOpen` - Mobile menu toggle
 
 ### Footer
@@ -170,6 +181,7 @@ Navigation bar component.
 **Location:** `src/components/layout/Footer.tsx`
 
 Footer component with:
+
 - Links
 - Copyright information
 - Social links (if applicable)
@@ -191,6 +203,7 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 ```
 
 **Features:**
+
 - Active state styling
 - Pending state styling
 - Compatible with React Router NavLink API
@@ -200,7 +213,7 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 ```typescript
 import { NavLink } from '@/components/NavLink';
 
-<NavLink 
+<NavLink
   to="/trips"
   className="link-base"
   activeClassName="link-active"
@@ -229,6 +242,7 @@ interface ListingCardProps {
 ```
 
 **Features:**
+
 - Image carousel with navigation
 - Wishlist toggle button
 - Rating display
@@ -244,6 +258,7 @@ interface ListingCardProps {
 ```
 
 **Interactive Elements:**
+
 - Image navigation (prev/next)
 - Wishlist toggle
 - Click to navigate to details
@@ -258,7 +273,7 @@ Search form component with location, dates, and guests.
 
 ```typescript
 interface SearchFormProps {
-  variant?: 'hero' | 'compact';
+  variant?: "hero" | "compact";
   initialValues?: {
     location?: string;
     checkIn?: string;
@@ -269,10 +284,12 @@ interface SearchFormProps {
 ```
 
 **Variants:**
+
 - `hero` - Large hero-style form (home page)
 - `compact` - Compact inline form (search page)
 
 **Features:**
+
 - Location autocomplete
 - Date pickers (check-in/check-out)
 - Guest counter
@@ -286,7 +303,7 @@ interface SearchFormProps {
 <SearchForm variant="hero" />
 
 // Compact variant with initial values
-<SearchForm 
+<SearchForm
   variant="compact"
   initialValues={{
     location: "Paris",
@@ -305,30 +322,30 @@ StayFinder uses **shadcn/ui** components built on Radix UI primitives. These are
 
 ### Component List
 
-| Component | Location | Purpose |
-|-----------|----------|---------|
-| **Accordion** | `accordion.tsx` | Collapsible content sections |
-| **Alert** | `alert.tsx` | Alert messages |
-| **Alert Dialog** | `alert-dialog.tsx` | Modal confirmation dialogs |
-| **Avatar** | `avatar.tsx` | User profile images |
-| **Badge** | `badge.tsx` | Status labels and tags |
-| **Button** | `button.tsx` | Interactive buttons |
-| **Card** | `card.tsx` | Content containers |
-| **Checkbox** | `checkbox.tsx` | Checkbox inputs |
-| **Dialog** | `dialog.tsx` | Modal dialogs |
-| **Dropdown Menu** | `dropdown-menu.tsx` | Context menus |
-| **Form** | `form.tsx` | Form wrapper with validation |
-| **Input** | `input.tsx` | Text inputs |
-| **Label** | `label.tsx` | Form labels |
-| **Select** | `select.tsx` | Dropdown selects |
-| **Separator** | `separator.tsx` | Visual dividers |
-| **Sheet** | `sheet.tsx` | Slide-out panels |
-| **Skeleton** | `skeleton.tsx` | Loading placeholders |
-| **Slider** | `slider.tsx` | Range inputs |
-| **Switch** | `switch.tsx` | Toggle switches |
-| **Tabs** | `tabs.tsx` | Tabbed interfaces |
-| **Toast** | `toast.tsx` | Notification toasts |
-| **Tooltip** | `tooltip.tsx` | Hover tooltips |
+| Component         | Location            | Purpose                      |
+| ----------------- | ------------------- | ---------------------------- |
+| **Accordion**     | `accordion.tsx`     | Collapsible content sections |
+| **Alert**         | `alert.tsx`         | Alert messages               |
+| **Alert Dialog**  | `alert-dialog.tsx`  | Modal confirmation dialogs   |
+| **Avatar**        | `avatar.tsx`        | User profile images          |
+| **Badge**         | `badge.tsx`         | Status labels and tags       |
+| **Button**        | `button.tsx`        | Interactive buttons          |
+| **Card**          | `card.tsx`          | Content containers           |
+| **Checkbox**      | `checkbox.tsx`      | Checkbox inputs              |
+| **Dialog**        | `dialog.tsx`        | Modal dialogs                |
+| **Dropdown Menu** | `dropdown-menu.tsx` | Context menus                |
+| **Form**          | `form.tsx`          | Form wrapper with validation |
+| **Input**         | `input.tsx`         | Text inputs                  |
+| **Label**         | `label.tsx`         | Form labels                  |
+| **Select**        | `select.tsx`        | Dropdown selects             |
+| **Separator**     | `separator.tsx`     | Visual dividers              |
+| **Sheet**         | `sheet.tsx`         | Slide-out panels             |
+| **Skeleton**      | `skeleton.tsx`      | Loading placeholders         |
+| **Slider**        | `slider.tsx`        | Range inputs                 |
+| **Switch**        | `switch.tsx`        | Toggle switches              |
+| **Tabs**          | `tabs.tsx`          | Tabbed interfaces            |
+| **Toast**         | `toast.tsx`         | Notification toasts          |
+| **Tooltip**       | `tooltip.tsx`       | Hover tooltips               |
 
 ### Most Used Components
 
@@ -416,7 +433,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 **Usage:**
 
 ```typescript
-import { toast } from '@/components/ui/use-toast';
+import { toast } from "@/components/ui/use-toast";
 
 toast({
   title: "Success",
@@ -434,17 +451,17 @@ graph TD
     A --> C[Common Components]
     C --> D[UI Components]
     B --> D
-    
+
     E[Home] --> F[SearchForm]
     E --> G[ListingCard]
     F --> D
     G --> D
-    
+
     H[Search] --> F
     H --> G
     H --> I[Filter UI]
     I --> D
-    
+
     J[Listing] --> K[Image Gallery]
     J --> L[Booking Form]
     K --> D
@@ -491,17 +508,14 @@ interface ComponentProps {
 Using `class-variance-authority`:
 
 ```typescript
-const buttonVariants = cva(
-  "base-classes",
-  {
-    variants: {
-      variant: {
-        default: "default-classes",
-        outline: "outline-classes",
-      },
+const buttonVariants = cva("base-classes", {
+  variants: {
+    variant: {
+      default: "default-classes",
+      outline: "outline-classes",
     },
-  }
-);
+  },
+});
 ```
 
 ---
@@ -523,10 +537,8 @@ All components use Tailwind utility classes:
 Components use CSS variables for theming:
 
 ```css
---background: theme color
---foreground: text color
---primary: primary color
---secondary: secondary color
+--background: theme color --foreground: text color --primary: primary color --secondary: secondary
+  color;
 ```
 
 ### Responsive Design
@@ -556,12 +568,12 @@ All shadcn/ui components are built on **Radix UI**, which provides:
 
 ### Optimization Techniques
 
-| Technique | Implementation |
-|----------|---------------|
-| **Memoization** | `React.memo()` for expensive components |
-| **Lazy Loading** | Route-based code splitting |
-| **Image Optimization** | Lazy loading, proper sizing |
-| **Code Splitting** | Dynamic imports for pages |
+| Technique              | Implementation                          |
+| ---------------------- | --------------------------------------- |
+| **Memoization**        | `React.memo()` for expensive components |
+| **Lazy Loading**       | Route-based code splitting              |
+| **Image Optimization** | Lazy loading, proper sizing             |
+| **Code Splitting**     | Dynamic imports for pages               |
 
 ### Best Practices
 
@@ -623,4 +635,3 @@ export function MyPage() {
 **Next:** Learn about [Custom Hooks](./hooks.md) →
 
 </div>
-

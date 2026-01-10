@@ -16,12 +16,12 @@ StayFinder provides custom React hooks for managing application state and busine
 
 ### Available Hooks
 
-| Hook | Purpose | Location |
-|------|---------|----------|
+| Hook                | Purpose                    | Location                       |
+| ------------------- | -------------------------- | ------------------------------ |
 | **useLocalStorage** | Persistent storage wrapper | `src/hooks/useLocalStorage.ts` |
-| **useWishlist** | Wishlist management | `src/hooks/useWishlist.ts` |
-| **useBookings** | Booking management | `src/hooks/useBookings.ts` |
-| **useIsMobile** | Mobile detection | `src/hooks/use-mobile.tsx` |
+| **useWishlist**     | Wishlist management        | `src/hooks/useWishlist.ts`     |
+| **useBookings**     | Booking management         | `src/hooks/useBookings.ts`     |
+| **useIsMobile**     | Mobile detection           | `src/hooks/use-mobile.tsx`     |
 
 ---
 
@@ -34,16 +34,16 @@ Base hook for localStorage persistence with React state synchronization.
 ```typescript
 function useLocalStorage<T>(
   key: string,
-  initialValue: T
-): [T, (value: T | ((prev: T) => T)) => void]
+  initialValue: T,
+): [T, (value: T | ((prev: T) => T)) => void];
 ```
 
 ### Parameters
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `key` | `string` | localStorage key |
-| `initialValue` | `T` | Default value if key doesn't exist |
+| Parameter      | Type     | Description                        |
+| -------------- | -------- | ---------------------------------- |
+| `key`          | `string` | localStorage key                   |
+| `initialValue` | `T`      | Default value if key doesn't exist |
 
 ### Returns
 
@@ -64,13 +64,13 @@ import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 function MyComponent() {
   const [value, setValue] = useLocalStorage('my-key', 'default');
-  
+
   // Update value
   setValue('new value');
-  
+
   // Functional update
   setValue(prev => prev + ' updated');
-  
+
   return <div>{value}</div>;
 }
 ```
@@ -83,11 +83,11 @@ graph TB
     B --> C[Parse JSON]
     C --> D[Return value or initial]
     D --> E[React State]
-    
+
     F[setValue] --> G[Update state]
     G --> H[Save to localStorage]
     H --> I[Dispatch event]
-    
+
     J[Storage Event] --> K[Update state]
     K --> E
 ```
@@ -95,6 +95,7 @@ graph TB
 ### Storage Event Handling
 
 The hook listens to:
+
 - **`storage` event** - Changes from other tabs
 - **`local-storage` event** - Changes from same tab
 
@@ -114,19 +115,19 @@ function useWishlist(): {
   toggleWishlist: (listingId: string) => void;
   isInWishlist: (listingId: string) => boolean;
   clearWishlist: () => void;
-}
+};
 ```
 
 ### Returns
 
-| Property | Type | Description |
-|---------|------|-------------|
-| `wishlist` | `string[]` | Array of listing IDs |
-| `addToWishlist` | `(id: string) => void` | Add listing to wishlist |
-| `removeFromWishlist` | `(id: string) => void` | Remove listing from wishlist |
-| `toggleWishlist` | `(id: string) => void` | Toggle listing in wishlist |
-| `isInWishlist` | `(id: string) => boolean` | Check if listing is in wishlist |
-| `clearWishlist` | `() => void` | Clear entire wishlist |
+| Property             | Type                      | Description                     |
+| -------------------- | ------------------------- | ------------------------------- |
+| `wishlist`           | `string[]`                | Array of listing IDs            |
+| `addToWishlist`      | `(id: string) => void`    | Add listing to wishlist         |
+| `removeFromWishlist` | `(id: string) => void`    | Remove listing from wishlist    |
+| `toggleWishlist`     | `(id: string) => void`    | Toggle listing in wishlist      |
+| `isInWishlist`       | `(id: string) => boolean` | Check if listing is in wishlist |
+| `clearWishlist`      | `() => void`              | Clear entire wishlist           |
 
 ### Usage
 
@@ -136,7 +137,7 @@ import { useWishlist } from '@/hooks/useWishlist';
 function ListingCard({ listing }) {
   const { isInWishlist, toggleWishlist } = useWishlist();
   const isSaved = isInWishlist(listing.id);
-  
+
   return (
     <button onClick={() => toggleWishlist(listing.id)}>
       {isSaved ? 'Remove from wishlist' : 'Add to wishlist'}
@@ -153,7 +154,7 @@ sequenceDiagram
     participant useWishlist
     participant useLocalStorage
     participant LocalStorage
-    
+
     Component->>useWishlist: toggleWishlist(id)
     useWishlist->>useLocalStorage: setValue(updated array)
     useLocalStorage->>LocalStorage: Save JSON
@@ -171,7 +172,7 @@ Uses `STORAGE_KEYS.WISHLIST` constant: `'stayfinder_wishlist'`
 ```typescript
 function WishlistPage() {
   const { wishlist, clearWishlist } = useWishlist();
-  
+
   return (
     <div>
       <h1>My Wishlist ({wishlist.length})</h1>
@@ -201,23 +202,23 @@ function useBookings(): {
     checkIn: string,
     checkOut: string,
     guests: number,
-    totalPrice: number
+    totalPrice: number,
   ) => Booking;
   cancelBooking: (bookingId: string) => void;
   getBookingById: (id: string) => Booking | undefined;
-}
+};
 ```
 
 ### Returns
 
-| Property | Type | Description |
-|---------|------|-------------|
-| `bookings` | `Booking[]` | All bookings |
-| `upcomingBookings` | `Booking[]` | Future bookings (sorted) |
-| `pastBookings` | `Booking[]` | Past/cancelled bookings (sorted) |
-| `createBooking` | `(...) => Booking` | Create new booking |
-| `cancelBooking` | `(id: string) => void` | Cancel a booking |
-| `getBookingById` | `(id: string) => Booking?` | Get booking by ID |
+| Property           | Type                       | Description                      |
+| ------------------ | -------------------------- | -------------------------------- |
+| `bookings`         | `Booking[]`                | All bookings                     |
+| `upcomingBookings` | `Booking[]`                | Future bookings (sorted)         |
+| `pastBookings`     | `Booking[]`                | Past/cancelled bookings (sorted) |
+| `createBooking`    | `(...) => Booking`         | Create new booking               |
+| `cancelBooking`    | `(id: string) => void`     | Cancel a booking                 |
+| `getBookingById`   | `(id: string) => Booking?` | Get booking by ID                |
 
 ### Usage
 
@@ -229,7 +230,7 @@ function ListingPage({ listing }) {
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState(2);
-  
+
   const handleBook = () => {
     const totalPrice = calculateTotal(listing, checkIn, checkOut);
     const booking = createBooking(
@@ -241,7 +242,7 @@ function ListingPage({ listing }) {
     );
     // Booking created and saved
   };
-  
+
   return <button onClick={handleBook}>Reserve</button>;
 }
 ```
@@ -261,7 +262,7 @@ graph TB
     A[All Bookings] --> B{Filter}
     B -->|Upcoming| C[checkIn > today AND status !== cancelled]
     B -->|Past| D[checkOut < today OR status === cancelled]
-    
+
     C --> E[Sort by checkIn ASC]
     D --> F[Sort by checkIn DESC]
 ```
@@ -275,13 +276,13 @@ sequenceDiagram
     participant useLocalStorage
     participant dateUtils
     participant LocalStorage
-    
+
     Component->>useBookings: createBooking(...)
     useBookings->>useBookings: Generate ID
     useBookings->>useBookings: Create Booking object
     useBookings->>useLocalStorage: Add to array
     useLocalStorage->>LocalStorage: Save
-    
+
     Component->>useBookings: upcomingBookings
     useBookings->>dateUtils: isUpcoming(checkIn)
     dateUtils->>useBookings: Return filtered
@@ -299,18 +300,18 @@ const bookingId = `booking_${Date.now()}_${Math.random().toString(36).substr(2, 
 ```typescript
 function TripsPage() {
   const { upcomingBookings, pastBookings, cancelBooking } = useBookings();
-  
+
   return (
     <div>
       <h1>Upcoming Trips</h1>
       {upcomingBookings.map(booking => (
-        <TripCard 
-          key={booking.id} 
+        <TripCard
+          key={booking.id}
           booking={booking}
           onCancel={() => cancelBooking(booking.id)}
         />
       ))}
-      
+
       <h1>Past Trips</h1>
       {pastBookings.map(booking => (
         <TripCard key={booking.id} booking={booking} />
@@ -329,7 +330,7 @@ Detects if the user is on a mobile device.
 ### API
 
 ```typescript
-function useIsMobile(): boolean
+function useIsMobile(): boolean;
 ```
 
 ### Returns
@@ -343,7 +344,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 function ResponsiveComponent() {
   const isMobile = useIsMobile();
-  
+
   return (
     <div className={isMobile ? 'mobile-layout' : 'desktop-layout'}>
       Content
@@ -366,7 +367,7 @@ graph TB
     C[useWishlist] --> A
     D[useBookings] --> A
     D --> E[dateUtils]
-    
+
     F[Components] --> C
     F --> D
     F --> G[useIsMobile]
@@ -397,8 +398,8 @@ function Component() {
 
 ```typescript
 const filteredBookings = useMemo(
-  () => bookings.filter(b => b.status === 'confirmed'),
-  [bookings]
+  () => bookings.filter((b) => b.status === "confirmed"),
+  [bookings],
 );
 ```
 
@@ -406,7 +407,7 @@ const filteredBookings = useMemo(
 
 ```typescript
 // ✅ Good - for complex updates
-setWishlist(prev => {
+setWishlist((prev) => {
   if (prev.includes(id)) return prev;
   return [...prev, id];
 });
@@ -418,7 +419,7 @@ setWishlist([...wishlist, id]);
 ### 4. Handle Loading States
 
 ```typescript
-const [wishlist, setWishlist] = useLocalStorage('wishlist', []);
+const [wishlist, setWishlist] = useLocalStorage("wishlist", []);
 const isLoading = wishlist === null; // Handle initial load
 ```
 
@@ -429,17 +430,17 @@ const isLoading = wishlist === null; // Handle initial load
 ### Example Test Structure
 
 ```typescript
-import { renderHook, act } from '@testing-library/react';
-import { useWishlist } from '@/hooks/useWishlist';
+import { renderHook, act } from "@testing-library/react";
+import { useWishlist } from "@/hooks/useWishlist";
 
-test('adds listing to wishlist', () => {
+test("adds listing to wishlist", () => {
   const { result } = renderHook(() => useWishlist());
-  
+
   act(() => {
-    result.current.addToWishlist('listing-1');
+    result.current.addToWishlist("listing-1");
   });
-  
-  expect(result.current.isInWishlist('listing-1')).toBe(true);
+
+  expect(result.current.isInWishlist("listing-1")).toBe(true);
 });
 ```
 
@@ -452,17 +453,17 @@ sequenceDiagram
     participant Component
     participant Hook
     participant LocalStorage
-    
+
     Component->>Hook: Mount
     Hook->>LocalStorage: Read initial value
     LocalStorage->>Hook: Return value
     Hook->>Component: Initial state
-    
+
     Component->>Hook: Update
     Hook->>LocalStorage: Write new value
     LocalStorage->>Hook: Confirm
     Hook->>Component: Updated state
-    
+
     Note over Component,Hook: Other tab changes storage
     LocalStorage->>Hook: Storage event
     Hook->>Component: Sync state
@@ -488,7 +489,9 @@ sequenceDiagram
     {
       "id": "booking_1234567890_abc123",
       "listingId": "listing-1",
-      "listing": { /* full listing object */ },
+      "listing": {
+        /* full listing object */
+      },
       "checkIn": "2024-01-15",
       "checkOut": "2024-01-20",
       "guests": 2,
@@ -507,4 +510,3 @@ sequenceDiagram
 **Next:** Learn about [API & Data Structures](./api-data.md) →
 
 </div>
-

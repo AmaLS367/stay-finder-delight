@@ -1,21 +1,42 @@
-import { useState, useMemo, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Star, Heart, Share, Check, MapPin, Users, Bed, Bath, X, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Layout } from '@/components/layout/Layout';
-import { formatPrice, formatGuests, pluralize } from '@/lib/formatters';
-import { calculateNights, isValidDateRange, getDefaultCheckIn, getDefaultCheckOut, generateICSContent, downloadICSFile, getLocalTodayISODate } from '@/lib/dateUtils';
-import { toast } from '@/components/ui/sonner';
-import { useWishlist } from '@/hooks/useWishlist';
-import { useBookings } from '@/hooks/useBookings';
-import { addRecentlyViewed } from '@/lib/storage';
-import { AMENITIES } from '@/lib/constants';
-import listings from '@/data/listings.json';
-import type { Listing as ListingType } from '@/types';
+import { useState, useMemo, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import {
+  Star,
+  Heart,
+  Share,
+  Check,
+  MapPin,
+  Users,
+  Bed,
+  Bath,
+  X,
+  Calendar,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { Layout } from "@/components/layout/Layout";
+import { formatPrice, formatGuests, pluralize } from "@/lib/formatters";
+import {
+  calculateNights,
+  isValidDateRange,
+  getDefaultCheckIn,
+  getDefaultCheckOut,
+  generateICSContent,
+  downloadICSFile,
+  getLocalTodayISODate,
+} from "@/lib/dateUtils";
+import { toast } from "@/components/ui/sonner";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useBookings } from "@/hooks/useBookings";
+import { addRecentlyViewed } from "@/lib/storage";
+import { AMENITIES } from "@/lib/constants";
+import listings from "@/data/listings.json";
+import type { Listing as ListingType } from "@/types";
 
 export default function Listing() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const listing = (listings as ListingType[]).find(l => l.id === id);
+  const listing = (listings as ListingType[]).find((l) => l.id === id);
 
   const [checkIn, setCheckIn] = useState(getDefaultCheckIn());
   const [checkOut, setCheckOut] = useState(getDefaultCheckOut());
@@ -39,7 +60,8 @@ export default function Listing() {
     const subtotal = listing.pricePerNight * nights;
     const cleaning = listing.fees.cleaning;
     const service = listing.fees.service;
-    const discount = listing.fees.discountPercent > 0 ? (subtotal * listing.fees.discountPercent) / 100 : 0;
+    const discount =
+      listing.fees.discountPercent > 0 ? (subtotal * listing.fees.discountPercent) / 100 : 0;
     const total = subtotal + cleaning + service - discount;
     return { nights, subtotal, cleaning, service, discount, total };
   }, [listing, checkIn, checkOut]);
@@ -47,7 +69,7 @@ export default function Listing() {
   const filteredReviews = useMemo(() => {
     if (!listing) return [];
     if (!reviewFilter) return listing.reviews;
-    return listing.reviews.filter(r => r.rating >= reviewFilter);
+    return listing.reviews.filter((r) => r.rating >= reviewFilter);
   }, [listing, reviewFilter]);
 
   if (!listing) {
@@ -55,7 +77,7 @@ export default function Listing() {
       <Layout>
         <div className="container-custom py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Listing not found</h1>
-          <button onClick={() => navigate('/search')} className="text-primary hover:underline">
+          <button onClick={() => navigate("/search")} className="text-primary hover:underline">
             Browse all stays
           </button>
         </div>
@@ -65,7 +87,7 @@ export default function Listing() {
 
   const handleReserve = () => {
     if (!isValidDateRange(checkIn, checkOut)) {
-      toast.error('Please select valid dates');
+      toast.error("Please select valid dates");
       return;
     }
     if (guests > listing.maxGuests) {
@@ -87,12 +109,12 @@ export default function Listing() {
       `${listing.city}, ${listing.country}`,
       checkIn,
       checkOut,
-      `Your booking at ${listing.title}. ${guests} guests.`
+      `Your booking at ${listing.title}. ${guests} guests.`,
     );
     downloadICSFile(ics, `stayfinder-${listing.id}.ics`);
   };
 
-  const getAmenityLabel = (id: string) => AMENITIES.find(a => a.id === id)?.label || id;
+  const getAmenityLabel = (id: string) => AMENITIES.find((a) => a.id === id)?.label || id;
 
   return (
     <Layout>
@@ -120,10 +142,10 @@ export default function Listing() {
               onClick={async () => {
                 try {
                   await navigator.clipboard.writeText(window.location.href);
-                  toast.success('Link copied');
+                  toast.success("Link copied");
                 } catch {
-                  window.prompt('Copy this link:', window.location.href);
-                  toast.message('Copy the link from the prompt');
+                  window.prompt("Copy this link:", window.location.href);
+                  toast.message("Copy the link from the prompt");
                 }
               }}
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm"
@@ -134,7 +156,9 @@ export default function Listing() {
               onClick={() => toggleWishlist(listing.id)}
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm"
             >
-              <Heart className={`h-4 w-4 ${isInWishlist(listing.id) ? 'fill-red-500 text-red-500' : ''}`} />
+              <Heart
+                className={`h-4 w-4 ${isInWishlist(listing.id) ? "fill-red-500 text-red-500" : ""}`}
+              />
               Save
             </button>
           </div>
@@ -143,12 +167,29 @@ export default function Listing() {
         {/* Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-10 rounded-xl overflow-hidden">
           <div className="md:col-span-2 md:row-span-2">
-            <button onClick={() => { setLightboxIndex(0); setShowLightbox(true); }} className="w-full h-full">
-              <img src={listing.images[0]} alt="" className="w-full h-full object-cover aspect-square md:aspect-auto" />
+            <button
+              onClick={() => {
+                setLightboxIndex(0);
+                setShowLightbox(true);
+              }}
+              className="w-full h-full"
+            >
+              <img
+                src={listing.images[0]}
+                alt=""
+                className="w-full h-full object-cover aspect-square md:aspect-auto"
+              />
             </button>
           </div>
           {listing.images.slice(1, 5).map((img, idx) => (
-            <button key={idx} onClick={() => { setLightboxIndex(idx + 1); setShowLightbox(true); }} className="hidden md:block">
+            <button
+              key={idx}
+              onClick={() => {
+                setLightboxIndex(idx + 1);
+                setShowLightbox(true);
+              }}
+              className="hidden md:block"
+            >
               <img src={img} alt="" className="w-full h-full object-cover aspect-square" />
             </button>
           ))}
@@ -161,20 +202,33 @@ export default function Listing() {
             <div className="flex items-center justify-between pb-6 border-b border-border">
               <div>
                 <h2 className="text-xl font-semibold">
-                  {listing.type.charAt(0).toUpperCase() + listing.type.slice(1)} hosted by {listing.host.name}
+                  {listing.type.charAt(0).toUpperCase() + listing.type.slice(1)} hosted by{" "}
+                  {listing.host.name}
                 </h2>
                 <div className="flex items-center gap-3 mt-2 text-muted-foreground text-sm">
-                  <span className="flex items-center gap-1"><Users className="h-4 w-4" /> {listing.maxGuests} guests</span>
+                  <span className="flex items-center gap-1">
+                    <Users className="h-4 w-4" /> {listing.maxGuests} guests
+                  </span>
                   <span>·</span>
-                  <span className="flex items-center gap-1"><Bed className="h-4 w-4" /> {pluralize(listing.bedrooms, 'bedroom')}</span>
+                  <span className="flex items-center gap-1">
+                    <Bed className="h-4 w-4" /> {pluralize(listing.bedrooms, "bedroom")}
+                  </span>
                   <span>·</span>
-                  <span className="flex items-center gap-1"><Bath className="h-4 w-4" /> {pluralize(listing.baths, 'bath')}</span>
+                  <span className="flex items-center gap-1">
+                    <Bath className="h-4 w-4" /> {pluralize(listing.baths, "bath")}
+                  </span>
                 </div>
               </div>
               <div className="relative">
-                <img src={listing.host.avatar} alt={listing.host.name} className="w-14 h-14 rounded-full object-cover" />
+                <img
+                  src={listing.host.avatar}
+                  alt={listing.host.name}
+                  className="w-14 h-14 rounded-full object-cover"
+                />
                 {listing.host.isSuperhost && (
-                  <span className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground text-xs px-1.5 py-0.5 rounded-full">★</span>
+                  <span className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground text-xs px-1.5 py-0.5 rounded-full">
+                    ★
+                  </span>
                 )}
               </div>
             </div>
@@ -189,7 +243,7 @@ export default function Listing() {
             <div className="py-6 border-b border-border">
               <h3 className="text-lg font-semibold mb-4">Amenities</h3>
               <div className="grid grid-cols-2 gap-3">
-                {listing.amenities.map(a => (
+                {listing.amenities.map((a) => (
                   <div key={a} className="flex items-center gap-3">
                     <Check className="h-4 w-4 text-muted-foreground" />
                     <span>{getAmenityLabel(a)}</span>
@@ -222,12 +276,14 @@ export default function Listing() {
                   {listing.rating.toFixed(2)} · {listing.reviewsCount} reviews
                 </h3>
                 <div className="flex gap-2">
-                  {[5, 4, 3].map(r => (
+                  {[5, 4, 3].map((r) => (
                     <button
                       key={r}
                       onClick={() => setReviewFilter(reviewFilter === r ? null : r)}
                       className={`px-3 py-1 rounded-full text-sm border transition-colors ${
-                        reviewFilter === r ? 'bg-primary text-primary-foreground' : 'border-border hover:bg-muted'
+                        reviewFilter === r
+                          ? "bg-primary text-primary-foreground"
+                          : "border-border hover:bg-muted"
                       }`}
                     >
                       {r}+ ★
@@ -236,10 +292,14 @@ export default function Listing() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {filteredReviews.map(r => (
+                {filteredReviews.map((r) => (
                   <div key={r.id} className="p-4 rounded-lg border border-border">
                     <div className="flex items-center gap-3 mb-3">
-                      <img src={r.authorAvatar} alt={r.authorName} className="w-10 h-10 rounded-full" />
+                      <img
+                        src={r.authorAvatar}
+                        alt={r.authorName}
+                        className="w-10 h-10 rounded-full"
+                      />
                       <div>
                         <p className="font-medium">{r.authorName}</p>
                         <p className="text-xs text-muted-foreground">{r.date}</p>
@@ -270,7 +330,7 @@ export default function Listing() {
                     <input
                       type="date"
                       value={checkIn}
-                      onChange={e => setCheckIn(e.target.value)}
+                      onChange={(e) => setCheckIn(e.target.value)}
                       min={getLocalTodayISODate()}
                       className="w-full text-sm bg-transparent"
                     />
@@ -280,7 +340,7 @@ export default function Listing() {
                     <input
                       type="date"
                       value={checkOut}
-                      onChange={e => setCheckOut(e.target.value)}
+                      onChange={(e) => setCheckOut(e.target.value)}
                       min={checkIn || getLocalTodayISODate()}
                       className="w-full text-sm bg-transparent"
                     />
@@ -290,11 +350,13 @@ export default function Listing() {
                   <label className="block text-xs font-medium mb-1">Guests</label>
                   <select
                     value={guests}
-                    onChange={e => setGuests(Number(e.target.value))}
+                    onChange={(e) => setGuests(Number(e.target.value))}
                     className="w-full text-sm bg-transparent"
                   >
-                    {Array.from({ length: listing.maxGuests }, (_, i) => i + 1).map(n => (
-                      <option key={n} value={n}>{formatGuests(n)}</option>
+                    {Array.from({ length: listing.maxGuests }, (_, i) => i + 1).map((n) => (
+                      <option key={n} value={n}>
+                        {formatGuests(n)}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -310,7 +372,9 @@ export default function Listing() {
               {priceDetails && priceDetails.nights > 0 && (
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>{formatPrice(listing.pricePerNight)} × {priceDetails.nights} nights</span>
+                    <span>
+                      {formatPrice(listing.pricePerNight)} × {priceDetails.nights} nights
+                    </span>
                     <span>{formatPrice(priceDetails.subtotal)}</span>
                   </div>
                   <div className="flex justify-between">
@@ -340,12 +404,18 @@ export default function Listing() {
 
       {/* Lightbox */}
       {showLightbox && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={() => setShowLightbox(false)}>
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={() => setShowLightbox(false)}
+        >
           <button className="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-full">
             <X className="h-6 w-6" />
           </button>
           <button
-            onClick={e => { e.stopPropagation(); setLightboxIndex((lightboxIndex - 1 + listing.images.length) % listing.images.length); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((lightboxIndex - 1 + listing.images.length) % listing.images.length);
+            }}
             className="absolute left-4 p-2 text-white hover:bg-white/10 rounded-full"
           >
             <ChevronLeft className="h-8 w-8" />
@@ -354,10 +424,13 @@ export default function Listing() {
             src={listing.images[lightboxIndex]}
             alt=""
             className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           />
           <button
-            onClick={e => { e.stopPropagation(); setLightboxIndex((lightboxIndex + 1) % listing.images.length); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((lightboxIndex + 1) % listing.images.length);
+            }}
             className="absolute right-4 p-2 text-white hover:bg-white/10 rounded-full"
           >
             <ChevronRight className="h-8 w-8" />
@@ -367,11 +440,28 @@ export default function Listing() {
 
       {/* Booking modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={() => { setShowModal(false); setBookingComplete(false); }}>
-          <div className="bg-background rounded-xl max-w-md w-full p-6" onClick={e => e.stopPropagation()}>
+        <div
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
+          onClick={() => {
+            setShowModal(false);
+            setBookingComplete(false);
+          }}
+        >
+          <div
+            className="bg-background rounded-xl max-w-md w-full p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold">{bookingComplete ? 'Booking confirmed!' : 'Confirm booking'}</h3>
-              <button onClick={() => { setShowModal(false); setBookingComplete(false); }} className="p-1 hover:bg-muted rounded">
+              <h3 className="text-xl font-bold">
+                {bookingComplete ? "Booking confirmed!" : "Confirm booking"}
+              </h3>
+              <button
+                onClick={() => {
+                  setShowModal(false);
+                  setBookingComplete(false);
+                }}
+                className="p-1 hover:bg-muted rounded"
+              >
                 <X className="h-5 w-5" />
               </button>
             </div>
@@ -381,7 +471,9 @@ export default function Listing() {
                 <img src={listing.images[0]} alt="" className="w-20 h-20 rounded-lg object-cover" />
                 <div>
                   <p className="font-medium">{listing.title}</p>
-                  <p className="text-sm text-muted-foreground">{listing.city}, {listing.country}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {listing.city}, {listing.country}
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
@@ -420,7 +512,7 @@ export default function Listing() {
                   <Calendar className="h-4 w-4" /> Add to calendar
                 </button>
                 <button
-                  onClick={() => navigate('/trips')}
+                  onClick={() => navigate("/trips")}
                   className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                 >
                   View my trips
