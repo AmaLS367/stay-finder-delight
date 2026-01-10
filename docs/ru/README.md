@@ -4,7 +4,7 @@
 
 **Полное руководство по пониманию, разработке и развертыванию StayFinder**
 
-[← Назад к главному README](../README.md) • [English](./../README.md)
+[← Назад к главному README](../../README.md) • [English](./../en/README.md)
 
 </div>
 
