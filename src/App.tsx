@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'next-themes';
 import { Toaster } from '@/components/ui/sonner';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -18,7 +19,7 @@ function LoadingFallback() {
 }
 
 const App = () => (
-  <>
+  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
     <Toaster />
     <HashRouter>
       <Suspense fallback={<LoadingFallback />}>
@@ -32,7 +33,7 @@ const App = () => (
         </Routes>
       </Suspense>
     </HashRouter>
-  </>
+  </ThemeProvider>
 );
 
 export default App;
