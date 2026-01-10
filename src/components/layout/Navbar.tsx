@@ -1,16 +1,22 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, X, MapPin } from 'lucide-react';
+import { Heart, Menu, X, MapPin, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
 
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/trips', label: 'Trips' },
     { href: '/wishlist', label: 'Wishlist', icon: Heart },
   ];
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,16 +41,36 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+              aria-label="Toggle theme"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </button>
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 hover:bg-muted rounded-lg"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+              aria-label="Toggle theme"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </button>
+            <button
+              className="p-2 hover:bg-muted rounded-lg"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile nav */}
