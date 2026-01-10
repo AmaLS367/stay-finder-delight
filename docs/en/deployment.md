@@ -44,7 +44,7 @@ Before deploying, ensure:
 
 ```bash
 # If not already on GitHub
-git remote add origin https://github.com/YOUR_USERNAME/stay-finder-delight.git
+git remote add origin https://github.com/AmaLS367/stay-finder-delight.git
 git push -u origin main
 ```
 
@@ -73,13 +73,7 @@ The deployment workflow runs automatically on:
 Your site will be available at:
 
 ```
-https://<USERNAME>.github.io/<REPO_NAME>/
-```
-
-For example:
-
-```
-https://johndoe.github.io/stay-finder-delight/
+https://AmaLS367.github.io/stay-finder-delight/
 ```
 
 ---
@@ -208,7 +202,7 @@ export default defineConfig({
 
 **Why `base: "./"`?**
 
-- GitHub Pages serves from `/<REPO_NAME>/`
+- GitHub Pages serves from `/stay-finder-delight/`
 - Relative paths ensure assets load correctly
 - Works with HashRouter routing
 
@@ -383,14 +377,14 @@ npm run build
 4. Configure DNS records:
    - **Type:** CNAME
    - **Name:** `@` or `www`
-   - **Value:** `<USERNAME>.github.io`
+   - **Value:** `AmaLS367.github.io`
 
 ### DNS Configuration
 
 ```
 Type: CNAME
 Name: www
-Value: johndoe.github.io
+Value: AmaLS367.github.io
 ```
 
 ---

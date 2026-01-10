@@ -44,7 +44,7 @@ graph LR
 
 ```bash
 # Если еще не на GitHub
-git remote add origin https://github.com/YOUR_USERNAME/stay-finder-delight.git
+git remote add origin https://github.com/AmaLS367/stay-finder-delight.git
 git push -u origin main
 ```
 
@@ -71,12 +71,6 @@ Workflow развертывания запускается автоматиче�
 ### Шаг 5: Доступ к сайту
 
 Ваш сайт будет доступен по адресу:
-
-```
-https://<USERNAME>.github.io/<REPO_NAME>/
-```
-
-Например:
 
 ```
 https://AmaLS367.github.io/stay-finder-delight/
@@ -122,7 +116,7 @@ export default defineConfig({
 
 **Почему `base: "./"`?**
 
-- GitHub Pages обслуживает из `/<REPO_NAME>/`
+- GitHub Pages обслуживает из `/stay-finder-delight/`
 - Относительные пути обеспечивают правильную загрузку ресурсов
 - Работает с HashRouter
 
@@ -297,7 +291,7 @@ npm run build
 4. Настройте DNS записи:
    - **Тип:** CNAME
    - **Имя:** `@` или `www`
-   - **Значение:** `<USERNAME>.github.io`
+   - **Значение:** `AmaLS367.github.io`
 
 ### Конфигурация DNS
 

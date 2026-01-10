@@ -162,7 +162,7 @@ For detailed structure, see [Architecture Documentation](./docs/architecture.md)
 This repository is deployed to GitHub Pages using GitHub Actions.
 The site URL format for Project Pages is:
 
-`https://AmaLS367.github.io/<repo-name>/`
+`https://AmaLS367.github.io/stay-finder-delight/`
 
 Routing works on GitHub Pages because the app uses hash-based routing (`HashRouter`).
 

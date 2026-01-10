@@ -40,7 +40,7 @@ git --version
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/stay-finder-delight.git
+git clone https://github.com/AmaLS367/stay-finder-delight.git
 cd stay-finder-delight
 ```
 
